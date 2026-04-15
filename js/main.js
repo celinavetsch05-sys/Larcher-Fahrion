@@ -193,12 +193,12 @@ function submitContactForm(type, formEl) {
     } else {
       throw new Error(json.error || 'Unbekannter Fehler');
     }
+    btn.textContent = originalText;
+    btn.disabled = false;
   })
   .catch(function() {
     feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es sp\u00e4ter erneut oder schreiben Sie uns direkt per E-Mail.';
     feedback.className = 'form-feedback error';
-  })
-  .finally(function() {
     btn.textContent = originalText;
     btn.disabled = false;
   });
