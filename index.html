@@ -141,6 +141,116 @@
     </div>
   </div>
 
+  <!-- ═══════════ KONTAKT ═══════════ -->
+  <div class="section contact-section" style="background:var(--bg)">
+    <div class="section-inner">
+      <div class="section-label">Kontakt</div>
+      <div class="section-title">Jetzt anfragen</div>
+      <p class="section-sub">Ob als Urlaubsgast oder als Wohnungseigentümer — wir freuen uns, von Ihnen zu hören.</p>
+
+      <div class="form-tabs">
+        <button class="form-tab active" onclick="switchFormTab('guest', this)">Als Gast anfragen</button>
+        <button class="form-tab" onclick="switchFormTab('owner', this)">Als Eigentümer</button>
+      </div>
+
+      <!-- Gast-Formular -->
+      <div class="form-panel active" id="panel-guest">
+        <form onsubmit="submitContactForm('guest', this); return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="g-name">Name *</label>
+              <input id="g-name" name="name" type="text" placeholder="Ihr Name" required>
+            </div>
+            <div class="form-group">
+              <label for="g-email">E-Mail-Adresse *</label>
+              <input id="g-email" name="email" type="email" placeholder="ihre@email.de" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="g-wohnung">Welche Wohnung?</label>
+              <select id="g-wohnung" name="wohnung">
+                <option value="Noch unentschieden">Noch unentschieden</option>
+                <option value="Appartement Louis">Appartement Louis</option>
+                <option value="Bergliebe">Bergliebe</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="g-datum">Ungefähres Wunschdatum</label>
+              <input id="g-datum" name="datum" type="date">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="g-nachricht">Nachricht *</label>
+            <textarea id="g-nachricht" name="nachricht" rows="4" placeholder="Was möchten Sie uns wissen lassen?" required></textarea>
+          </div>
+          <div class="form-submit-row">
+            <button type="submit" class="btn-primary">Anfrage senden</button>
+          </div>
+          <div class="form-feedback" id="feedback-guest"></div>
+        </form>
+      </div>
+
+      <!-- Eigentümer-Panel -->
+      <div class="form-panel" id="panel-owner">
+        <div class="service-grid">
+          <div class="service-card">
+            <div class="service-icon">🤝</div>
+            <h4>Gästebetreuung</h4>
+            <p>Check-in, Check-out und die gesamte Gästekommunikation — persönlich, herzlich und zuverlässig.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📣</div>
+            <h4>Inserate &amp; Vermarktung</h4>
+            <p>Professionelle Fotos, ansprechende Beschreibungen und Präsenz auf Airbnb, Booking.com und weiteren Plattformen.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">💰</div>
+            <h4>Preismanagement</h4>
+            <p>Dynamische Preisgestaltung nach Saison, Nachfrage und lokalen Events — für maximale Auslastung das ganze Jahr.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <h4>Wartung &amp; Reparaturen</h4>
+            <p>Wir koordinieren Handwerker, erledigen Kleinreparaturen und sorgen dafür, dass Ihre Wohnung stets in bestem Zustand ist.</p>
+          </div>
+        </div>
+        <p class="owner-intro">Sie besitzen eine Ferienwohnung in der Alpenregion und möchten sie professionell vermieten, ohne den Aufwand selbst zu tragen? Larcher &amp; Fahrion übernimmt die vollständige Betreuung — von der Vermarktung bis zur Wartung. Kontaktieren Sie uns für ein unverbindliches Gespräch.</p>
+        <form onsubmit="submitContactForm('owner', this); return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="o-name">Name *</label>
+              <input id="o-name" name="name" type="text" placeholder="Ihr Name" required>
+            </div>
+            <div class="form-group">
+              <label for="o-email">E-Mail-Adresse *</label>
+              <input id="o-email" name="email" type="email" placeholder="ihre@email.de" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="o-telefon">Telefonnummer</label>
+              <input id="o-telefon" name="telefon" type="tel" placeholder="+43 ...">
+            </div>
+            <div class="form-group">
+              <label for="o-standort">Standort der Wohnung *</label>
+              <input id="o-standort" name="standort" type="text" placeholder="z. B. Oberammergau, Bayern" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="o-nachricht">Ihre Nachricht</label>
+            <textarea id="o-nachricht" name="nachricht" rows="4" placeholder="Erzählen Sie uns von Ihrer Wohnung — Lage, Größe, aktuelle Situation ..."></textarea>
+          </div>
+          <div class="form-submit-row">
+            <button type="submit" class="btn-primary">Unverbindlich anfragen</button>
+          </div>
+          <div class="form-feedback" id="feedback-owner"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
   <div class="section" style="background:white">
     <div class="section-inner">
       <div class="section-label">Atmosphäre</div>
