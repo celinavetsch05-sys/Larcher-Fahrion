@@ -32,6 +32,9 @@ function showPage(name) {
       el.classList.add('in');
     });
   }
+
+  // Update nav transparency (transparent only on home at top)
+  updateNavStyle();
 }
 
 // ── Apartment card filter ─────────────────────────────────────────────────────
@@ -92,6 +95,20 @@ function setTestimonial(idx) {
 
 function handleSubmit() {
   alert('Vielen Dank! Wir melden uns so schnell wie m\u00f6glich bei dir.');
+}
+
+// ── Nav transparency ──────────────────────────────────────────────────────────
+
+function updateNavStyle() {
+  var nav = document.getElementById('main-nav');
+  if (!nav) return;
+  var homePage = document.getElementById('page-home');
+  var onHome = homePage && homePage.classList.contains('active');
+  if (onHome && window.scrollY < 80) {
+    nav.classList.add('nav-top');
+  } else {
+    nav.classList.remove('nav-top');
+  }
 }
 
 // ── Scroll / intersection animations ─────────────────────────────────────────
@@ -184,11 +201,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Start scroll animations
   initScrollAnimations();
 
-  // Scroll shadow on nav
+  // Scroll shadow + transparency on nav
   window.addEventListener('scroll', function() {
     var nav = document.getElementById('main-nav');
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 30);
+    updateNavStyle();
   });
+
+  // Set initial nav state
+  updateNavStyle();
 
   // Keyboard navigation for lightbox
   document.addEventListener('keydown', function(e) {
