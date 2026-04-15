@@ -3,6 +3,11 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY is not set');
+    return res.status(500).json({ error: 'Serverkonfigurationsfehler.' });
+  }
+
   var body = req.body || {};
   var type = body.type;
   var name = (body.name || '').trim();
@@ -13,9 +18,16 @@ export default async function handler(req, res) {
   var standort = (body.standort || '').trim();
   var nachricht = (body.nachricht || '').trim();
 
+  if (type !== 'guest' && type !== 'owner') {
+    return res.status(400).json({ error: 'Ung\u00fcltiger Anfragetyp.' });
+  }
+
   // Validate
   if (!name || !email) {
     return res.status(400).json({ error: 'Name und E-Mail sind erforderlich.' });
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return res.status(400).json({ error: 'Ung\u00fcltige E-Mail-Adresse.' });
   }
   if (type === 'guest' && !nachricht) {
     return res.status(400).json({ error: 'Bitte geben Sie eine Nachricht ein.' });
@@ -24,32 +36,49 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Bitte geben Sie den Standort Ihrer Wohnung an.' });
   }
 
+  function escHtml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   var isGuest = type === 'guest';
+  var safeName = name.replace(/[\r\n\t]/g, ' ');
   var subject = isGuest
-    ? 'Neue G\u00e4ste-Anfrage von ' + name
-    : 'Neue Eigent\u00fcmer-Anfrage von ' + name;
+    ? 'Neue G\u00e4ste-Anfrage von ' + safeName
+    : 'Neue Eigent\u00fcmer-Anfrage von ' + safeName;
 
   var row = function(label, value) {
     return '<tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5;width:160px;vertical-align:top">'
-      + label + '</td><td style="padding:8px 12px">' + (value || '\u2014') + '</td></tr>';
+      + escHtml(label) + '</td><td style="padding:8px 12px">' + (escHtml(value) || '\u2014') + '</td></tr>';
   };
+  var rowHtml = function(label, htmlValue) {
+    return '<tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5;width:160px;vertical-align:top">'
+      + escHtml(label) + '</td><td style="padding:8px 12px">' + (htmlValue || '\u2014') + '</td></tr>';
+  };
+
+  var emailCell = '<a href="mailto:' + escHtml(email) + '">' + escHtml(email) + '</a>';
+  var nachrichtCell = escHtml(nachricht).replace(/\n/g, '<br>');
 
   var htmlBody = isGuest
     ? '<h2 style="color:#2e4a5e;font-family:sans-serif">Neue G\u00e4ste-Anfrage</h2>'
       + '<table style="border-collapse:collapse;width:100%;max-width:560px;font-family:sans-serif;font-size:14px">'
       + row('Name', name)
-      + row('E-Mail', '<a href="mailto:' + email + '">' + email + '</a>')
+      + rowHtml('E-Mail', emailCell)
       + row('Wohnung', wohnung)
       + row('Wunschdatum', datum)
-      + row('Nachricht', nachricht.replace(/\n/g, '<br>'))
+      + rowHtml('Nachricht', nachrichtCell)
       + '</table>'
     : '<h2 style="color:#2e4a5e;font-family:sans-serif">Neue Eigent\u00fcmer-Anfrage</h2>'
       + '<table style="border-collapse:collapse;width:100%;max-width:560px;font-family:sans-serif;font-size:14px">'
       + row('Name', name)
-      + row('E-Mail', '<a href="mailto:' + email + '">' + email + '</a>')
+      + rowHtml('E-Mail', emailCell)
       + row('Telefon', telefon)
       + row('Standort', standort)
-      + row('Nachricht', nachricht.replace(/\n/g, '<br>'))
+      + rowHtml('Nachricht', nachrichtCell)
       + '</table>';
 
   try {
