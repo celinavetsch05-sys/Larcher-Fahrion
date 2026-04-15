@@ -647,3 +647,28 @@ footer{background:var(--brand-dark);color:rgba(255,255,255,0.6);padding:3rem 2.5
 }
 /* Mark gallery images as clickable */
 .gallery-grid img{cursor:zoom-in}
+
+/* WHATSAPP BUTTON */
+.wa-button{
+  position:fixed;bottom:1.5rem;right:1.5rem;z-index:500;
+  width:52px;height:52px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,0.4);
+  text-decoration:none;
+  transition:transform 0.2s,box-shadow 0.2s;
+  animation:wa-pop 0.4s cubic-bezier(0.22,1,0.36,1) both;
+}
+.wa-button:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.55)}
+@keyframes wa-pop{from{transform:scale(0.6);opacity:0}to{transform:scale(1);opacity:1}}
+.wa-tooltip{
+  display:none;position:absolute;right:60px;
+  background:#1a1a1a;color:white;
+  font-size:12px;padding:5px 10px;border-radius:6px;
+  white-space:nowrap;pointer-events:none;
+}
+.wa-button:hover .wa-tooltip{display:block}
+@media(max-width:680px){
+  .wa-button{width:44px;height:44px;bottom:1rem;right:1rem}
+  .wa-button svg{width:22px;height:22px}
+}
