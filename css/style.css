@@ -16,15 +16,13 @@ nav{
   backdrop-filter:blur(12px);
   padding:0 2.5rem;
   display:flex;align-items:center;justify-content:space-between;
-  height:66px;
+  height:90px;
   border-bottom:1px solid rgba(255,255,255,0.1);
   transition:background 0.3s;
 }
 .nav-logo{display:flex;align-items:center;gap:12px;cursor:pointer}
-.nav-logo img{height:54px;width:54px;object-fit:contain;mix-blend-mode:screen}
-.nav-logo-text{display:flex;flex-direction:column;line-height:1.2}
-.nav-logo-text span{font-size:15px;font-weight:500;color:#fff;letter-spacing:0.02em}
-.nav-logo-text small{font-size:11px;color:rgba(255,255,255,0.65);letter-spacing:0.06em}
+.nav-logo img{height:82px;width:82px;object-fit:contain;mix-blend-mode:screen}
+.nav-logo-text{display:none}
 .nav-links{display:flex;gap:0.25rem;list-style:none}
 .nav-links a{
   font-size:13px;color:rgba(255,255,255,0.82);text-decoration:none;
@@ -45,13 +43,13 @@ nav{
 /* HERO */
 .hero{
   position:relative;min-height:96vh;
-  display:flex;align-items:flex-end;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
   background:var(--brand-dark);
 }
 .hero-bg{position:absolute;inset:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center top;opacity:0.7}
 .hero-gradient{position:absolute;inset:0;background:linear-gradient(to top,rgba(22,42,58,0.92) 0%,rgba(46,74,94,0.5) 50%,rgba(46,74,94,0.1) 100%)}
-.hero-content{position:relative;padding:4rem 3rem 5rem;max-width:760px}
+.hero-content{position:relative;padding:4rem 3rem 5rem;max-width:900px;text-align:center;margin:0 auto}
 .hero-label{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);
@@ -62,16 +60,16 @@ nav{
 .hero-dot{width:6px;height:6px;border-radius:50%;background:#7eb3d4;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
 .hero-content h1{
-  font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:400;
-  color:#fff;line-height:1.15;margin-bottom:1.25rem;
-  letter-spacing:-0.01em;
+  font-size:clamp(3rem,7vw,5.5rem);font-weight:400;
+  color:#fff;line-height:1.1;margin-bottom:1.25rem;
+  letter-spacing:-0.02em;
 }
 .hero-content h1 em{font-style:normal;color:#7eb3d4}
 .hero-content p{
   font-size:1.15rem;color:rgba(255,255,255,0.78);
   margin-bottom:2.25rem;line-height:1.75;max-width:520px;
 }
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .btn-hero{
   background:var(--brand);color:white;border:none;
   padding:14px 32px;border-radius:28px;
