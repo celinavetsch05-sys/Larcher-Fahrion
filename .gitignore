@@ -3,3 +3,4 @@ image/
 docs/
 .DS_Store
 Thumbs.db
+.claude/
