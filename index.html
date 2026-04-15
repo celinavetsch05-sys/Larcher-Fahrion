@@ -32,7 +32,7 @@
 <div id="page-home" class="page active">
 
   <div class="hero">
-    <div class="hero-bg"><img id="hero-bg-img" src="https://picsum.photos/seed/hero/1600/900" alt="Alpine view"></div>
+    <div class="hero-bg"><img id="hero-bg-img" src="images/bergliebe-9.jpg" alt="Alpine view"></div>
     <div class="hero-gradient"></div>
     <div class="hero-content">
       <div class="hero-label"><div class="hero-dot"></div>Oberammergau · Bayerische Alpen</div>
@@ -53,7 +53,7 @@
     </div>
     <div class="trust-item">
       <div class="trust-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="rgba(255,255,255,0.8)"/></svg></div>
-      3 einzigartige Wohnungen
+      2 einzigartige Wohnungen
     </div>
     <div class="trust-item">
       <div class="trust-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="rgba(255,255,255,0.8)"/></svg></div>
@@ -69,7 +69,7 @@
     <div class="section-inner">
       <div class="intro-split">
         <div class="intro-img fade-up">
-          <img id="intro-img" src="https://picsum.photos/seed/intro/800/600" alt="Cozy alpine interior">
+          <img id="intro-img" src="images/louis-2.jpg" alt="Cozy alpine interior">
           <div class="intro-img-badge"><strong>Oberammergau</strong>Bayerische Alpen</div>
         </div>
         <div class="intro-text fade-up">
@@ -86,68 +86,47 @@
   <div class="section" style="background:var(--bg)">
     <div class="section-inner">
       <div class="section-label">Unsere Wohnungen</div>
-      <div class="section-title">Drei Orte, ein Gefühl</div>
+      <div class="section-title">Zwei Orte, ein Gefühl</div>
       <p class="section-sub">Jede Wohnung hat ihre eigene Persönlichkeit — such dir die aus, die zu dir passt.</p>
       <div class="filter-bar">
         <button class="filter-btn on" onclick="filterCards(this,'all')">Alle</button>
-        <button class="filter-btn" onclick="filterCards(this,'2')">Bis 2 Personen</button>
-        <button class="filter-btn" onclick="filterCards(this,'4')">Bis 4 Personen</button>
-        <button class="filter-btn" onclick="filterCards(this,'6')">Bis 6 Personen</button>
+        <button class="filter-btn" onclick="filterCards(this,'2')">2 Personen</button>
       </div>
       <div class="apt-grid" id="apt-grid">
-        <div class="apt-card fade-up" data-cap="4" onclick="showPage('detail')">
+        <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail')">
           <div class="apt-card-img">
-            <img id="card1-img" src="https://picsum.photos/seed/bergblick/800/500" alt="Bergblick">
-            <div class="apt-tag">Bergblick</div>
+            <img id="card1-img" src="images/louis-1.jpg" alt="Appartement Louis">
+            <div class="apt-tag">Louis</div>
           </div>
           <div class="apt-body">
-            <h3>Wohnung Bergblick</h3>
-            <p>Hoch gelegen, mit weitem Panorama und viel Naturlicht. Perfekt für Familien oder zwei Paare.</p>
+            <h3>Appartement Louis</h3>
+            <p>Kompaktes Apartment mit Balkon und herrlichem Berg- und Gartenblick. Ideal für zwei Personen, die Ruhe und Natur suchen.</p>
             <div class="apt-specs">
-              <span class="spec">⌂ 65 m²</span>
-              <span class="spec">★ 4 Pers.</span>
-              <span class="spec">▣ 2 Schlafzimmer</span>
+              <span class="spec">⌂ 26 m²</span>
+              <span class="spec">★ 2 Pers.</span>
+              <span class="spec">▣ 1 Schlafzimmer</span>
             </div>
             <div class="apt-footer">
-              <div class="apt-price">ab <strong>95 €</strong> / Nacht</div>
+              <div class="apt-price">ab <strong>70 €</strong> / Nacht</div>
               <button class="btn-card" onclick="event.stopPropagation();showPage('detail')">Details</button>
             </div>
           </div>
         </div>
         <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail')">
           <div class="apt-card-img">
-            <img id="card2-img" src="https://picsum.photos/seed/waldstille/800/500" alt="Waldstille">
-            <div class="apt-tag">Waldstille</div>
+            <img id="card2-img" src="images/bergliebe-1.jpg" alt="Bergliebe">
+            <div class="apt-tag">Bergliebe</div>
           </div>
           <div class="apt-body">
-            <h3>Wohnung Waldstille</h3>
-            <p>Eingebettet zwischen Bäumen, ruhig und romantisch. Ideal für zwei, die abschalten wollen.</p>
+            <h3>Bergliebe</h3>
+            <p>Geräumiges Apartment mit eigenem Wohnzimmer, Balkon und traumhaftem Bergblick. Fahrräder inklusive, familienfreundlich.</p>
             <div class="apt-specs">
-              <span class="spec">⌂ 50 m²</span>
+              <span class="spec">⌂ 45 m²</span>
               <span class="spec">★ 2 Pers.</span>
               <span class="spec">▣ 1 Schlafzimmer</span>
             </div>
             <div class="apt-footer">
-              <div class="apt-price">ab <strong>75 €</strong> / Nacht</div>
-              <button class="btn-card" onclick="event.stopPropagation();showPage('detail')">Details</button>
-            </div>
-          </div>
-        </div>
-        <div class="apt-card fade-up" data-cap="6" onclick="showPage('detail')">
-          <div class="apt-card-img">
-            <img id="card3-img" src="https://picsum.photos/seed/almhuette/800/500" alt="Almhütte">
-            <div class="apt-tag">Almhütte</div>
-          </div>
-          <div class="apt-body">
-            <h3>Almhütte</h3>
-            <p>Warm, weit, ursprünglich. Holz, Kamin, Platz für alle — für Familien und Gruppen.</p>
-            <div class="apt-specs">
-              <span class="spec">⌂ 80 m²</span>
-              <span class="spec">★ 6 Pers.</span>
-              <span class="spec">▣ 3 Schlafzimmer</span>
-            </div>
-            <div class="apt-footer">
-              <div class="apt-price">ab <strong>130 €</strong> / Nacht</div>
+              <div class="apt-price">ab <strong>90 €</strong> / Nacht</div>
               <button class="btn-card" onclick="event.stopPropagation();showPage('detail')">Details</button>
             </div>
           </div>
@@ -161,10 +140,10 @@
       <div class="section-label">Atmosphäre</div>
       <div class="section-title">So fühlt es sich an</div>
       <div class="mosaic">
-        <div class="mosaic-img"><img id="atm1" src="https://picsum.photos/seed/atm1/600/400" alt="Living room"><div class="mosaic-caption">Gemütliches Wohnzimmer</div></div>
-        <div class="mosaic-img"><img id="atm2" src="https://picsum.photos/seed/atm2/600/400" alt="Bedroom"><div class="mosaic-caption">Ruhiges Schlafzimmer</div></div>
-        <div class="mosaic-img"><img id="atm3" src="https://picsum.photos/seed/atm3/600/400" alt="View"><div class="mosaic-caption">Morgenblick</div></div>
-        <div class="mosaic-img"><img id="atm4" src="https://picsum.photos/seed/atm4/600/400" alt="Kitchen"><div class="mosaic-caption">Einladende Küche</div></div>
+        <div class="mosaic-img"><img id="atm1" src="images/bergliebe-2.jpg" alt="Living room"><div class="mosaic-caption">Gemütliches Wohnzimmer</div></div>
+        <div class="mosaic-img"><img id="atm2" src="images/bergliebe-3.jpg" alt="Bedroom"><div class="mosaic-caption">Ruhiges Schlafzimmer</div></div>
+        <div class="mosaic-img"><img id="atm3" src="images/bergliebe-4.jpg" alt="View"><div class="mosaic-caption">Morgenblick</div></div>
+        <div class="mosaic-img"><img id="atm4" src="images/bergliebe-5.jpg" alt="Kitchen"><div class="mosaic-caption">Einladende Küche</div></div>
       </div>
     </div>
   </div>
@@ -258,32 +237,27 @@
   </div>
   <div class="section" style="background:var(--bg)">
     <div class="section-inner">
+      <div class="filter-bar">
+        <button class="filter-btn on" onclick="filterCards(this,'all')">Alle</button>
+        <button class="filter-btn" onclick="filterCards(this,'2')">2 Personen</button>
+      </div>
       <div class="apt-grid">
-        <div class="apt-card" onclick="showPage('detail')">
-          <div class="apt-card-img"><img id="r-card1" src="https://picsum.photos/seed/bergblick/800/500" alt="Bergblick"><div class="apt-tag">Bergblick</div></div>
+        <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail')">
+          <div class="apt-card-img"><img id="r-card1" src="images/louis-1.jpg" alt="Appartement Louis"><div class="apt-tag">Louis</div></div>
           <div class="apt-body">
-            <h3>Wohnung Bergblick</h3>
-            <p>Panoramablick, viel Licht, liebevoll eingerichtet. Für Familien oder zwei Paare ideal.</p>
-            <div class="apt-specs"><span class="spec">⌂ 65 m²</span><span class="spec">★ 4 Pers.</span><span class="spec">▣ 2 Schlafz.</span></div>
-            <div class="apt-footer"><div class="apt-price">ab <strong>95 €</strong> / Nacht</div><button class="btn-card">Details</button></div>
+            <h3>Appartement Louis</h3>
+            <p>Kompaktes Apartment mit Balkon und herrlichem Berg- und Gartenblick. Ideal für zwei Personen, die Ruhe und Natur suchen.</p>
+            <div class="apt-specs"><span class="spec">⌂ 26 m²</span><span class="spec">★ 2 Pers.</span><span class="spec">▣ 1 Schlafzimmer</span></div>
+            <div class="apt-footer"><div class="apt-price">ab <strong>70 €</strong> / Nacht</div><button class="btn-card" onclick="event.stopPropagation();showPage('detail')">Details</button></div>
           </div>
         </div>
-        <div class="apt-card" onclick="showPage('detail')">
-          <div class="apt-card-img"><img id="r-card2" src="https://picsum.photos/seed/waldstille/800/500" alt="Waldstille"><div class="apt-tag">Waldstille</div></div>
+        <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail')">
+          <div class="apt-card-img"><img id="r-card2" src="images/bergliebe-1.jpg" alt="Bergliebe"><div class="apt-tag">Bergliebe</div></div>
           <div class="apt-body">
-            <h3>Wohnung Waldstille</h3>
-            <p>Romantisch, ruhig, naturnah. Für zwei, die wirklich abschalten möchten.</p>
-            <div class="apt-specs"><span class="spec">⌂ 50 m²</span><span class="spec">★ 2 Pers.</span><span class="spec">▣ 1 Schlafz.</span></div>
-            <div class="apt-footer"><div class="apt-price">ab <strong>75 €</strong> / Nacht</div><button class="btn-card">Details</button></div>
-          </div>
-        </div>
-        <div class="apt-card" onclick="showPage('detail')">
-          <div class="apt-card-img"><img id="r-card3" src="https://picsum.photos/seed/almhuette/800/500" alt="Almhütte"><div class="apt-tag">Almhütte</div></div>
-          <div class="apt-body">
-            <h3>Almhütte</h3>
-            <p>Groß, warm, ursprünglich. Holz, Kamin, echte Alpengemütlichkeit.</p>
-            <div class="apt-specs"><span class="spec">⌂ 80 m²</span><span class="spec">★ 6 Pers.</span><span class="spec">▣ 3 Schlafz.</span></div>
-            <div class="apt-footer"><div class="apt-price">ab <strong>130 €</strong> / Nacht</div><button class="btn-card">Details</button></div>
+            <h3>Bergliebe</h3>
+            <p>Geräumiges Apartment mit eigenem Wohnzimmer, Balkon und traumhaftem Bergblick. Fahrräder inklusive, familienfreundlich.</p>
+            <div class="apt-specs"><span class="spec">⌂ 45 m²</span><span class="spec">★ 2 Pers.</span><span class="spec">▣ 1 Schlafzimmer</span></div>
+            <div class="apt-footer"><div class="apt-price">ab <strong>90 €</strong> / Nacht</div><button class="btn-card" onclick="event.stopPropagation();showPage('detail')">Details</button></div>
           </div>
         </div>
       </div>
@@ -309,41 +283,40 @@
           Zurück zu allen Wohnungen
         </a>
       </div>
-      <div class="section-label">Bergblick</div>
-      <h1 style="font-size:clamp(1.9rem,4vw,2.6rem);font-weight:400;margin-bottom:0.25rem;color:var(--text)">Weit oben — nah bei dir</h1>
+      <div class="section-label">Bergliebe</div>
+      <h1 style="font-size:clamp(1.9rem,4vw,2.6rem);font-weight:400;margin-bottom:0.25rem;color:var(--text)">Bergblick, Wohnzimmer &amp; Fahrräder inklusive</h1>
       <div class="detail-hero-imgs">
-        <div class="big"><img id="d-big" src="https://picsum.photos/seed/detail-main/1200/800" alt="Main view"></div>
-        <div class="sm"><img id="d-sm1" src="https://picsum.photos/seed/detail-bed/600/400" alt="Bedroom"></div>
-        <div class="sm"><img id="d-sm2" src="https://picsum.photos/seed/detail-terrace/600/400" alt="Terrace"></div>
+        <div class="big"><img id="d-big" src="images/bergliebe-6.jpg" alt="Main view"></div>
+        <div class="sm"><img id="d-sm1" src="images/bergliebe-7.jpg" alt="Bedroom"></div>
+        <div class="sm"><img id="d-sm2" src="images/bergliebe-8.jpg" alt="Terrace"></div>
       </div>
       <div class="detail-layout">
         <div>
           <div class="detail-desc">
-            <p>Die Wohnung Bergblick ist genau das, was der Name verspricht: Weite, Stille und ein Panorama, das du nicht vergisst. Durch die großen Fenster fällt das Morgenlicht direkt ins Wohnzimmer — und auf der Terrasse trinkst du deinen Kaffee mit Blick auf die Gipfel.</p>
-            <p>Eingerichtet mit natürlichen Materialien, warm und ohne Schnörkel. Hier fühlt es sich an, als wärst du schon immer dagewesen. Verena und Matthias sorgen dafür, dass du alles hast, was du brauchst.</p>
+            <p>Die Bergliebe ist genau das, was der Name verspricht: 45 m² mit eigenem Wohnzimmer, einem Balkon mit Panoramablick auf die Berge und Fahrräder, die auf dich warten. Morgens Bergluft, abends Gemütlichkeit — hier findest du deinen Rhythmus.</p>
+            <p>Familienfreundlich eingerichtet, vollausgestattete Küche, kostenloser Parkplatz. Verena und Matthias sorgen dafür, dass du alles hast, was du brauchst.</p>
           </div>
           <div class="badges">
-            <span class="badge">65 m²</span><span class="badge">4 Personen</span>
-            <span class="badge">2 Schlafzimmer</span><span class="badge">Terrasse</span>
-            <span class="badge">Bergblick</span><span class="badge">Erdgeschoss</span>
+            <span class="badge">45 m²</span><span class="badge">2 Personen</span>
+            <span class="badge">1 Schlafzimmer</span><span class="badge">Wohnzimmer</span>
+            <span class="badge">Balkon</span><span class="badge">Bergblick</span>
           </div>
           <h4 style="font-size:1rem;font-weight:500;margin-bottom:0.75rem;color:var(--text)">Ausstattung</h4>
           <div class="amenities-grid">
-            <div class="amenity"><span class="amenity-check">✓</span>Vollausgestattete Küche</div>
-            <div class="amenity"><span class="amenity-check">✓</span>Kostenloses WLAN</div>
-            <div class="amenity"><span class="amenity-check">✓</span>Terrasse mit Panoramablick</div>
+            <div class="amenity"><span class="amenity-check">✓</span>WLAN</div>
             <div class="amenity"><span class="amenity-check">✓</span>Kostenloser Parkplatz</div>
-            <div class="amenity"><span class="amenity-check">✓</span>Bettwäsche &amp; Handtücher</div>
-            <div class="amenity"><span class="amenity-check">✓</span>Kamin</div>
+            <div class="amenity"><span class="amenity-check">✓</span>Vollausgestattete Küche</div>
             <div class="amenity"><span class="amenity-check">✓</span>Waschmaschine</div>
-            <div class="amenity"><span class="amenity-check">✓</span>Haustiere willkommen</div>
+            <div class="amenity"><span class="amenity-check">✓</span>Balkon</div>
+            <div class="amenity"><span class="amenity-check">✓</span>Bergblick</div>
+            <div class="amenity"><span class="amenity-check">✓</span>Fahrräder kostenlos</div>
+            <div class="amenity"><span class="amenity-check">✓</span>Familienfreundlich</div>
             <div class="amenity"><span class="amenity-check">✓</span>Kinderbett auf Anfrage</div>
-            <div class="amenity"><span class="amenity-check">✓</span>Smart-TV</div>
           </div>
         </div>
         <div>
           <div class="booking-card">
-            <div class="price-line"><span class="price-big">95 €</span><span class="price-label">/ Nacht</span></div>
+            <div class="price-line"><span class="price-big">90 €</span><span class="price-label">/ Nacht</span></div>
             <div class="booking-grid">
               <div class="b-field">
                 <label>Anreise</label>
@@ -359,8 +332,6 @@
               <select>
                 <option>1 Person</option>
                 <option>2 Personen</option>
-                <option>3 Personen</option>
-                <option selected>4 Personen</option>
               </select>
             </div>
             <div id="price-calc" style="background:var(--brand-xlight);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;font-size:14px;color:var(--text-muted)">
@@ -491,8 +462,8 @@
           <div class="form-row"><label>E-Mail-Adresse</label><input type="email" placeholder="deine@email.de"></div>
           <div class="form-row"><label>Telefon (optional)</label><input type="tel" placeholder="+49 ..."></div>
           <div class="form-row-2">
-            <div class="form-row"><label>Wohnung</label><select><option>Bergblick</option><option>Waldstille</option><option>Almhütte</option></select></div>
-            <div class="form-row"><label>Personen</label><select><option>1–2</option><option>3–4</option><option>5–6</option></select></div>
+            <div class="form-row"><label>Wohnung</label><select><option>Appartement Louis</option><option>Bergliebe</option></select></div>
+            <div class="form-row"><label>Personen</label><select><option>1 Person</option><option>2 Personen</option></select></div>
           </div>
           <div class="form-row-2">
             <div class="form-row"><label>Anreise</label><input type="date"></div>
