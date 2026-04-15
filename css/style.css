@@ -11,7 +11,7 @@ body{font-family:var(--font-sans,system-ui,sans-serif);background:var(--bg);colo
 
 /* NAV */
 nav{
-  position:sticky;top:0;z-index:200;
+  position:fixed;top:0;left:0;right:0;z-index:200;
   background:rgba(252,249,243,0.97);
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(0,0,0,0.07);
@@ -114,7 +114,7 @@ nav.nav-top .nav-logo{filter:drop-shadow(0 2px 12px rgba(0,0,0,0.5)) brightness(
   display:none;flex-direction:column;
   background:rgba(252,249,243,0.99);
   border-bottom:1px solid rgba(0,0,0,0.07);
-  position:sticky;top:100px;z-index:199;
+  position:fixed;top:100px;left:0;right:0;z-index:199;
 }
 .mobile-menu a{
   padding:18px 2rem;
@@ -136,11 +136,16 @@ nav.nav-top .nav-logo{filter:drop-shadow(0 2px 12px rgba(0,0,0,0.5)) brightness(
   nav.scrolled .nav-logo{height:38px}
   .nav-brand-name{font-size:17px}
   .nav-brand-sub{display:none}
-  .mobile-menu{top:80px}
+  .mobile-menu{top:80px;left:0;right:0}
 }
 
 .page{display:none}
 .page.active{display:block}
+/* Fixed nav: push non-hero pages down so content isn't hidden behind the nav */
+#page-rentals,#page-detail-louis,#page-detail-bergliebe{padding-top:100px}
+@media(max-width:680px){
+  #page-rentals,#page-detail-louis,#page-detail-bergliebe{padding-top:80px}
+}
 
 /* HERO */
 .hero{
