@@ -688,7 +688,7 @@ footer{background:var(--brand-dark);color:rgba(255,255,255,0.6);padding:3rem 2.5
   transition:color 0.2s,border-color 0.2s;
 }
 .form-tab.active{color:var(--brand);border-bottom-color:var(--brand)}
-.form-tab:hover:not(.active){color:#444}
+.form-tab:hover:not(.active){color:var(--text)}
 .form-panel{display:none;padding-top:2rem}
 .form-panel.active{display:block}
 
@@ -742,14 +742,14 @@ footer{background:var(--brand-dark);color:rgba(255,255,255,0.6);padding:3rem 2.5
   box-shadow:0 0 0 3px rgba(72,102,130,0.1);
 }
 .form-group textarea{resize:vertical;min-height:110px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-cols{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .form-submit-row{margin-top:1.25rem}
 .form-feedback{margin-top:0.75rem;font-size:13px;min-height:20px;line-height:1.5}
 .form-feedback.success{color:#2a7d3a}
 .form-feedback.error{color:#c0392b}
 
 @media(max-width:680px){
-  .form-row{grid-template-columns:1fr;gap:0}
+  .form-cols{grid-template-columns:1fr;gap:0}
   .service-grid{grid-template-columns:1fr}
   .form-tab{padding:10px 16px;font-size:11px}
 }
