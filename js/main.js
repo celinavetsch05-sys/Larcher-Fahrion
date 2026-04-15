@@ -131,6 +131,50 @@ function closeMobileMenu() {
   if (menu) menu.classList.remove('open');
 }
 
+// ── Lightbox ──────────────────────────────────────────────────────────────────
+
+var lbImages = [];
+var lbIndex  = 0;
+
+function lbOpen(img) {
+  // Collect all gallery images from the current active page
+  var activePage = document.querySelector('.page.active');
+  if (!activePage) return;
+  lbImages = Array.from(activePage.querySelectorAll('.gallery-grid img, .detail-hero-imgs img'));
+  lbIndex  = lbImages.indexOf(img);
+  if (lbIndex < 0) { lbImages = [img]; lbIndex = 0; }
+  lbShow();
+}
+
+function lbShow() {
+  var overlay = document.getElementById('lightbox');
+  var imgEl   = document.getElementById('lightbox-img');
+  var counter = document.getElementById('lightbox-counter');
+  if (!overlay || !imgEl) return;
+  imgEl.src = lbImages[lbIndex].src;
+  imgEl.alt = lbImages[lbIndex].alt || '';
+  counter.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function lbHide() {
+  var overlay = document.getElementById('lightbox');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function lbClose(e) {
+  // Close only when clicking the overlay itself (not the image or buttons)
+  if (e.target === document.getElementById('lightbox')) lbHide();
+}
+
+function lbStep(dir, e) {
+  if (e) e.stopPropagation();
+  lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+  lbShow();
+}
+
 // ── Initialise on DOM ready ───────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -144,5 +188,21 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
     var nav = document.getElementById('main-nav');
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // Keyboard navigation for lightbox
+  document.addEventListener('keydown', function(e) {
+    var overlay = document.getElementById('lightbox');
+    if (!overlay || !overlay.classList.contains('active')) return;
+    if (e.key === 'Escape')     lbHide();
+    if (e.key === 'ArrowRight') lbStep(1, null);
+    if (e.key === 'ArrowLeft')  lbStep(-1, null);
+  });
+
+  // Wire up gallery images to lightbox
+  document.addEventListener('click', function(e) {
+    if (e.target.matches('.gallery-grid img, .detail-hero-imgs img')) {
+      lbOpen(e.target);
+    }
   });
 });
