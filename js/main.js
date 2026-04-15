@@ -139,4 +139,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Start scroll animations
   initScrollAnimations();
+
+  // Scroll shadow on nav
+  window.addEventListener('scroll', function() {
+    var nav = document.getElementById('main-nav');
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 30);
+  });
 });
