@@ -91,11 +91,6 @@ function setTestimonial(idx) {
   });
 }
 
-// ── Contact form submission ───────────────────────────────────────────────────
-
-function handleSubmit() {
-  alert('Vielen Dank! Wir melden uns so schnell wie m\u00f6glich bei dir.');
-}
 
 // ── Nav transparency ──────────────────────────────────────────────────────────
 
@@ -151,6 +146,7 @@ function closeMobileMenu() {
 // ── Contact form tabs ─────────────────────────────────────────────────────────
 
 function switchFormTab(type, btn) {
+  if (!btn) return;
   document.querySelectorAll('.form-tab').forEach(function(t) {
     t.classList.remove('active');
   });
@@ -167,6 +163,7 @@ function switchFormTab(type, btn) {
 function submitContactForm(type, formEl) {
   var btn = formEl.querySelector('button[type="submit"]');
   var feedback = document.getElementById('feedback-' + type);
+  if (!btn || !feedback) return;
 
   var data = { type: type };
   formEl.querySelectorAll('input,select,textarea').forEach(function(el) {
