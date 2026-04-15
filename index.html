@@ -149,8 +149,8 @@
       <p class="section-sub">Ob als Urlaubsgast oder als Wohnungseigentümer — wir freuen uns, von Ihnen zu hören.</p>
 
       <div class="form-tabs">
-        <button class="form-tab active" onclick="switchFormTab('guest', this)">Als Gast anfragen</button>
-        <button class="form-tab" onclick="switchFormTab('owner', this)">Als Eigentümer</button>
+        <button type="button" class="form-tab active" onclick="switchFormTab('guest', this)">Als Gast anfragen</button>
+        <button type="button" class="form-tab" onclick="switchFormTab('owner', this)">Als Eigentümer</button>
       </div>
 
       <!-- Gast-Formular -->
@@ -187,7 +187,7 @@
           <div class="form-submit-row">
             <button type="submit" class="btn-primary">Anfrage senden</button>
           </div>
-          <div class="form-feedback" id="feedback-guest"></div>
+          <div class="form-feedback" id="feedback-guest" aria-live="polite"></div>
         </form>
       </div>
 
@@ -244,7 +244,7 @@
           <div class="form-submit-row">
             <button type="submit" class="btn-primary">Unverbindlich anfragen</button>
           </div>
-          <div class="form-feedback" id="feedback-owner"></div>
+          <div class="form-feedback" id="feedback-owner" aria-live="polite"></div>
         </form>
       </div>
 
