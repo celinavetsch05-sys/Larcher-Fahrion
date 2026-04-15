@@ -21,25 +21,22 @@
   <ul class="nav-links" id="nav-links">
     <li><a href="#" id="nl-home" onclick="showPage('home');return false">Start</a></li>
     <li><a href="#" id="nl-rentals" onclick="showPage('rentals');return false">Wohnungen</a></li>
-    <li><a href="#" id="nl-about" onclick="showPage('about');return false">Über uns</a></li>
-    <li><a href="#" id="nl-location" onclick="showPage('location');return false">Lage</a></li>
-    <li><a href="#" id="nl-contact" onclick="showPage('contact');return false">Kontakt</a></li>
   </ul>
-  <button class="nav-cta" onclick="showPage('contact')">Anfragen</button>
+  <a class="nav-cta" href="mailto:hallo@larcher-fahrion.de">Anfragen</a>
 </nav>
 
 <!-- ═══════════ HOME ═══════════ -->
 <div id="page-home" class="page active">
 
   <div class="hero">
-    <div class="hero-bg"><img id="hero-bg-img" src="images/bergliebe-9.jpg" alt="Alpine view"></div>
+    <div class="hero-bg"><img id="hero-bg-img" src="images/hero.jpg" alt="Alpine view"></div>
     <div class="hero-gradient"></div>
     <div class="hero-content">
       <div class="hero-label"><div class="hero-dot"></div>Oberammergau · Bayerische Alpen</div>
       <h1>Dein Zuhause<br>in den <em>Bergen</em></h1>
       <p>Ruhig. Echt. Zum Wohlfühlen. Verena und Matthias freuen sich, dich willkommen zu heißen.</p>
       <div class="hero-btns">
-        <button class="btn-hero" onclick="showPage('contact')">Verfügbarkeit anfragen</button>
+        <a class="btn-hero" href="mailto:hallo@larcher-fahrion.de">Verfügbarkeit anfragen</a>
         <button class="btn-hero-ghost" onclick="showPage('rentals')">Alle Wohnungen ansehen</button>
       </div>
     </div>
@@ -69,7 +66,7 @@
     <div class="section-inner">
       <div class="intro-split">
         <div class="intro-img fade-up">
-          <img id="intro-img" src="images/louis-2.jpg" alt="Cozy alpine interior">
+          <img id="intro-img" src="images/intro.jpg" alt="Cozy alpine interior">
           <div class="intro-img-badge"><strong>Oberammergau</strong>Bayerische Alpen</div>
         </div>
         <div class="intro-text fade-up">
@@ -77,7 +74,6 @@
           <h3>Ein Ort zum echten Ankommen</h3>
           <p>Keine Hotellobby, kein Callcenter — einfach wir, Verena und Matthias, die sich wirklich freuen, wenn du ankommst. Unsere Wohnungen in Oberammergau sind mit Liebe eingerichtet und spiegeln den Charakter dieser besonderen Region wider.</p>
           <p>Ob Wandern, Skifahren oder einfach die Stille genießen — du findest hier deinen eigenen Rhythmus. Und wenn du etwas brauchst, sind wir direkt für dich da.</p>
-          <button class="btn-outline-blue" style="margin-top:1rem" onclick="showPage('about')">Mehr über uns</button>
         </div>
       </div>
     </div>
@@ -193,7 +189,7 @@
     <div class="section-inner">
       <h2>Bereit für dein Bergabenteuer?</h2>
       <p>Frag jetzt an — wir melden uns schnell und unkompliziert.</p>
-      <button class="btn-primary" onclick="showPage('contact')">Jetzt Verfügbarkeit anfragen</button>
+      <a class="btn-primary" href="mailto:hallo@larcher-fahrion.de">Jetzt Verfügbarkeit anfragen</a>
       <button class="btn-outline-blue" onclick="showPage('rentals')">Alle Wohnungen</button>
     </div>
   </div>
@@ -210,15 +206,13 @@
         <ul>
           <li><a onclick="showPage('home')">Start</a></li>
           <li><a onclick="showPage('rentals')">Wohnungen</a></li>
-          <li><a onclick="showPage('about')">Über uns</a></li>
-          <li><a onclick="showPage('location')">Lage</a></li>
-          <li><a onclick="showPage('contact')">Kontakt</a></li>
+          <li><a href="mailto:hallo@larcher-fahrion.de">Kontakt</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Kontakt</h4>
         <ul>
-          <li><a>hallo@larcher-fahrion.de</a></li>
+          <li><a href="mailto:hallo@larcher-fahrion.de">hallo@larcher-fahrion.de</a></li>
           <li><a>+49 8822 123 456</a></li>
           <li><a>Oberammergau, 82487</a></li>
         </ul>
@@ -265,9 +259,9 @@
   </div>
   <footer>
     <div class="footer-inner">
-      <div class="footer-brand"><img id="footer-logo2" src="images/logo.jpg" alt="Logo" style="height:38px;width:38px;object-fit:contain;border-radius:6px;background:white;padding:2px;margin-bottom:0.75rem"><br><strong style="color:rgba(255,255,255,0.8);font-size:14px">Larcher &amp; Fahrion</strong></div>
-      <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="showPage('home')">Start</a></li><li><a onclick="showPage('rentals')">Wohnungen</a></li><li><a onclick="showPage('about')">Über uns</a></li><li><a onclick="showPage('contact')">Kontakt</a></li></ul></div>
-      <div class="footer-col"><h4>Kontakt</h4><ul><li><a>hallo@larcher-fahrion.de</a></li><li><a>+49 8822 123 456</a></li></ul></div>
+      <div class="footer-brand"><img id="footer-logo2" src="images/logo.jpg" alt="Logo" style="height:44px;width:44px;object-fit:contain;mix-blend-mode:screen;margin-bottom:0.75rem"><br><strong style="color:rgba(255,255,255,0.8);font-size:14px">Larcher &amp; Fahrion</strong></div>
+      <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="showPage('home')">Start</a></li><li><a onclick="showPage('rentals')">Wohnungen</a></li><li><a href="mailto:hallo@larcher-fahrion.de">Kontakt</a></li></ul></div>
+      <div class="footer-col"><h4>Kontakt</h4><ul><li><a href="mailto:hallo@larcher-fahrion.de">hallo@larcher-fahrion.de</a></li><li><a>+49 8822 123 456</a></li></ul></div>
     </div>
     <div class="footer-bottom">© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</div>
   </footer>
@@ -337,7 +331,7 @@
             <div id="price-calc" style="background:var(--brand-xlight);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;font-size:14px;color:var(--text-muted)">
               Wähle An- &amp; Abreise für eine Preisübersicht.
             </div>
-            <button class="btn-primary" style="width:100%;padding:14px" onclick="showPage('contact')">Jetzt anfragen</button>
+            <a class="btn-primary" href="mailto:hallo@larcher-fahrion.de" style="width:100%;padding:14px;display:block;text-align:center;text-decoration:none">Jetzt anfragen</a>
             <p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:12px;line-height:1.6">
               Keine Kreditkarte nötig<br>Kostenlose Stornierung bis 7 Tage vorher
             </p>
@@ -348,164 +342,14 @@
   </div>
   <footer>
     <div class="footer-inner">
-      <div class="footer-brand"><img id="footer-logo3" src="images/logo.jpg" alt="Logo" style="height:38px;width:38px;object-fit:contain;border-radius:6px;background:white;padding:2px;margin-bottom:0.75rem"><br><strong style="color:rgba(255,255,255,0.8);font-size:14px">Larcher &amp; Fahrion</strong></div>
-      <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="showPage('rentals')">Alle Wohnungen</a></li><li><a onclick="showPage('contact')">Kontakt</a></li></ul></div>
-      <div class="footer-col"><h4>Kontakt</h4><ul><li><a>hallo@larcher-fahrion.de</a></li></ul></div>
+      <div class="footer-brand"><img id="footer-logo3" src="images/logo.jpg" alt="Logo" style="height:44px;width:44px;object-fit:contain;mix-blend-mode:screen;margin-bottom:0.75rem"><br><strong style="color:rgba(255,255,255,0.8);font-size:14px">Larcher &amp; Fahrion</strong></div>
+      <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="showPage('rentals')">Alle Wohnungen</a></li><li><a href="mailto:hallo@larcher-fahrion.de">Kontakt</a></li></ul></div>
+      <div class="footer-col"><h4>Kontakt</h4><ul><li><a href="mailto:hallo@larcher-fahrion.de">hallo@larcher-fahrion.de</a></li></ul></div>
     </div>
     <div class="footer-bottom">© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</div>
   </footer>
 </div>
 
-<!-- ═══════════ ABOUT ═══════════ -->
-<div id="page-about" class="page">
-  <div class="about-hero">
-    <div class="section-label" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85)">Über uns</div>
-    <h1>Verena &amp; Matthias</h1>
-    <p>Wir vermieten nicht nur Wohnungen — wir teilen unsere Heimat mit dir.</p>
-  </div>
-  <div class="section" style="background:white">
-    <div class="section-inner">
-      <div class="about-split">
-        <div class="about-portrait fade-up">
-          <img id="about-img" src="https://picsum.photos/seed/about/600/800" alt="Verena und Matthias" onerror="this.parentNode.style.background='linear-gradient(145deg,#c0d0dd,#9ab8cb)';this.style.display='none'">
-        </div>
-        <div class="about-text fade-up">
-          <div class="quote-mark">"</div>
-          <blockquote>Wir vermieten nicht einfach Wohnungen. Wir möchten, dass du dich wirklich wohlfühlst — wie bei Freunden.</blockquote>
-          <p>Hallo, wir sind Verena Larcher und Matthias Fahrion. Wir leben und arbeiten in Oberammergau — einem der schönsten Orte der Bayerischen Alpen. Diese Region liegt uns am Herzen, und genau das möchten wir weitergeben.</p>
-          <p>Unsere Ferienwohnungen haben wir selbst eingerichtet: mit natürlichen Materialien, viel Liebe zum Detail und dem klaren Ziel, dass du dich sofort zuhause fühlst. Kein anonymes Einchecken, keine Nummern auf einer Liste — wir sind persönlich für dich da.</p>
-          <p>Ob du die Berge erkundest, durch die Altstadt schlenderst oder einfach auf der Terrasse sitzt und die Stille genießt — wir freuen uns, ein Teil deines Urlaubs zu sein.</p>
-          <div class="signature">
-            Verena Larcher &amp; Matthias Fahrion
-            <small>Oberammergau, Bayern</small>
-          </div>
-          <button class="btn-primary" style="margin-top:2rem" onclick="showPage('contact')">Schreib uns</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand"><img id="footer-logo4" src="images/logo.jpg" alt="Logo" style="height:38px;width:38px;object-fit:contain;border-radius:6px;background:white;padding:2px;margin-bottom:0.75rem"><br><strong style="color:rgba(255,255,255,0.8);font-size:14px">Larcher &amp; Fahrion</strong></div>
-      <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="showPage('home')">Start</a></li><li><a onclick="showPage('rentals')">Wohnungen</a></li><li><a onclick="showPage('contact')">Kontakt</a></li></ul></div>
-      <div class="footer-col"><h4>Kontakt</h4><ul><li><a>hallo@larcher-fahrion.de</a></li><li><a>+49 8822 123 456</a></li></ul></div>
-    </div>
-    <div class="footer-bottom">© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</div>
-  </footer>
-</div>
-
-<!-- ═══════════ LOCATION ═══════════ -->
-<div id="page-location" class="page">
-  <div class="loc-hero">
-    <div class="section-label" style="background:rgba(255,255,255,0.15);color:white">Lage</div>
-    <h1>Oberammergau entdecken</h1>
-    <p>Hier ist die Natur nicht Kulisse — sie ist der Grund, warum du kommst. Und bleibst.</p>
-  </div>
-  <div class="section" style="background:white">
-    <div class="section-inner">
-      <div class="loc-split">
-        <div class="loc-map"><img id="loc-img" src="https://picsum.photos/seed/location/800/600" alt="Oberammergau landscape" onerror="this.parentNode.style.background='#d6e4f0';this.style.display='none'"></div>
-        <div>
-          <h3 style="font-size:1.2rem;font-weight:500;margin-bottom:1.5rem;color:var(--text)">Was dich erwartet</h3>
-          <ul class="tips-list">
-            <li class="tip">
-              <div class="tip-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm4 5.28c-1.23-.37-2.22-1.17-2.8-2.22l-1-1.6c-.41-.65-1.11-1-1.84-1-.78 0-1.59.5-1.78 1.44S7 14 7 14H9l1-4.5.95 1.96c.84 1.18 1.951 2.05 3.05 2.47V20h2v-4h2v4h2v-7.19l-2.5-.03z" fill="#486682"/></svg></div>
-              <div class="tip-text"><strong>Wandern &amp; Bergsteigen</strong><span>Über 300 km markierte Wege direkt ab Oberammergau — für alle Schwierigkeitsgrade</span></div>
-            </li>
-            <li class="tip">
-              <div class="tip-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z" fill="#486682"/></svg></div>
-              <div class="tip-text"><strong>Radfahren &amp; E-Bike</strong><span>Traumhafte Routen durch Täler und Wälder — E-Bike-Verleih in Laufdistanz</span></div>
-            </li>
-            <li class="tip">
-              <div class="tip-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14z" fill="#486682"/></svg></div>
-              <div class="tip-text"><strong>Skifahren im Winter</strong><span>Zugspitzregion und Ammergauer Alpen — Skigebiet 15 Min. entfernt</span></div>
-            </li>
-            <li class="tip">
-              <div class="tip-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-5h2v5h6v-8h3L12 3z" fill="#486682"/></svg></div>
-              <div class="tip-text"><strong>Altstadt &amp; Kultur</strong><span>Passionsspiele, Lüftlmalerei, Handwerk — Oberammergau ist einzigartig in Bayern</span></div>
-            </li>
-            <li class="tip">
-              <div class="tip-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" fill="#486682"/></svg></div>
-              <div class="tip-text"><strong>Essen &amp; Einkaufen</strong><span>Typisch bayerische Wirtshäuser, Bäcker, Supermarkt — alles zu Fuß erreichbar</span></div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand"><img id="footer-logo5" src="images/logo.jpg" alt="Logo" style="height:38px;width:38px;object-fit:contain;border-radius:6px;background:white;padding:2px;margin-bottom:0.75rem"><br><strong style="color:rgba(255,255,255,0.8);font-size:14px">Larcher &amp; Fahrion</strong></div>
-      <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="showPage('home')">Start</a></li><li><a onclick="showPage('rentals')">Wohnungen</a></li></ul></div>
-      <div class="footer-col"><h4>Kontakt</h4><ul><li><a>hallo@larcher-fahrion.de</a></li></ul></div>
-    </div>
-    <div class="footer-bottom">© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</div>
-  </footer>
-</div>
-
-<!-- ═══════════ CONTACT ═══════════ -->
-<div id="page-contact" class="page">
-  <div class="page-hero-blue">
-    <div class="section-label" style="background:rgba(255,255,255,0.15);color:white">Kontakt</div>
-    <h1>Schreib uns — wir antworten schnell</h1>
-    <p>Kein Formular-Dschungel. Einfach schreiben, was du brauchst.</p>
-  </div>
-  <div class="section" style="background:var(--bg)">
-    <div class="section-inner">
-      <div class="contact-wrap">
-        <div class="contact-form-card">
-          <h3 style="font-size:1.15rem;font-weight:500;margin-bottom:1.75rem;color:var(--text)">Deine Anfrage</h3>
-          <div class="form-row-2">
-            <div class="form-row"><label>Vorname</label><input type="text" placeholder="Dein Vorname"></div>
-            <div class="form-row"><label>Nachname</label><input type="text" placeholder="Dein Nachname"></div>
-          </div>
-          <div class="form-row"><label>E-Mail-Adresse</label><input type="email" placeholder="deine@email.de"></div>
-          <div class="form-row"><label>Telefon (optional)</label><input type="tel" placeholder="+49 ..."></div>
-          <div class="form-row-2">
-            <div class="form-row"><label>Wohnung</label><select><option>Appartement Louis</option><option>Bergliebe</option></select></div>
-            <div class="form-row"><label>Personen</label><select><option>1 Person</option><option>2 Personen</option></select></div>
-          </div>
-          <div class="form-row-2">
-            <div class="form-row"><label>Anreise</label><input type="date"></div>
-            <div class="form-row"><label>Abreise</label><input type="date"></div>
-          </div>
-          <div class="form-row"><label>Deine Nachricht</label><textarea placeholder="Hast du noch Fragen oder besondere Wünsche?"></textarea></div>
-          <button class="btn-primary" style="width:100%;padding:14px;font-size:15px" onclick="handleSubmit()">Anfrage absenden</button>
-          <p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:12px">Wir melden uns in der Regel innerhalb weniger Stunden.</p>
-        </div>
-        <div class="contact-info-card">
-          <h3>Direkt erreichbar</h3>
-          <p>Verena und Matthias sind persönlich für dich da — ruf einfach an oder schreib uns.</p>
-          <div class="contact-item">
-            <div class="c-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="white"/></svg></div>
-            <div class="c-text"><strong>E-Mail</strong><span>hallo@larcher-fahrion.de</span></div>
-          </div>
-          <div class="contact-item">
-            <div class="c-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="white"/></svg></div>
-            <div class="c-text"><strong>Telefon</strong><span>+49 8822 123 456</span></div>
-          </div>
-          <div class="contact-item">
-            <div class="c-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="white"/></svg></div>
-            <div class="c-text"><strong>Adresse</strong><span>Oberammergau, 82487 Bayern</span></div>
-          </div>
-          <div style="margin-top:1.5rem;background:var(--brand-dark);border-radius:var(--r-sm);padding:1.25rem 1.5rem">
-            <p style="font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.75">
-              Wir antworten in der Regel innerhalb weniger Stunden. Wenn's dringend ist, ruf einfach an!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand"><img id="footer-logo6" src="images/logo.jpg" alt="Logo" style="height:38px;width:38px;object-fit:contain;border-radius:6px;background:white;padding:2px;margin-bottom:0.75rem"><br><strong style="color:rgba(255,255,255,0.8);font-size:14px">Larcher &amp; Fahrion</strong></div>
-      <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="showPage('home')">Start</a></li><li><a onclick="showPage('rentals')">Wohnungen</a></li></ul></div>
-      <div class="footer-col"><h4>Kontakt</h4><ul><li><a>hallo@larcher-fahrion.de</a></li><li><a>+49 8822 123 456</a></li></ul></div>
-    </div>
-    <div class="footer-bottom">© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</div>
-  </footer>
-</div>
 
 </div>
 

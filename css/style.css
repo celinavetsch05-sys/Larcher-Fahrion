@@ -21,7 +21,7 @@ nav{
   transition:background 0.3s;
 }
 .nav-logo{display:flex;align-items:center;gap:12px;cursor:pointer}
-.nav-logo img{height:42px;width:42px;object-fit:contain;border-radius:6px;background:white;padding:2px}
+.nav-logo img{height:54px;width:54px;object-fit:contain;mix-blend-mode:screen}
 .nav-logo-text{display:flex;flex-direction:column;line-height:1.2}
 .nav-logo-text span{font-size:15px;font-weight:500;color:#fff;letter-spacing:0.02em}
 .nav-logo-text small{font-size:11px;color:rgba(255,255,255,0.65);letter-spacing:0.06em}
@@ -349,7 +349,7 @@ nav{
 /* FOOTER */
 footer{background:var(--brand-dark);color:rgba(255,255,255,0.6);padding:3rem 2.5rem}
 .footer-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem}
-.footer-brand img{height:44px;width:44px;object-fit:contain;border-radius:6px;background:white;padding:2px;margin-bottom:1rem}
+.footer-brand img{height:44px;width:44px;object-fit:contain;mix-blend-mode:screen;margin-bottom:1rem}
 .footer-brand p{font-size:13px;line-height:1.75;color:rgba(255,255,255,0.55);max-width:260px;margin-top:0.75rem}
 .footer-col h4{font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.4);margin-bottom:1rem;font-weight:500}
 .footer-col ul{list-style:none}
