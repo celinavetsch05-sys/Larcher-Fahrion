@@ -148,6 +148,62 @@ function closeMobileMenu() {
   if (menu) menu.classList.remove('open');
 }
 
+// ── Contact form tabs ─────────────────────────────────────────────────────────
+
+function switchFormTab(type, btn) {
+  document.querySelectorAll('.form-tab').forEach(function(t) {
+    t.classList.remove('active');
+  });
+  document.querySelectorAll('.form-panel').forEach(function(p) {
+    p.classList.remove('active');
+  });
+  btn.classList.add('active');
+  var panel = document.getElementById('panel-' + type);
+  if (panel) panel.classList.add('active');
+}
+
+// ── Contact form submission ───────────────────────────────────────────────────
+
+function submitContactForm(type, formEl) {
+  var btn = formEl.querySelector('button[type="submit"]');
+  var feedback = document.getElementById('feedback-' + type);
+
+  var data = { type: type };
+  formEl.querySelectorAll('input,select,textarea').forEach(function(el) {
+    if (el.name) data[el.name] = el.value;
+  });
+
+  var originalText = btn.textContent;
+  btn.textContent = 'Wird gesendet \u2026';
+  btn.disabled = true;
+  feedback.textContent = '';
+  feedback.className = 'form-feedback';
+
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(json) {
+    if (json.ok) {
+      feedback.textContent = 'Vielen Dank! Wir melden uns in K\u00fcrze bei Ihnen.';
+      feedback.className = 'form-feedback success';
+      formEl.reset();
+    } else {
+      throw new Error(json.error || 'Unbekannter Fehler');
+    }
+  })
+  .catch(function() {
+    feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es sp\u00e4ter erneut oder schreiben Sie uns direkt per E-Mail.';
+    feedback.className = 'form-feedback error';
+  })
+  .finally(function() {
+    btn.textContent = originalText;
+    btn.disabled = false;
+  });
+}
+
 // ── Lightbox ──────────────────────────────────────────────────────────────────
 
 var lbImages = [];
