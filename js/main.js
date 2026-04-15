@@ -1,6 +1,8 @@
 // ── Page navigation ──────────────────────────────────────────────────────────
 
 function showPage(name) {
+  closeMobileMenu();
+
   // Hide all pages
   document.querySelectorAll('.page').forEach(function(p) {
     p.classList.remove('active');
@@ -147,6 +149,18 @@ function initScrollAnimations() {
   document.querySelectorAll('.fade-up').forEach(function(el) {
     observer.observe(el);
   });
+}
+
+// ── Mobile menu ───────────────────────────────────────────────────────────────
+
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobile-menu');
+  if (menu) menu.classList.toggle('open');
+}
+
+function closeMobileMenu() {
+  var menu = document.getElementById('mobile-menu');
+  if (menu) menu.classList.remove('open');
 }
 
 // ── Initialise on DOM ready ───────────────────────────────────────────────────

@@ -11,19 +11,23 @@
 <div id="site">
 
 <nav id="main-nav">
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#" id="nl-rentals" onclick="showPage('rentals');return false">Unterkünfte</a></li>
+  </ul>
   <div class="nav-logo" onclick="showPage('home')">
     <img id="nav-logo-img" src="images/logo.jpg" alt="Larcher & Fahrion">
-    <div class="nav-logo-text">
-      <span>Larcher &amp; Fahrion</span>
-      <small>Oberammergau · Bayern</small>
-    </div>
   </div>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#" id="nl-home" onclick="showPage('home');return false">Start</a></li>
-    <li><a href="#" id="nl-rentals" onclick="showPage('rentals');return false">Wohnungen</a></li>
-  </ul>
-  <a class="nav-cta" href="mailto:hallo@larcher-fahrion.de">Anfragen</a>
+  <div class="nav-right">
+    <a class="nav-cta" href="mailto:hallo@larcher-fahrion.de">Anfragen</a>
+    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#" onclick="showPage('rentals');closeMobileMenu();return false">Unterkünfte</a>
+  <a href="mailto:hallo@larcher-fahrion.de" onclick="closeMobileMenu()">Anfragen</a>
+</div>
 
 <!-- ═══════════ HOME ═══════════ -->
 <div id="page-home" class="page active">
@@ -91,7 +95,7 @@
       <div class="apt-grid" id="apt-grid">
         <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail')">
           <div class="apt-card-img">
-            <img id="card1-img" src="images/louis-1.jpg" alt="Appartement Louis">
+            <img id="card1-img" src="images/louis-card.jpg" alt="Appartement Louis">
             <div class="apt-tag">Louis</div>
           </div>
           <div class="apt-body">
@@ -237,7 +241,7 @@
       </div>
       <div class="apt-grid">
         <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail')">
-          <div class="apt-card-img"><img id="r-card1" src="images/louis-1.jpg" alt="Appartement Louis"><div class="apt-tag">Louis</div></div>
+          <div class="apt-card-img"><img id="r-card1" src="images/louis-card.jpg" alt="Appartement Louis"><div class="apt-tag">Louis</div></div>
           <div class="apt-body">
             <h3>Appartement Louis</h3>
             <p>Kompaktes Apartment mit Balkon und herrlichem Berg- und Gartenblick. Ideal für zwei Personen, die Ruhe und Natur suchen.</p>
