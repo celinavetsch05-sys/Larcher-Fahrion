@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Serverkonfigurationsfehler.' });
   }
 
-  var body = req.body || {};
+  var body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {});
   var type = body.type;
   var name = (body.name || '').trim();
   var email = (body.email || '').trim();
@@ -22,7 +22,6 @@ export default async function handler(req, res) {
   if (type !== 'guest' && type !== 'owner') {
     return res.status(400).json({ error: 'Ungültiger Anfragetyp.' });
   }
-
   if (!name || !email) {
     return res.status(400).json({ error: 'Name und E-Mail sind erforderlich.' });
   }
@@ -101,10 +100,10 @@ export default async function handler(req, res) {
     if (!response.ok) {
       var errText = await response.text();
       console.error('Resend error:', errText);
-      return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden. Bitte schreiben Sie uns direkt an hallo@larcher-fahrion.de' });
+      return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden.' });
     }
 
-    // Best-effort confirmation to sender — failure must not block the main response
+    // Best-effort confirmation — must not crash the main response
     try {
       var confirmHtml = '<div style="font-family:sans-serif;font-size:15px;color:#333;max-width:560px">'
         + '<h2 style="color:#2e4a5e">Vielen Dank für Ihre Anfrage!</h2>'
@@ -135,4 +134,4 @@ export default async function handler(req, res) {
     console.error('Contact handler error:', err);
     return res.status(500).json({ error: 'Serverfehler. Bitte versuchen Sie es später erneut.' });
   }
-}
+};

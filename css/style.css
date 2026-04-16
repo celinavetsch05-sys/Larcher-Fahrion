@@ -307,25 +307,27 @@ nav.nav-top .nav-logo{mix-blend-mode:screen;filter:brightness(1.8)}
 
 /* TESTIMONIAL STRIP */
 .testimonial-strip{
-  background:var(--brand);padding:5rem 5rem;
+  background:var(--brand);
   text-align:center;position:relative;overflow:hidden;
   user-select:none;
+  display:flex;align-items:center;justify-content:center;
+  min-height:420px;padding:4rem 5rem;
 }
 .testimonial-content{
-  max-width:680px;margin:0 auto;
+  max-width:680px;width:100%;margin:0 auto;
   display:flex;flex-direction:column;align-items:center;
-  min-height:220px;
+  height:280px;
   transition:opacity 0.35s ease,transform 0.35s ease;
 }
 .testimonial-content.fading{opacity:0;transform:translateY(8px)}
-.t-stars{color:#f9d94e;font-size:1.1rem;letter-spacing:3px;margin-bottom:1.25rem;flex-shrink:0}
+.t-stars{color:#f9d94e;font-size:1.1rem;letter-spacing:3px;margin-bottom:1rem;flex-shrink:0}
 .testimonial-strip blockquote{
-  font-size:clamp(1rem,2.2vw,1.4rem);font-weight:300;
+  font-size:clamp(1rem,2vw,1.35rem);font-weight:300;
   color:white;margin:0 auto 1rem;
   line-height:1.75;letter-spacing:0.01em;
-  flex:1;display:flex;align-items:center;
+  flex:1;display:flex;align-items:center;overflow:hidden;
 }
-.testimonial-strip cite{color:rgba(255,255,255,0.6);font-size:13.5px;font-style:normal;display:block;margin-bottom:0.75rem;flex-shrink:0}
+.testimonial-strip cite{color:rgba(255,255,255,0.6);font-size:13.5px;font-style:normal;display:block;margin-bottom:0.6rem;flex-shrink:0}
 .t-platform{
   display:inline-block;font-size:11px;font-weight:600;
   letter-spacing:0.1em;text-transform:uppercase;
@@ -347,10 +349,10 @@ nav.nav-top .nav-logo{mix-blend-mode:screen;filter:brightness(1.8)}
 .t-prev{left:1.5rem}
 .t-next{right:1.5rem}
 @media(max-width:680px){
-  .testimonial-strip{padding:3.5rem 1.25rem}
+  .testimonial-strip{padding:3rem 1.25rem;min-height:380px}
   .t-arrow{display:none}
-  .testimonial-content{min-height:240px}
-  .testimonial-strip blockquote{font-size:1rem}
+  .testimonial-content{height:260px}
+  .testimonial-strip blockquote{font-size:0.97rem}
 }
 
 /* CTA BANNER */
