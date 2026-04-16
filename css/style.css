@@ -50,7 +50,9 @@ nav.nav-top .nav-links a:hover,nav.nav-top .nav-links a.active{color:#fff;opacit
 nav.nav-top .nav-cta{background:rgba(255,255,255,0.2);color:#fff;border:1px solid rgba(255,255,255,0.5)}
 nav.nav-top .nav-cta:hover{background:rgba(255,255,255,0.35)}
 nav.nav-top .nav-hamburger span{background:#fff}
-nav.nav-top .nav-logo{display:none}
+nav.nav-top .nav-logo-dark{display:none}
+.nav-logo-light{display:none}
+nav.nav-top .nav-logo-light{display:block}
 /* Brand */
 .nav-brand{
   display:flex;flex-direction:row;align-items:center;
@@ -500,11 +502,8 @@ footer{
 }
 .footer-logo{
   display:block;
-  height:90px;width:auto;
-  background:white;
-  border-radius:10px;
-  padding:6px 10px;
-  margin-bottom:1rem;
+  height:110px;width:auto;
+  margin-bottom:0.75rem;
 }
 .footer-brand strong{display:block;color:white;font-size:19px;font-weight:700;letter-spacing:0.02em;margin-bottom:0.75rem}
 .footer-brand p{font-size:12.5px;line-height:1.85;color:rgba(255,255,255,0.4);max-width:230px}
