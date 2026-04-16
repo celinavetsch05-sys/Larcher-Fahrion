@@ -83,8 +83,8 @@ module.exports = async function handler(req, res) {
 
     await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'verena.larcher@gmail.com',
-      reply_to: email,
+      to: ['verena.larcher@gmail.com'],
+      replyTo: email,
       subject: subject,
       html: htmlBody
     });
@@ -93,7 +93,7 @@ module.exports = async function handler(req, res) {
     try {
       await resend.emails.send({
         from: 'onboarding@resend.dev',
-        to: email,
+        to: [email],
         subject: 'Ihre Anfrage ist bei uns eingegangen',
         html: '<div style="font-family:sans-serif;font-size:15px;color:#333;max-width:560px">'
           + '<h2 style="color:#2e4a5e">Vielen Dank für Ihre Anfrage!</h2>'
@@ -110,6 +110,6 @@ module.exports = async function handler(req, res) {
 
   } catch (err) {
     console.error('Resend error:', err);
-    return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden.' });
+    return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden.', detail: err.message });
   }
 };

@@ -335,7 +335,8 @@ function submitContactForm(type, formEl) {
     btn.textContent = originalText;
     btn.disabled = false;
   })
-  .catch(function() {
+  .catch(function(err) {
+    console.error('Form submit error:', err);
     feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es sp\u00e4ter erneut oder schreiben Sie uns direkt per E-Mail.';
     feedback.className = 'form-feedback error';
     btn.textContent = originalText;
