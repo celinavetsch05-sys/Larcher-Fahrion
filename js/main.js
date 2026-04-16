@@ -338,10 +338,9 @@ var lbImages = [];
 var lbIndex  = 0;
 
 function lbOpen(img) {
-  // Collect all gallery images from the current active page
   var activePage = document.querySelector('.page.active');
   if (!activePage) return;
-  lbImages = Array.from(activePage.querySelectorAll('.gallery-grid img, .detail-hero-imgs img'));
+  lbImages = Array.from(activePage.querySelectorAll('.gallery-grid img, .detail-hero-imgs img, .pg-main img, .pg-cell img'));
   lbIndex  = lbImages.indexOf(img);
   if (lbIndex < 0) { lbImages = [img]; lbIndex = 0; }
   lbShow();
@@ -406,7 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Wire up gallery images to lightbox
   document.addEventListener('click', function(e) {
-    if (e.target.matches('.gallery-grid img, .detail-hero-imgs img')) {
+    if (e.target.matches('.gallery-grid img, .detail-hero-imgs img, .pg-main img, .pg-cell img')) {
       lbOpen(e.target);
     }
   });
