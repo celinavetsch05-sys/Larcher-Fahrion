@@ -182,16 +182,17 @@ var galleryPhotos = {
     { src: 'images/louis-x4.avif', alt: 'Appartement Louis' }
   ],
   bergliebe: [
-    { src: 'images/bergliebe-main.jpg', alt: 'Bergliebe — Schlafzimmer' },
-    { src: 'images/bergliebe-g2.jpg',   alt: 'Bergliebe — Wohnzimmer' },
-    { src: 'images/bergliebe-g3.jpg',   alt: 'Bergliebe — Küche' },
-    { src: 'images/bergliebe-g4.jpg',   alt: 'Bergliebe — Balkon' },
-    { src: 'images/bergliebe-x1.jpg',   alt: 'Bergliebe — Essbereich' },
-    { src: 'images/bergliebe-x2.jpg',   alt: 'Bergliebe — Schlafzimmer' },
-    { src: 'images/bergliebe-x3.jpg',   alt: 'Bergliebe — Eingang' },
-    { src: 'images/bergliebe-x4.jpg',   alt: 'Bergliebe — Terrasse' },
-    { src: 'images/bergliebe-x5.jpg',   alt: 'Bergliebe — Balkon' },
-    { src: 'images/bergliebe-x6.avif',  alt: 'Bergliebe' }
+    { src: 'images/bergliebe-1.jpg',  alt: 'Bergliebe' },
+    { src: 'images/bergliebe-7.jpg',  alt: 'Bergliebe' },
+    { src: 'images/bergliebe-8.jpg',  alt: 'Bergliebe' },
+    { src: 'images/bergliebe-2.jpg',  alt: 'Bergliebe' },
+    { src: 'images/bergliebe-18.jpg', alt: 'Bergliebe' },
+    { src: 'images/bergliebe-3.jpg',  alt: 'Bergliebe' },
+    { src: 'images/bergliebe-4.jpg',  alt: 'Bergliebe' },
+    { src: 'images/bergliebe-10.jpg', alt: 'Bergliebe' },
+    { src: 'images/bergliebe-16.jpg', alt: 'Bergliebe' },
+    { src: 'images/bergliebe-19.jpg', alt: 'Bergliebe' },
+    { src: 'images/bergliebe-20.jpg', alt: 'Bergliebe' }
   ]
 };
 
