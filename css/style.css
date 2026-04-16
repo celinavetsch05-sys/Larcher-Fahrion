@@ -497,12 +497,12 @@ footer{
   padding-right:3rem;
   border-right:1px solid rgba(255,255,255,0.08);
   margin-right:0;
-  text-align:center;
 }
 .footer-logo{
   display:block;
-  height:200px;width:auto;
-  margin:0 auto 0.75rem auto;
+  height:150px;width:auto;
+  margin-bottom:0.5rem;
+  margin-left:-6px;
   filter:brightness(0) invert(1);
 }
 .footer-brand strong{display:block;color:white;font-size:19px;font-weight:700;letter-spacing:0.02em;margin-bottom:0.75rem}
