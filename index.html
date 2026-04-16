@@ -116,8 +116,10 @@
               <div class="apt-price">ab <strong>70 €</strong> / Nacht</div>
               <div class="apt-actions">
                 <button class="btn-card" onclick="event.stopPropagation();showPage('detail-louis')">Details</button>
-                <a class="btn-card-book" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener" onclick="event.stopPropagation()">Booking</a>
-                <a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener" onclick="event.stopPropagation()">Airbnb</a>
+                <div class="apt-book-pair" onclick="event.stopPropagation()">
+                  <a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener">Airbnb</a>
+                  <a class="btn-card-book" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Booking</a>
+                </div>
               </div>
             </div>
           </div>
@@ -139,8 +141,10 @@
               <div class="apt-price">ab <strong>90 €</strong> / Nacht</div>
               <div class="apt-actions">
                 <button class="btn-card" onclick="event.stopPropagation();showPage('detail-bergliebe')">Details</button>
-                <a class="btn-card-book" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener" onclick="event.stopPropagation()">Booking</a>
-                <a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener" onclick="event.stopPropagation()">Airbnb</a>
+                <div class="apt-book-pair" onclick="event.stopPropagation()">
+                  <a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener">Airbnb</a>
+                  <a class="btn-card-book" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Booking</a>
+                </div>
               </div>
             </div>
           </div>
@@ -264,10 +268,12 @@
       <div class="section-label">Atmosphäre</div>
       <div class="section-title">So fühlt es sich an</div>
       <div class="mosaic">
-        <div class="mosaic-img"><img id="atm1" src="images/bergliebe-2.jpg" alt="Living room"><div class="mosaic-caption">Gemütliches Wohnzimmer</div></div>
-        <div class="mosaic-img"><img id="atm2" src="images/bergliebe-3.jpg" alt="Bedroom"><div class="mosaic-caption">Ruhiges Schlafzimmer</div></div>
-        <div class="mosaic-img"><img id="atm3" src="images/bergliebe-4.jpg" alt="View"><div class="mosaic-caption">Morgenblick</div></div>
-        <div class="mosaic-img"><img id="atm4" src="images/bergliebe-7.jpg" alt="Kitchen"><div class="mosaic-caption">Einladende Küche</div></div>
+        <div class="mosaic-img"><img id="atm1" src="images/bergliebe-1.jpg" alt="Bergliebe"></div>
+        <div class="mosaic-img"><img id="atm2" src="images/louis-b.jpg" alt="Appartement Louis"></div>
+        <div class="mosaic-img"><img id="atm3" src="images/louis-card.jpg" alt="Appartement Louis"></div>
+        <div class="mosaic-img"><img id="atm4" src="images/louis-x3.avif" alt="Appartement Louis"></div>
+        <div class="mosaic-img"><img id="atm5" src="images/bergliebe-3.jpg" alt="Bergliebe"></div>
+        <div class="mosaic-img"><img id="atm6" src="images/louis-g5.avif" alt="Appartement Louis"></div>
       </div>
     </div>
   </div>
@@ -386,7 +392,7 @@
             <h3>Appartement Louis</h3>
             <p>Kompaktes Apartment mit Balkon und herrlichem Berg- und Gartenblick. Ideal für zwei Personen, die Ruhe und Natur suchen.</p>
             <div class="apt-specs"><span class="spec">⌂ 26 m²</span><span class="spec">★ 2 Pers.</span><span class="spec">▣ 1 Schlafzimmer</span></div>
-            <div class="apt-footer"><div class="apt-price">ab <strong>70 €</strong> / Nacht</div><div class="apt-actions"><button class="btn-card" onclick="event.stopPropagation();showPage('detail-louis')">Details</button><a class="btn-card-book" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener" onclick="event.stopPropagation()">Booking</a><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener" onclick="event.stopPropagation()">Airbnb</a></div></div>
+            <div class="apt-footer"><div class="apt-price">ab <strong>70 €</strong> / Nacht</div><div class="apt-actions"><button class="btn-card" onclick="event.stopPropagation();showPage('detail-louis')">Details</button><div class="apt-book-pair" onclick="event.stopPropagation()"><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener">Airbnb</a><a class="btn-card-book" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Booking</a></div></div></div>
           </div>
         </div>
         <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail-bergliebe')">
@@ -395,7 +401,7 @@
             <h3>Bergliebe</h3>
             <p>Geräumiges Apartment mit eigenem Wohnzimmer, Balkon und traumhaftem Bergblick. Fahrräder inklusive, familienfreundlich.</p>
             <div class="apt-specs"><span class="spec">⌂ 45 m²</span><span class="spec">★ 2 Pers.</span><span class="spec">▣ 1 Schlafzimmer</span></div>
-            <div class="apt-footer"><div class="apt-price">ab <strong>90 €</strong> / Nacht</div><div class="apt-actions"><button class="btn-card" onclick="event.stopPropagation();showPage('detail-bergliebe')">Details</button><a class="btn-card-book" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener" onclick="event.stopPropagation()">Booking</a><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener" onclick="event.stopPropagation()">Airbnb</a></div></div>
+            <div class="apt-footer"><div class="apt-price">ab <strong>90 €</strong> / Nacht</div><div class="apt-actions"><button class="btn-card" onclick="event.stopPropagation();showPage('detail-bergliebe')">Details</button><div class="apt-book-pair" onclick="event.stopPropagation()"><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener">Airbnb</a><a class="btn-card-book" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Booking</a></div></div></div>
           </div>
         </div>
       </div>
@@ -607,7 +613,7 @@
             <img src="images/bergliebe-1.jpg" alt="Bergliebe" style="cursor:pointer">
           </div>
           <div class="pg-grid">
-            <div class="pg-cell"><img src="images/bergliebe-7.jpg" alt="Bergliebe" style="cursor:pointer"></div>
+            <div class="pg-cell"><img src="images/bergliebe-20.jpg" alt="Bergliebe" style="cursor:pointer"></div>
             <div class="pg-cell"><img src="images/bergliebe-8.jpg" alt="Bergliebe" style="cursor:pointer"></div>
             <div class="pg-cell"><img src="images/bergliebe-2.jpg" alt="Bergliebe" style="cursor:pointer"></div>
             <div class="pg-cell pg-last">
