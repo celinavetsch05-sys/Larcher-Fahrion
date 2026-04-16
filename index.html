@@ -460,16 +460,19 @@
           <h1 class="detail-title">Kompaktes 1-Zimmer-Apartment mit Balkon in ruhiger Lage</h1>
         </div>
 
-        <div class="detail-hero-imgs">
-          <div class="big"><img src="images/louis-card.jpg" alt="Appartement Louis — Zimmer"></div>
-          <div class="sm"><img src="images/louis-a.jpg" alt="Appartement Louis"></div>
-          <div class="sm"><img src="images/louis-b.jpg" alt="Appartement Louis"></div>
-        </div>
-        <div class="gallery-grid">
-          <img src="images/louis-1.jpg" alt="Appartement Louis">
-          <img src="images/louis-2.jpg" alt="Appartement Louis">
-          <img src="images/louis-3.jpg" alt="Appartement Louis">
-          <img src="images/louis-c.jpg" alt="Appartement Louis">
+        <div class="photo-gallery">
+          <div class="pg-main" onclick="openLightbox('louis', 0)">
+            <img src="images/louis-main.jpg" alt="Appartement Louis">
+          </div>
+          <div class="pg-grid">
+            <div class="pg-cell" onclick="openLightbox('louis', 1)"><img src="images/louis-g2.avif" alt="Appartement Louis"></div>
+            <div class="pg-cell" onclick="openLightbox('louis', 2)"><img src="images/louis-g3.avif" alt="Appartement Louis"></div>
+            <div class="pg-cell" onclick="openLightbox('louis', 3)"><img src="images/louis-g4.jpg" alt="Appartement Louis"></div>
+            <div class="pg-cell pg-last" onclick="openLightbox('louis', 4)">
+              <img src="images/louis-g5.avif" alt="Appartement Louis">
+              <button class="pg-show-all" onclick="event.stopPropagation();openLightbox('louis',0)">&#9638; Alle Fotos anzeigen</button>
+            </div>
+          </div>
         </div>
 
         <div class="detail-body">
@@ -602,23 +605,19 @@
           <h1 class="detail-title">Großzügiges 1-Zimmer-Apartment mit Wohnbereich und Balkon</h1>
         </div>
 
-        <div class="detail-hero-imgs">
-          <div class="big"><img src="images/bergliebe-1.jpg" alt="Bergliebe — Hauptansicht"></div>
-          <div class="sm"><img src="images/bergliebe-2.jpg" alt="Bergliebe"></div>
-          <div class="sm"><img src="images/bergliebe-3.jpg" alt="Bergliebe"></div>
-        </div>
-        <div class="gallery-grid">
-          <img src="images/bergliebe-4.jpg" alt="Bergliebe">
-          <img src="images/bergliebe-7.jpg" alt="Bergliebe">
-          <img src="images/bergliebe-8.jpg" alt="Bergliebe">
-          <img src="images/bergliebe-10.jpg" alt="Bergliebe">
-          <img src="images/bergliebe-13.jpg" alt="Bergliebe">
-          <img src="images/bergliebe-14.jpg" alt="Bergliebe">
-          <img src="images/bergliebe-16.jpg" alt="Bergliebe">
-          <img src="images/bergliebe-17.jpg" alt="Bergliebe">
-          <img src="images/bergliebe-18.jpg" alt="Bergliebe">
-          <img src="images/bergliebe-19.jpg" alt="Bergliebe">
-          <img src="images/bergliebe-20.jpg" alt="Bergliebe">
+        <div class="photo-gallery">
+          <div class="pg-main" onclick="openLightbox('bergliebe', 0)">
+            <img src="images/bergliebe-main.jpg" alt="Bergliebe">
+          </div>
+          <div class="pg-grid">
+            <div class="pg-cell" onclick="openLightbox('bergliebe', 0)"><img src="images/bergliebe-main.jpg" alt="Bergliebe — Schlafzimmer"></div>
+            <div class="pg-cell" onclick="openLightbox('bergliebe', 1)"><img src="images/bergliebe-g2.jpg" alt="Bergliebe — Wohnzimmer"></div>
+            <div class="pg-cell" onclick="openLightbox('bergliebe', 2)"><img src="images/bergliebe-g3.jpg" alt="Bergliebe — Küche"></div>
+            <div class="pg-cell pg-last" onclick="openLightbox('bergliebe', 3)">
+              <img src="images/bergliebe-g4.jpg" alt="Bergliebe — Balkon">
+              <button class="pg-show-all" onclick="event.stopPropagation();openLightbox('bergliebe',0)">&#9638; Alle Fotos anzeigen</button>
+            </div>
+          </div>
         </div>
 
         <div class="detail-body">
@@ -725,6 +724,17 @@
 </div>
 
 
+</div>
+
+<!-- GALLERY LIGHTBOX -->
+<div id="gallery-lightbox" class="lightbox-overlay" style="display:none" role="dialog" aria-modal="true" aria-label="Fotogalerie">
+  <div class="lightbox-header">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Schließen">&#10005;</button>
+    <span class="lightbox-title" id="lightbox-title">Alle Fotos</span>
+  </div>
+  <div class="lightbox-body">
+    <div id="lightbox-grid" class="lightbox-grid"></div>
+  </div>
 </div>
 
 <!-- WHATSAPP -->

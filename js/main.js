@@ -167,6 +167,62 @@ function resetAutoPlay() {
 resetAutoPlay();
 
 
+// ── Photo gallery lightbox ────────────────────────────────────────────────────
+
+var galleryPhotos = {
+  louis: [
+    { src: 'images/louis-main.jpg', alt: 'Appartement Louis — Zimmer' },
+    { src: 'images/louis-g2.avif', alt: 'Appartement Louis' },
+    { src: 'images/louis-g3.avif', alt: 'Appartement Louis' },
+    { src: 'images/louis-g4.jpg',  alt: 'Appartement Louis — Bergblick' },
+    { src: 'images/louis-g5.avif', alt: 'Appartement Louis' },
+    { src: 'images/louis-x1.jpg',  alt: 'Appartement Louis — Aussicht' },
+    { src: 'images/louis-x2.jpg',  alt: 'Appartement Louis' },
+    { src: 'images/louis-x3.avif', alt: 'Appartement Louis' },
+    { src: 'images/louis-x4.avif', alt: 'Appartement Louis' }
+  ],
+  bergliebe: [
+    { src: 'images/bergliebe-main.jpg', alt: 'Bergliebe — Schlafzimmer' },
+    { src: 'images/bergliebe-g2.jpg',   alt: 'Bergliebe — Wohnzimmer' },
+    { src: 'images/bergliebe-g3.jpg',   alt: 'Bergliebe — Küche' },
+    { src: 'images/bergliebe-g4.jpg',   alt: 'Bergliebe — Balkon' },
+    { src: 'images/bergliebe-x1.jpg',   alt: 'Bergliebe — Essbereich' },
+    { src: 'images/bergliebe-x2.jpg',   alt: 'Bergliebe — Schlafzimmer' },
+    { src: 'images/bergliebe-x3.jpg',   alt: 'Bergliebe — Eingang' },
+    { src: 'images/bergliebe-x4.jpg',   alt: 'Bergliebe — Terrasse' },
+    { src: 'images/bergliebe-x5.jpg',   alt: 'Bergliebe — Balkon' },
+    { src: 'images/bergliebe-x6.avif',  alt: 'Bergliebe' }
+  ]
+};
+
+function openLightbox(apt, startIdx) {
+  var photos = galleryPhotos[apt];
+  var grid = document.getElementById('lightbox-grid');
+  var title = document.getElementById('lightbox-title');
+  var aptName = apt === 'louis' ? 'Appartement Louis' : 'Bergliebe';
+
+  if (title) title.textContent = aptName + ' \u00b7 ' + photos.length + ' Fotos';
+
+  grid.innerHTML = photos.map(function(p, i) {
+    return '<img src="' + p.src + '" alt="' + p.alt + '" loading="lazy">';
+  }).join('');
+
+  var overlay = document.getElementById('gallery-lightbox');
+  overlay.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  overlay.scrollTop = 0;
+}
+
+function closeLightbox() {
+  var overlay = document.getElementById('gallery-lightbox');
+  if (overlay) overlay.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+
 // ── Nav transparency ──────────────────────────────────────────────────────────
 
 function updateNavStyle() {
