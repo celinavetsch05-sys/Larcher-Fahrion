@@ -5,3 +5,4 @@ docs/
 Thumbs.db
 .claude/
 .superpowers/
+node_modules/
