@@ -307,16 +307,47 @@ nav.nav-top .nav-logo{filter:drop-shadow(0 2px 12px rgba(0,0,0,0.5)) brightness(
 .why-card p{font-size:0.88rem;line-height:1.65;color:rgba(255,255,255,0.65)}
 
 /* TESTIMONIAL STRIP */
-.testimonial-strip{background:var(--brand);padding:4rem 2.5rem;text-align:center}
-.testimonial-strip blockquote{
-  font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:300;
-  color:white;max-width:700px;margin:0 auto 1.25rem;
-  line-height:1.65;letter-spacing:0.01em;
+.testimonial-strip{
+  background:var(--brand);padding:5rem 5rem;
+  text-align:center;position:relative;overflow:hidden;
+  user-select:none;
 }
-.testimonial-strip cite{color:rgba(255,255,255,0.65);font-size:14px;font-style:normal}
-.testimonial-dots{display:flex;justify-content:center;gap:8px;margin-top:1.5rem}
-.t-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.3);cursor:pointer;transition:background 0.2s}
-.t-dot.on{background:rgba(255,255,255,0.9)}
+.testimonial-content{
+  max-width:680px;margin:0 auto;
+  transition:opacity 0.35s ease,transform 0.35s ease;
+}
+.testimonial-content.fading{opacity:0;transform:translateY(8px)}
+.t-stars{color:#f9d94e;font-size:1.1rem;letter-spacing:3px;margin-bottom:1.25rem}
+.testimonial-strip blockquote{
+  font-size:clamp(1.1rem,2.2vw,1.5rem);font-weight:300;
+  color:white;margin:0 auto 1rem;
+  line-height:1.7;letter-spacing:0.01em;
+}
+.testimonial-strip cite{color:rgba(255,255,255,0.6);font-size:13.5px;font-style:normal;display:block;margin-bottom:0.75rem}
+.t-platform{
+  display:inline-block;font-size:11px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:rgba(255,255,255,0.35);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:20px;padding:3px 12px;
+}
+.testimonial-dots{display:flex;justify-content:center;gap:8px;margin-top:2rem}
+.t-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.25);cursor:pointer;transition:all 0.25s}
+.t-dot.on{background:white;transform:scale(1.2)}
+.t-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,0.12);border:none;color:white;
+  width:44px;height:44px;border-radius:50%;cursor:pointer;
+  font-size:1.4rem;line-height:1;
+  transition:background 0.2s;display:flex;align-items:center;justify-content:center;
+}
+.t-arrow:hover{background:rgba(255,255,255,0.25)}
+.t-prev{left:1.5rem}
+.t-next{right:1.5rem}
+@media(max-width:680px){
+  .testimonial-strip{padding:4rem 1rem}
+  .t-arrow{display:none}
+}
 
 /* CTA BANNER */
 .cta-banner{
@@ -452,21 +483,50 @@ nav.nav-top .nav-logo{filter:drop-shadow(0 2px 12px rgba(0,0,0,0.5)) brightness(
 .b-field input:focus{border-color:var(--brand)}
 
 /* FOOTER */
-footer{background:var(--brand-dark);color:rgba(255,255,255,0.6);padding:3.5rem 2.5rem 2rem}
-.footer-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.75fr 1fr 1fr 1fr;gap:2.5rem;align-items:start}
-.footer-brand img{height:44px;width:44px;object-fit:contain;mix-blend-mode:screen;margin-bottom:0.75rem;display:block}
-.footer-brand strong{display:block;color:rgba(255,255,255,0.9);font-size:15px;margin-bottom:0.5rem}
-.footer-brand p{font-size:12.5px;line-height:1.8;color:rgba(255,255,255,0.45);max-width:240px}
-.footer-col h4{font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.35);margin-bottom:1rem;font-weight:600}
+footer{
+  background:var(--brand-dark);
+  border-top:3px solid var(--brand-mid);
+  color:rgba(255,255,255,0.6);
+  padding:4rem 2.5rem 2rem;
+}
+.footer-inner{
+  max-width:1080px;margin:0 auto;
+  display:grid;grid-template-columns:1.75fr 1fr 1fr 1fr;
+  gap:0;align-items:start;
+}
+.footer-brand{
+  padding-right:3rem;
+  border-right:1px solid rgba(255,255,255,0.08);
+  margin-right:0;
+}
+.footer-brand img{
+  height:48px;width:48px;object-fit:contain;
+  border-radius:6px;margin-bottom:1rem;display:block;
+}
+.footer-brand strong{display:block;color:white;font-size:15px;font-weight:600;margin-bottom:0.5rem}
+.footer-brand p{font-size:12.5px;line-height:1.85;color:rgba(255,255,255,0.4);max-width:230px}
+.footer-col{padding-left:2.5rem}
+.footer-col h4{
+  font-size:10.5px;text-transform:uppercase;letter-spacing:0.14em;
+  color:rgba(255,255,255,0.3);margin-bottom:1.1rem;font-weight:700;
+}
 .footer-col ul{list-style:none}
-.footer-col li{margin-bottom:0.6rem}
-.footer-col a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;transition:color 0.2s;cursor:pointer}
+.footer-col li{margin-bottom:0.65rem}
+.footer-col a{
+  color:rgba(255,255,255,0.58);text-decoration:none;
+  font-size:13.5px;transition:color 0.2s;cursor:pointer;
+}
 .footer-col a:hover{color:white}
 .footer-bottom{
-  border-top:1px solid rgba(255,255,255,0.08);
-  margin-top:2.5rem;padding-top:1.5rem;
-  text-align:center;font-size:12px;color:rgba(255,255,255,0.35);
+  max-width:1080px;margin:0 auto;
+  border-top:1px solid rgba(255,255,255,0.07);
+  margin-top:3rem;padding-top:1.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;color:rgba(255,255,255,0.28);
 }
+.footer-bottom-links{display:flex;gap:1.5rem}
+.footer-bottom-links a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:12px;transition:color 0.2s}
+.footer-bottom-links a:hover{color:rgba(255,255,255,0.7)}
 
 /* FADE IN */
 .fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
@@ -603,7 +663,10 @@ footer{background:var(--brand-dark);color:rgba(255,255,255,0.6);padding:3.5rem 2
   .detail-hero-imgs .sm:first-of-type{border-radius:0}
   .detail-hero-imgs .sm:last-child{border-radius:0 0 var(--r) var(--r)}
   .footer-inner{grid-template-columns:1fr 1fr;gap:2rem}
-  .footer-brand{grid-column:span 2}
+  .footer-brand{grid-column:span 2;border-right:none;padding-right:0;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:1.5rem;margin-bottom:0.5rem}
+  .footer-col{padding-left:0}
+  .footer-bottom{flex-direction:column;gap:0.75rem;text-align:center}
+  .footer-bottom-links{justify-content:center}
   nav .nav-links{display:none}
   .hero-content{padding:2rem 1.5rem 4rem}
   .trust-bar{gap:1.25rem;flex-wrap:wrap}

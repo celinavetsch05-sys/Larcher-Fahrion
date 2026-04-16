@@ -72,34 +72,99 @@ function filterCards(btn, capacity) {
 var testimonials = [
   {
     quote: '\u201cWir kommen jedes Jahr wieder. Es f\u00fchlt sich wirklich wie ein zweites Zuhause an \u2014 danke Verena und Matthias!\u201d',
-    author: '\u2014 Familie M\u00fcller, M\u00fcnchen'
+    author: '\u2014 Familie M\u00fcller, M\u00fcnchen',
+    stars: 5,
+    platform: 'Booking.com'
   },
   {
-    quote: '\u201cDie Wohnung Bergblick hat uns begeistert. Morgens Bergpanorama, abends Ruhe \u2014 so soll Urlaub sein.\u201d',
-    author: '\u2014 Sarah & Thomas, Hamburg'
+    quote: '\u201cDie Wohnung Bergliebe hat uns begeistert. Morgens Bergpanorama, abends Ruhe \u2014 so soll Urlaub sein.\u201d',
+    author: '\u2014 Sarah & Thomas, Hamburg',
+    stars: 5,
+    platform: 'Airbnb'
   },
   {
     quote: '\u201cPerfekte Gastgeber, wundersch\u00f6ne Lage. Oberammergau ist ein Geheimtipp, den wir immer wieder empfehlen.\u201d',
-    author: '\u2014 Familie Weber, Berlin'
+    author: '\u2014 Familie Weber, Berlin',
+    stars: 5,
+    platform: 'Booking.com'
   }
 ];
 
 var currentTestimonial = 0;
+var testimonialTimer = null;
 
 function setTestimonial(idx) {
   if (idx < 0 || idx >= testimonials.length) return;
-  currentTestimonial = idx;
+  var content = document.getElementById('testimonial-content');
+  if (!content) return;
 
-  var quoteEl = document.getElementById('t-quote');
-  var authorEl = document.getElementById('t-author');
-  if (quoteEl) quoteEl.textContent = testimonials[idx].quote;
-  if (authorEl) authorEl.textContent = testimonials[idx].author;
+  content.classList.add('fading');
 
-  // Update dots
-  document.querySelectorAll('.t-dot').forEach(function(dot, i) {
-    dot.classList.toggle('on', i === idx);
-  });
+  setTimeout(function() {
+    currentTestimonial = idx;
+    var t = testimonials[idx];
+
+    var quoteEl = document.getElementById('t-quote');
+    var authorEl = document.getElementById('t-author');
+    var starsEl = document.getElementById('t-stars');
+    var platformEl = document.getElementById('t-platform');
+
+    if (quoteEl) quoteEl.textContent = t.quote;
+    if (authorEl) authorEl.textContent = t.author;
+    if (starsEl) starsEl.textContent = '★'.repeat(t.stars) + '☆'.repeat(5 - t.stars);
+    if (platformEl) platformEl.textContent = t.platform;
+
+    document.querySelectorAll('.t-dot').forEach(function(dot, i) {
+      dot.classList.toggle('on', i === idx);
+    });
+
+    content.classList.remove('fading');
+  }, 200);
 }
+
+function nextTestimonial() {
+  setTestimonial((currentTestimonial + 1) % testimonials.length);
+  resetAutoPlay();
+}
+
+function prevTestimonial() {
+  setTestimonial((currentTestimonial - 1 + testimonials.length) % testimonials.length);
+  resetAutoPlay();
+}
+
+function resetAutoPlay() {
+  if (testimonialTimer) clearInterval(testimonialTimer);
+  testimonialTimer = setInterval(function() {
+    setTestimonial((currentTestimonial + 1) % testimonials.length);
+  }, 5000);
+}
+
+// Touch swipe support
+(function() {
+  var strip = document.getElementById('testimonial-strip');
+  if (!strip) return;
+  var startX = 0;
+  strip.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+  strip.addEventListener('touchend', function(e) {
+    var dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) {
+      dx < 0 ? nextTestimonial() : prevTestimonial();
+    }
+  }, { passive: true });
+
+  // Pause auto-play on hover
+  strip.addEventListener('mouseenter', function() {
+    if (testimonialTimer) clearInterval(testimonialTimer);
+  });
+  strip.addEventListener('mouseleave', function() {
+    resetAutoPlay();
+  });
+})();
+
+// Start auto-play after page load
+resetAutoPlay();
 
 
 // ── Nav transparency ──────────────────────────────────────────────────────────
