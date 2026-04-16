@@ -535,6 +535,12 @@ footer{
 .footer-bottom-links{display:flex;gap:1.5rem}
 .footer-bottom-links a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:12px;transition:color 0.2s}
 .footer-bottom-links a:hover{color:rgba(255,255,255,0.7)}
+/* Legal pages */
+.legal-body{color:#333;line-height:1.8;font-size:15px}
+.legal-body h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:1.25rem;color:#2e4a5e;margin:2rem 0 0.5rem}
+.legal-body p{margin-bottom:1rem}
+.legal-body ul{padding-left:1.5rem;margin-bottom:1rem}
+.legal-body ul li{margin-bottom:0.35rem}
 
 /* FADE IN */
 .fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
