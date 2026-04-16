@@ -24,7 +24,7 @@ nav{
   transition:background 0.45s ease,border-color 0.45s ease,box-shadow 0.45s ease,height 0.35s ease;
 }
 nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,0.08);height:70px}
-nav.scrolled .nav-logo{height:44px}
+nav.scrolled .nav-logo{height:36px}
 nav.scrolled .nav-brand-name{font-size:19px}
 nav.scrolled .nav-brand-sub{opacity:0;height:0;overflow:hidden}
 /* Transparent state — over hero on home page */
@@ -50,7 +50,7 @@ nav.nav-top .nav-links a:hover,nav.nav-top .nav-links a.active{color:#fff;opacit
 nav.nav-top .nav-cta{background:rgba(255,255,255,0.2);color:#fff;border:1px solid rgba(255,255,255,0.5)}
 nav.nav-top .nav-cta:hover{background:rgba(255,255,255,0.35)}
 nav.nav-top .nav-hamburger span{background:#fff}
-nav.nav-top .nav-logo{filter:drop-shadow(0 2px 12px rgba(0,0,0,0.5)) brightness(1.2)}
+nav.nav-top .nav-logo{mix-blend-mode:screen;filter:brightness(1.8)}
 /* Brand */
 .nav-brand{
   display:flex;flex-direction:row;align-items:center;
@@ -58,10 +58,10 @@ nav.nav-top .nav-logo{filter:drop-shadow(0 2px 12px rgba(0,0,0,0.5)) brightness(
   text-decoration:none;
 }
 .nav-logo{
-  height:76px;width:auto;
+  height:44px;width:auto;
   display:block;
   transition:height 0.35s ease,filter 0.45s ease;
-  filter:drop-shadow(0 1px 4px rgba(0,0,0,0.15));
+  mix-blend-mode:multiply;
 }
 .nav-brand-text{display:flex;flex-direction:column;gap:2px}
 .nav-brand-name{
@@ -132,8 +132,8 @@ nav.nav-top .nav-logo{filter:drop-shadow(0 2px 12px rgba(0,0,0,0.5)) brightness(
   .nav-links{display:none}
   .nav-cta{display:none}
   .nav-hamburger{display:flex}
-  .nav-logo{height:56px}
-  nav.scrolled .nav-logo{height:38px}
+  .nav-logo{height:40px}
+  nav.scrolled .nav-logo{height:32px}
   .nav-brand-name{font-size:17px}
   .nav-brand-sub{display:none}
   .mobile-menu{top:80px;left:0;right:0}
