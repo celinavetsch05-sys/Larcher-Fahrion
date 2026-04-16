@@ -23,8 +23,8 @@ nav{
   box-shadow:0 1px 0 rgba(0,0,0,0.04);
   transition:background 0.45s ease,border-color 0.45s ease,box-shadow 0.45s ease,height 0.35s ease;
 }
-nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,0.08);height:70px}
-nav.scrolled .nav-logo{height:56px}
+nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,0.08);height:90px}
+nav.scrolled .nav-logo{height:72px}
 nav.scrolled .nav-brand-name{font-size:19px}
 nav.scrolled .nav-brand-sub{opacity:0;height:0;overflow:hidden}
 /* Transparent state — over hero on home page */
