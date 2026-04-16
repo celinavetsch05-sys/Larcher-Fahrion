@@ -81,6 +81,13 @@ export default async function handler(req, res) {
       + rowHtml('Nachricht', nachrichtCell)
       + '</table>';
 
+  var confirmationHtml = '<div style="font-family:sans-serif;font-size:15px;color:#333;max-width:560px">'
+    + '<h2 style="color:#2e4a5e">Vielen Dank für Ihre Anfrage!</h2>'
+    + '<p>Liebe/r ' + escHtml(name) + ',</p>'
+    + '<p>wir haben Ihre Anfrage erhalten und melden uns so bald wie möglich bei Ihnen.</p>'
+    + '<p style="color:#555">Mit freundlichen Grüßen<br><strong>Verena &amp; Matthias Larcher-Fahrion</strong><br>Ferienwohnungen Oberammergau</p>'
+    + '</div>';
+
   try {
     var response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -102,6 +109,21 @@ export default async function handler(req, res) {
       console.error('Resend error:', errText);
       return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden.' });
     }
+
+    // Send confirmation to the person who submitted the form
+    await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + process.env.RESEND_API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: 'Larcher & Fahrion <onboarding@resend.dev>',
+        to: [email],
+        subject: 'Ihre Anfrage ist bei uns eingegangen',
+        html: confirmationHtml
+      })
+    });
 
     return res.status(200).json({ ok: true });
 
