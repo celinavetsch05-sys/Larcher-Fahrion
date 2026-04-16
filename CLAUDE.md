@@ -154,3 +154,35 @@ Pushing to the `main` branch on GitHub automatically triggers a Vercel deploymen
 - **Do not push** until the user has reviewed and approved changes on localhost
 - After pushing, Vercel typically deploys within 1–2 minutes
 - The live site URL is: `project-if6oq.vercel.app` (custom domain to be added later)
+
+---
+
+## Coding Behavior Guidelines (Karpathy)
+
+These four principles apply to every task, no matter how small.
+
+### 1. Think Before Coding
+- State assumptions explicitly — if something is unclear, ask rather than guess
+- If multiple interpretations exist, present them instead of picking silently
+- If a simpler approach exists, say so and push back
+- Stop when confused — name what's unclear and ask
+
+### 2. Simplicity First
+- Write the minimum code that solves the problem — nothing speculative
+- No features beyond what was asked
+- No abstractions for single-use code
+- No error handling for scenarios that can't happen
+- If 200 lines could be 50, rewrite it
+
+### 3. Surgical Changes
+- Touch only what the request requires
+- Don't "improve" adjacent code, comments, or formatting
+- Don't refactor things that aren't broken
+- Match existing style, even when you'd do it differently
+- If you notice unrelated dead code, mention it — don't delete it
+- Remove imports/variables/functions only if YOUR changes made them unused
+
+### 4. Goal-Driven Execution
+- Before starting a multi-step task, state a brief plan with verifiable steps
+- Define what success looks like before implementing
+- Loop until the success criteria are met
