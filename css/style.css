@@ -24,7 +24,7 @@ nav{
   transition:background 0.45s ease,border-color 0.45s ease,box-shadow 0.45s ease,height 0.35s ease;
 }
 nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,0.08);height:90px}
-nav.scrolled .nav-logo{height:72px}
+nav.scrolled .nav-logo{height:84px}
 nav.scrolled .nav-brand-name{font-size:19px}
 nav.scrolled .nav-brand-sub{opacity:0;height:0;overflow:hidden}
 /* Transparent state — over hero on home page */
@@ -58,7 +58,7 @@ nav.nav-top .nav-logo{filter:brightness(0) invert(1)}
   text-decoration:none;
 }
 .nav-logo{
-  height:72px;width:auto;
+  height:84px;width:auto;
   display:block;
   transition:height 0.35s ease;
 }
@@ -497,11 +497,12 @@ footer{
   padding-right:3rem;
   border-right:1px solid rgba(255,255,255,0.08);
   margin-right:0;
+  text-align:center;
 }
 .footer-logo{
   display:block;
   height:200px;width:auto;
-  margin-bottom:0.75rem;
+  margin:0 auto 0.75rem auto;
   filter:brightness(0) invert(1);
 }
 .footer-brand strong{display:block;color:white;font-size:19px;font-weight:700;letter-spacing:0.02em;margin-bottom:0.75rem}
