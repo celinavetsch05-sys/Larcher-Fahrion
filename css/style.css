@@ -24,7 +24,7 @@ nav{
   transition:background 0.45s ease,border-color 0.45s ease,box-shadow 0.45s ease,height 0.35s ease;
 }
 nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,0.08);height:70px}
-nav.scrolled .nav-logo{height:48px}
+nav.scrolled .nav-logo{height:56px}
 nav.scrolled .nav-brand-name{font-size:19px}
 nav.scrolled .nav-brand-sub{opacity:0;height:0;overflow:hidden}
 /* Transparent state — over hero on home page */
@@ -54,11 +54,11 @@ nav.nav-top .nav-logo{display:none}
 /* Brand */
 .nav-brand{
   display:flex;flex-direction:row;align-items:center;
-  cursor:pointer;flex-shrink:0;gap:12px;
+  cursor:pointer;flex-shrink:0;gap:20px;
   text-decoration:none;
 }
 .nav-logo{
-  height:58px;width:auto;
+  height:72px;width:auto;
   display:block;
   transition:height 0.35s ease;
 }
