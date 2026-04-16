@@ -493,11 +493,7 @@ footer{
   border-right:1px solid rgba(255,255,255,0.08);
   margin-right:0;
 }
-.footer-brand img{
-  height:48px;width:48px;object-fit:contain;
-  border-radius:6px;margin-bottom:1rem;display:block;
-}
-.footer-brand strong{display:block;color:white;font-size:15px;font-weight:600;margin-bottom:0.5rem}
+.footer-brand strong{display:block;color:white;font-size:19px;font-weight:700;letter-spacing:0.02em;margin-bottom:0.75rem}
 .footer-brand p{font-size:12.5px;line-height:1.85;color:rgba(255,255,255,0.4);max-width:230px}
 .footer-col{padding-left:2.5rem}
 .footer-col h4{
