@@ -452,14 +452,15 @@ nav.nav-top .nav-logo{filter:drop-shadow(0 2px 12px rgba(0,0,0,0.5)) brightness(
 .b-field input:focus{border-color:var(--brand)}
 
 /* FOOTER */
-footer{background:var(--brand-dark);color:rgba(255,255,255,0.6);padding:3rem 2.5rem}
-.footer-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem}
-.footer-brand img{height:44px;width:44px;object-fit:contain;mix-blend-mode:screen;margin-bottom:1rem}
-.footer-brand p{font-size:13px;line-height:1.75;color:rgba(255,255,255,0.55);max-width:260px;margin-top:0.75rem}
-.footer-col h4{font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.4);margin-bottom:1rem;font-weight:500}
+footer{background:var(--brand-dark);color:rgba(255,255,255,0.6);padding:3.5rem 2.5rem 2rem}
+.footer-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.75fr 1fr 1fr 1fr;gap:2.5rem;align-items:start}
+.footer-brand img{height:44px;width:44px;object-fit:contain;mix-blend-mode:screen;margin-bottom:0.75rem;display:block}
+.footer-brand strong{display:block;color:rgba(255,255,255,0.9);font-size:15px;margin-bottom:0.5rem}
+.footer-brand p{font-size:12.5px;line-height:1.8;color:rgba(255,255,255,0.45);max-width:240px}
+.footer-col h4{font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.35);margin-bottom:1rem;font-weight:600}
 .footer-col ul{list-style:none}
-.footer-col li{margin-bottom:0.5rem}
-.footer-col a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:13px;transition:color 0.2s;cursor:pointer}
+.footer-col li{margin-bottom:0.6rem}
+.footer-col a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;transition:color 0.2s;cursor:pointer}
 .footer-col a:hover{color:white}
 .footer-bottom{
   border-top:1px solid rgba(255,255,255,0.08);
@@ -601,7 +602,8 @@ footer{background:var(--brand-dark);color:rgba(255,255,255,0.6);padding:3rem 2.5
   .detail-hero-imgs .sm{height:180px}
   .detail-hero-imgs .sm:first-of-type{border-radius:0}
   .detail-hero-imgs .sm:last-child{border-radius:0 0 var(--r) var(--r)}
-  .footer-inner{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:2rem}
+  .footer-brand{grid-column:span 2}
   nav .nav-links{display:none}
   .hero-content{padding:2rem 1.5rem 4rem}
   .trust-bar{gap:1.25rem;flex-wrap:wrap}

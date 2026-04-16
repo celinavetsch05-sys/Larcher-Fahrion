@@ -46,7 +46,7 @@
       <h1>Dein Zuhause<br>in den <em>Bergen</em></h1>
       <p>Ruhig. Echt. Zum Wohlfühlen. Verena und Matthias freuen sich, dich willkommen zu heißen.</p>
       <div class="hero-btns">
-        <a class="btn-hero" href="mailto:hallo@larcher-fahrion.de">Verfügbarkeit anfragen</a>
+        <a class="btn-hero" href="#" onclick="scrollToContact();return false">Verfügbarkeit anfragen</a>
         <button class="btn-hero-ghost" onclick="showPage('rentals')">Alle Wohnungen ansehen</button>
       </div>
     </div>
@@ -150,14 +150,14 @@
   </div>
 
   <!-- ═══════════ KONTAKT ═══════════ -->
-  <div class="section contact-section" style="background:var(--bg)">
+  <div id="kontakt" class="section contact-section" style="background:var(--bg)">
     <div class="section-inner">
       <div class="section-label">Kontakt</div>
       <div class="section-title">Jetzt anfragen</div>
       <p class="section-sub">Ob als Urlaubsgast oder als Wohnungseigentümer — wir freuen uns, von Ihnen zu hören.</p>
 
       <div class="form-tabs">
-        <button type="button" class="form-tab active" onclick="switchFormTab('guest', this)">Als Gast anfragen</button>
+        <button type="button" class="form-tab active" onclick="switchFormTab('guest', this)">Als Gast</button>
         <button type="button" class="form-tab" onclick="switchFormTab('owner', this)">Als Eigentümer</button>
       </div>
 
@@ -218,12 +218,12 @@
             <p>Dynamische Preisgestaltung nach Saison, Nachfrage und lokalen Events — für maximale Auslastung das ganze Jahr.</p>
           </div>
           <div class="service-card">
-            <div class="service-icon">🔧</div>
-            <h4>Wartung &amp; Reparaturen</h4>
-            <p>Wir koordinieren Handwerker, erledigen Kleinreparaturen und sorgen dafür, dass Ihre Wohnung stets in bestem Zustand ist.</p>
+            <div class="service-icon">🧹</div>
+            <h4>Reinigung</h4>
+            <p>Professionelle Endreinigung nach jedem Aufenthalt — zuverlässig, gründlich und auf Gastgeberniveau.</p>
           </div>
         </div>
-        <p class="owner-intro">Sie besitzen eine Ferienwohnung in der Alpenregion und möchten sie professionell vermieten, ohne den Aufwand selbst zu tragen? Larcher &amp; Fahrion übernimmt die vollständige Betreuung — von der Vermarktung bis zur Wartung. Kontaktieren Sie uns für ein unverbindliches Gespräch.</p>
+        <p class="owner-intro">Sie besitzen eine Ferienwohnung in der Alpenregion und möchten sie professionell vermieten, ohne den Aufwand selbst zu tragen? Larcher &amp; Fahrion übernimmt die vollständige Betreuung — von der Vermarktung bis zur Reinigung. Kontaktieren Sie uns für ein unverbindliches Gespräch.</p>
         <form onsubmit="submitContactForm('owner', this); return false;">
           <div class="form-cols">
             <div class="form-group">
@@ -238,7 +238,7 @@
           <div class="form-cols">
             <div class="form-group">
               <label for="o-telefon">Telefonnummer</label>
-              <input id="o-telefon" name="telefon" type="tel" placeholder="+43 ...">
+              <input id="o-telefon" name="telefon" type="tel" placeholder="+49 ...">
             </div>
             <div class="form-group">
               <label for="o-standort">Standort der Wohnung *</label>
@@ -317,7 +317,7 @@
     <div class="section-inner">
       <h2>Bereit für dein Bergabenteuer?</h2>
       <p>Frag jetzt an — wir melden uns schnell und unkompliziert.</p>
-      <a class="btn-primary" href="mailto:hallo@larcher-fahrion.de">Jetzt Verfügbarkeit anfragen</a>
+      <a class="btn-primary" href="#" onclick="scrollToContact();return false">Jetzt Verfügbarkeit anfragen</a>
       <button class="btn-outline-blue" onclick="showPage('rentals')">Alle Wohnungen</button>
     </div>
   </div>
@@ -325,28 +325,35 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img id="footer-logo" src="images/logo.jpg" alt="Logo">
-        <strong style="color:rgba(255,255,255,0.85);font-size:15px">Larcher &amp; Fahrion</strong>
-        <p>Verena Larcher &amp; Matthias Fahrion<br>Ferienwohnungen · Verwaltung · Betreuung<br>Oberammergau, Bayern</p>
+        <img src="images/logo.jpg" alt="Larcher &amp; Fahrion">
+        <strong>Larcher &amp; Fahrion</strong>
+        <p>Verena Larcher &amp; Matthias Fahrion<br>Ferienwohnungen · Verwaltung · Betreuung<br>82487 Oberammergau, Bayern</p>
       </div>
       <div class="footer-col">
-        <h4>Navigation</h4>
+        <h4>Unterkünfte</h4>
         <ul>
-          <li><a onclick="showPage('home')">Start</a></li>
-          <li><a onclick="showPage('rentals')">Wohnungen</a></li>
-          <li><a href="mailto:hallo@larcher-fahrion.de">Kontakt</a></li>
+          <li><a onclick="showPage('detail-louis')">Appartement Louis</a></li>
+          <li><a onclick="showPage('detail-bergliebe')">Bergliebe</a></li>
+          <li><a onclick="showPage('rentals')">Alle Wohnungen</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Kontakt</h4>
         <ul>
           <li><a href="mailto:hallo@larcher-fahrion.de">hallo@larcher-fahrion.de</a></li>
-          <li><a>+49 8822 123 456</a></li>
-          <li><a>Oberammergau, 82487</a></li>
+          <li><a href="tel:+498822123456">+49 8822 123 456</a></li>
+          <li><a href="https://wa.me/436505190043" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2025 Larcher &amp; Fahrion · Alle Rechte vorbehalten · Impressum · Datenschutz</div>
+    <div class="footer-bottom">© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</div>
   </footer>
 </div>
 
@@ -387,9 +394,34 @@
   </div>
   <footer>
     <div class="footer-inner">
-      <div class="footer-brand"><img id="footer-logo2" src="images/logo.jpg" alt="Logo" style="height:44px;width:44px;object-fit:contain;mix-blend-mode:screen;margin-bottom:0.75rem"><br><strong style="color:rgba(255,255,255,0.8);font-size:14px">Larcher &amp; Fahrion</strong></div>
-      <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="showPage('home')">Start</a></li><li><a onclick="showPage('rentals')">Wohnungen</a></li><li><a href="mailto:hallo@larcher-fahrion.de">Kontakt</a></li></ul></div>
-      <div class="footer-col"><h4>Kontakt</h4><ul><li><a href="mailto:hallo@larcher-fahrion.de">hallo@larcher-fahrion.de</a></li><li><a>+49 8822 123 456</a></li></ul></div>
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Larcher &amp; Fahrion">
+        <strong>Larcher &amp; Fahrion</strong>
+        <p>Verena Larcher &amp; Matthias Fahrion<br>Ferienwohnungen · Verwaltung · Betreuung<br>82487 Oberammergau, Bayern</p>
+      </div>
+      <div class="footer-col">
+        <h4>Unterkünfte</h4>
+        <ul>
+          <li><a onclick="showPage('detail-louis')">Appartement Louis</a></li>
+          <li><a onclick="showPage('detail-bergliebe')">Bergliebe</a></li>
+          <li><a onclick="showPage('rentals')">Alle Wohnungen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:hallo@larcher-fahrion.de">hallo@larcher-fahrion.de</a></li>
+          <li><a href="tel:+498822123456">+49 8822 123 456</a></li>
+          <li><a href="https://wa.me/436505190043" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</div>
   </footer>
@@ -497,9 +529,34 @@
     </div>
     <footer>
       <div class="footer-inner">
-        <div class="footer-brand"><img src="images/logo.png" alt="Logo" style="height:48px;width:auto;object-fit:contain;margin-bottom:0.75rem"><br><strong style="color:rgba(255,255,255,0.8);font-size:14px">Larcher &amp; Fahrion</strong></div>
-        <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="showPage('rentals')" style="cursor:pointer">Alle Wohnungen</a></li><li><a href="mailto:hallo@larcher-fahrion.de">Kontakt</a></li></ul></div>
-        <div class="footer-col"><h4>Kontakt</h4><ul><li><a href="mailto:hallo@larcher-fahrion.de">hallo@larcher-fahrion.de</a></li></ul></div>
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="Larcher &amp; Fahrion">
+          <strong>Larcher &amp; Fahrion</strong>
+          <p>Verena Larcher &amp; Matthias Fahrion<br>Ferienwohnungen · Verwaltung · Betreuung<br>82487 Oberammergau, Bayern</p>
+        </div>
+        <div class="footer-col">
+          <h4>Unterkünfte</h4>
+          <ul>
+            <li><a onclick="showPage('detail-louis')">Appartement Louis</a></li>
+            <li><a onclick="showPage('detail-bergliebe')">Bergliebe</a></li>
+            <li><a onclick="showPage('rentals')">Alle Wohnungen</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:hallo@larcher-fahrion.de">hallo@larcher-fahrion.de</a></li>
+            <li><a href="tel:+498822123456">+49 8822 123 456</a></li>
+            <li><a href="https://wa.me/436505190043" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+          </ul>
+        </div>
       </div>
       <div class="footer-bottom">© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</div>
     </footer>
@@ -605,9 +662,34 @@
     </div>
     <footer>
       <div class="footer-inner">
-        <div class="footer-brand"><img src="images/logo.png" alt="Logo" style="height:48px;width:auto;object-fit:contain;margin-bottom:0.75rem"><br><strong style="color:rgba(255,255,255,0.8);font-size:14px">Larcher &amp; Fahrion</strong></div>
-        <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="showPage('rentals')" style="cursor:pointer">Alle Wohnungen</a></li><li><a href="mailto:hallo@larcher-fahrion.de">Kontakt</a></li></ul></div>
-        <div class="footer-col"><h4>Kontakt</h4><ul><li><a href="mailto:hallo@larcher-fahrion.de">hallo@larcher-fahrion.de</a></li></ul></div>
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="Larcher &amp; Fahrion">
+          <strong>Larcher &amp; Fahrion</strong>
+          <p>Verena Larcher &amp; Matthias Fahrion<br>Ferienwohnungen · Verwaltung · Betreuung<br>82487 Oberammergau, Bayern</p>
+        </div>
+        <div class="footer-col">
+          <h4>Unterkünfte</h4>
+          <ul>
+            <li><a onclick="showPage('detail-louis')">Appartement Louis</a></li>
+            <li><a onclick="showPage('detail-bergliebe')">Bergliebe</a></li>
+            <li><a onclick="showPage('rentals')">Alle Wohnungen</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:hallo@larcher-fahrion.de">hallo@larcher-fahrion.de</a></li>
+            <li><a href="tel:+498822123456">+49 8822 123 456</a></li>
+            <li><a href="https://wa.me/436505190043" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+          </ul>
+        </div>
       </div>
       <div class="footer-bottom">© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</div>
     </footer>

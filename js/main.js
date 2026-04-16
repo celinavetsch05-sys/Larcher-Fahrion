@@ -37,6 +37,16 @@ function showPage(name) {
   updateNavStyle();
 }
 
+// ── Scroll to contact section ─────────────────────────────────────────────────
+
+function scrollToContact() {
+  showPage('home');
+  setTimeout(function() {
+    var el = document.getElementById('kontakt');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }, 50);
+}
+
 // ── Apartment card filter ─────────────────────────────────────────────────────
 
 function filterCards(btn, capacity) {
