@@ -1,5 +1,3 @@
-const { Resend } = require('resend');
-
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -78,20 +76,34 @@ module.exports = async function handler(req, res) {
       + rowHtml('Nachricht', nachrichtCell)
       + '</table>';
 
-  try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
+  async function sendEmail(payload) {
+    var r = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + process.env.RESEND_API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+    if (!r.ok) {
+      var errBody = await r.text();
+      throw new Error('Resend ' + r.status + ': ' + errBody);
+    }
+    return r.json();
+  }
 
-    await resend.emails.send({
+  try {
+    await sendEmail({
       from: 'onboarding@resend.dev',
       to: ['verena.larcher@gmail.com'],
-      replyTo: email,
+      reply_to: email,
       subject: subject,
       html: htmlBody
     });
 
-    // Best-effort confirmation to the sender
+    // Best-effort confirmation to sender
     try {
-      await resend.emails.send({
+      await sendEmail({
         from: 'onboarding@resend.dev',
         to: [email],
         subject: 'Ihre Anfrage ist bei uns eingegangen',
@@ -109,7 +121,7 @@ module.exports = async function handler(req, res) {
     return res.status(200).json({ ok: true });
 
   } catch (err) {
-    console.error('Resend error:', err);
+    console.error('Resend error:', err.message);
     return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden.', detail: err.message });
   }
 };
