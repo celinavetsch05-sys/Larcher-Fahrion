@@ -24,7 +24,7 @@ nav{
   transition:background 0.45s ease,border-color 0.45s ease,box-shadow 0.45s ease,height 0.35s ease;
 }
 nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,0.08);height:70px}
-nav.scrolled .nav-logo{height:36px;width:36px}
+nav.scrolled .nav-logo{height:48px}
 nav.scrolled .nav-brand-name{font-size:19px}
 nav.scrolled .nav-brand-sub{opacity:0;height:0;overflow:hidden}
 /* Transparent state — over hero on home page */
@@ -58,12 +58,9 @@ nav.nav-top .nav-logo{display:none}
   text-decoration:none;
 }
 .nav-logo{
-  height:44px;width:44px;
-  object-fit:cover;
-  object-position:center 12%;
+  height:58px;width:auto;
   display:block;
-  border-radius:4px;
-  transition:height 0.35s ease, width 0.35s ease;
+  transition:height 0.35s ease;
 }
 .nav-brand-text{display:flex;flex-direction:column;gap:2px}
 .nav-brand-name{
@@ -134,8 +131,8 @@ nav.nav-top .nav-logo{display:none}
   .nav-links{display:none}
   .nav-cta{display:none}
   .nav-hamburger{display:flex}
-  .nav-logo{height:40px}
-  nav.scrolled .nav-logo{height:32px;width:32px}
+  .nav-logo{height:50px}
+  nav.scrolled .nav-logo{height:42px}
   .nav-brand-name{font-size:17px}
   .nav-brand-sub{display:none}
   .mobile-menu{top:80px;left:0;right:0}
