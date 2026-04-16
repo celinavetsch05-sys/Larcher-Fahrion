@@ -204,8 +204,18 @@ function openLightbox(apt, startIdx) {
   if (title) title.textContent = aptName + ' \u00b7 ' + photos.length + ' Fotos';
 
   grid.innerHTML = photos.map(function(p, i) {
-    return '<img src="' + p.src + '" alt="' + p.alt + '" loading="lazy">';
+    return '<img src="' + p.src + '" alt="' + p.alt + '" loading="lazy" style="cursor:pointer">';
   }).join('');
+
+  // clicking a grid image opens it full-screen
+  grid.querySelectorAll('img').forEach(function(img, i) {
+    img.addEventListener('click', function() {
+      lbImages = grid.querySelectorAll('img');
+      lbImages = Array.from(lbImages);
+      lbIndex = i;
+      lbShow();
+    });
+  });
 
   var overlay = document.getElementById('gallery-lightbox');
   overlay.style.display = 'block';
