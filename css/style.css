@@ -947,7 +947,8 @@ footer{
   .cta-banner{padding:3rem 1.25rem}
   .cta-banner h2{font-size:1.5rem}
   .btn-primary{padding:13px 28px;font-size:14px}
-  .btn-outline-blue{margin-left:0;margin-top:10px;padding:12px 24px;font-size:14px;display:inline-block}
+  .btn-outline-blue{margin-left:0;margin-top:16px;padding:12px 24px;font-size:14px;display:block;width:100%}
+  .cta-banner .btn-primary{display:block;width:100%}
 
   /* Trust bar */
   .trust-bar{gap:1.25rem;padding:1rem 1.25rem;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}
