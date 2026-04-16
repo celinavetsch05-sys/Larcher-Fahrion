@@ -700,6 +700,12 @@ footer{
   flex-shrink:0;line-height:1;
 }
 .rating-text{display:flex;flex-direction:column;gap:2px}
+.rating-breakdown{margin-top:1rem}
+.rating-breakdown-title{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--brand-dark);margin-bottom:0.5rem}
+.rating-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.rating-row span{font-size:12px;color:#555;width:10px;text-align:right;flex-shrink:0}
+.rb-track{flex:1;height:6px;background:#e0e0e0;border-radius:3px;overflow:hidden}
+.rb-fill{height:100%;background:var(--brand-dark);border-radius:3px;transition:width 0.4s ease}
 .rating-text strong{font-size:0.95rem;color:var(--text)}
 .rating-text span{font-size:0.82rem;color:var(--text-muted)}
 .detail-notes{
