@@ -71,22 +71,22 @@ function filterCards(btn, capacity) {
 
 var testimonials = [
   {
-    quote: '\u201cWir kommen jedes Jahr wieder. Es f\u00fchlt sich wirklich wie ein zweites Zuhause an \u2014 danke Verena und Matthias!\u201d',
-    author: '\u2014 Familie M\u00fcller, M\u00fcnchen',
-    stars: 5,
-    platform: 'Booking.com'
-  },
-  {
-    quote: '\u201cDie Wohnung Bergliebe hat uns begeistert. Morgens Bergpanorama, abends Ruhe \u2014 so soll Urlaub sein.\u201d',
-    author: '\u2014 Sarah & Thomas, Hamburg',
+    quote: '\u201cDer Aufenthalt in Oberammergau war einfach ein Tr\u00e4umchen! Die Lage ist super! Wir haben einen wundersch\u00f6nen Blick auf den Kofel gehabt.\u201d',
+    author: '\u2014 Airbnb-Gast',
     stars: 5,
     platform: 'Airbnb'
   },
   {
-    quote: '\u201cPerfekte Gastgeber, wundersch\u00f6ne Lage. Oberammergau ist ein Geheimtipp, den wir immer wieder empfehlen.\u201d',
-    author: '\u2014 Familie Weber, Berlin',
+    quote: '\u201cSehr sch\u00f6nes und gut ausgestattetes Apartment mit einem wundersch\u00f6nen Ausblick. Die Unterkunft war sauber, geschmackvoll eingerichtet und es hat an nichts gefehlt. Wir haben uns sehr wohlgef\u00fchlt und kommen gerne wieder!\u201d',
+    author: '\u2014 Airbnb-Gast',
     stars: 5,
-    platform: 'Booking.com'
+    platform: 'Airbnb'
+  },
+  {
+    quote: '\u201cWir haben uns mit Hund sehr wohl gef\u00fchlt. Die Unterkunft befindet sich in ruhiger Lage und mit tollem Ausblick!\u201d',
+    author: '\u2014 Airbnb-Gast',
+    stars: 5,
+    platform: 'Airbnb'
   }
 ];
 
