@@ -6,3 +6,5 @@ Thumbs.db
 .claude/
 .superpowers/
 node_modules/
+.env.local
+.env
