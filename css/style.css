@@ -502,7 +502,7 @@ footer{
 }
 .footer-logo{
   display:block;
-  height:110px;width:auto;
+  height:160px;width:auto;
   margin-bottom:0.75rem;
   filter:brightness(0) invert(1);
 }
