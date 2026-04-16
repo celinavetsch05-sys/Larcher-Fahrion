@@ -499,7 +499,8 @@ footer{
   margin-right:0;
   display:flex;
   flex-direction:column;
-  align-items:flex-start;
+  align-items:center;
+  text-align:center;
 }
 .footer-logo{
   display:block;
