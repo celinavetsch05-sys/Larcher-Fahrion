@@ -687,6 +687,7 @@ footer{
   .apt-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr 1fr}
   .mosaic{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px 160px}
+  .section{padding:4rem 1.75rem}
 .footer-inner{grid-template-columns:1fr 1fr;gap:2rem}
   .footer-brand{grid-column:span 2;border-right:none;padding-right:0;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:1.5rem;margin-bottom:0.5rem}
   .footer-col{padding-left:0}
@@ -880,4 +881,40 @@ footer{
   .form-cols{grid-template-columns:1fr;gap:0}
   .service-grid{grid-template-columns:1fr}
   .form-tab{padding:10px 16px;font-size:11px}
+
+  /* Section spacing */
+  .section{padding:3.5rem 1.25rem}
+  .section-title{margin-bottom:0.75rem}
+
+  /* Hero */
+  .hero{min-height:85vh}
+  .hero-content{padding:2rem 1.25rem 3.5rem}
+  .hero-content p{font-size:1rem;margin-bottom:1.75rem}
+  .hero-btns{flex-direction:column;align-items:center;gap:10px}
+  .btn-hero,.btn-hero-ghost{width:100%;max-width:280px;text-align:center}
+  .scroll-hint{display:none}
+
+  /* Apartment cards */
+  .apt-footer{flex-direction:column;align-items:flex-start;gap:0.75rem}
+  .apt-actions{width:100%;justify-content:flex-start}
+  .apt-book-pair{flex-shrink:0}
+
+  /* Why grid → 1 column on small screens */
+  .why-grid{grid-template-columns:1fr}
+
+  /* Gallery mobile: 2x2 thumbnail grid instead of 4-in-a-row */
+  .pg-grid{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:160px}
+
+  /* CTA buttons stack */
+  .cta-banner{padding:3rem 1.25rem}
+  .btn-outline-blue{margin-left:0;margin-top:10px}
+
+  /* About / location grids already handled by 760px breakpoint */
+
+  /* Trust bar */
+  .trust-bar{gap:1.25rem;padding:1rem 1.25rem;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}
+  .trust-item{flex-shrink:0}
+
+  /* Detail back button */
+  .detail-back{margin-bottom:1rem}
 }
