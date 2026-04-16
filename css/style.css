@@ -50,7 +50,7 @@ nav.nav-top .nav-links a:hover,nav.nav-top .nav-links a.active{color:#fff;opacit
 nav.nav-top .nav-cta{background:rgba(255,255,255,0.2);color:#fff;border:1px solid rgba(255,255,255,0.5)}
 nav.nav-top .nav-cta:hover{background:rgba(255,255,255,0.35)}
 nav.nav-top .nav-hamburger span{background:#fff}
-nav.nav-top .nav-logo{mix-blend-mode:screen;filter:brightness(1.8)}
+nav.nav-top .nav-logo{background:rgba(255,255,255,0.15);border-radius:6px;padding:3px}
 /* Brand */
 .nav-brand{
   display:flex;flex-direction:row;align-items:center;
@@ -60,8 +60,7 @@ nav.nav-top .nav-logo{mix-blend-mode:screen;filter:brightness(1.8)}
 .nav-logo{
   height:44px;width:auto;
   display:block;
-  transition:height 0.35s ease,filter 0.45s ease;
-  mix-blend-mode:multiply;
+  transition:height 0.35s ease;
 }
 .nav-brand-text{display:flex;flex-direction:column;gap:2px}
 .nav-brand-name{
