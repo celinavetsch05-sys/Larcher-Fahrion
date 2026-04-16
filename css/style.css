@@ -504,6 +504,7 @@ footer{
   display:block;
   height:110px;width:auto;
   margin-bottom:0.75rem;
+  filter:brightness(0) invert(1);
 }
 .footer-brand strong{display:block;color:white;font-size:19px;font-weight:700;letter-spacing:0.02em;margin-bottom:0.75rem}
 .footer-brand p{font-size:12.5px;line-height:1.85;color:rgba(255,255,255,0.4);max-width:230px}
