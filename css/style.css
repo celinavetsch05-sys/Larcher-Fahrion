@@ -501,8 +501,8 @@ footer{
 .footer-logo{
   display:block;
   height:300px;width:auto;
+  max-width:100%;
   margin-bottom:0.5rem;
-  margin-left:-8px;
   filter:brightness(0) invert(1);
 }
 .footer-brand strong{display:block;color:white;font-size:19px;font-weight:700;letter-spacing:0.02em;margin-bottom:0.75rem}
