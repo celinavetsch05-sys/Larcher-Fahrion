@@ -540,7 +540,7 @@ footer{
 .pg-main{overflow:hidden;cursor:pointer}
 .pg-main img{width:100%;height:100%;object-fit:cover;transition:transform 0.35s}
 .pg-main:hover img{transform:scale(1.03)}
-.pg-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:5px}
+.pg-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:5px;height:100%}
 .pg-cell{overflow:hidden;position:relative;cursor:pointer}
 .pg-cell img{width:100%;height:100%;object-fit:cover;transition:transform 0.35s;display:block}
 .pg-cell:hover img{transform:scale(1.03)}
