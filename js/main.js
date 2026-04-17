@@ -87,6 +87,24 @@ var testimonials = [
     author: '\u2014 Airbnb-Gast',
     stars: 5,
     platform: 'Airbnb'
+  },
+  {
+    quote: '\u201cUnser Urlaub in Oberammergau wird uns sehr positiv in Erinnerung bleiben! Die Lage der Wohnung ist perfekt um (mit dem Hund) einen aktiven Urlaub in den Ammergauer Alpen zu verbringen. Die Wohnung ist modern, aber trotzdem gem\u00fctlich. Der Blick auf den Kofel rundet das Bild ab.\u201d',
+    author: '\u2014 Airbnb-Gast',
+    stars: 5,
+    platform: 'Airbnb'
+  },
+  {
+    quote: '\u201cAlles wie beschrieben :) Die Lage war top und die Kontaktaufnahme h\u00e4tte nicht besser sein k\u00f6nnen. Wir kommen gerne wieder!\u201d',
+    author: '\u2014 Airbnb-Gast',
+    stars: 5,
+    platform: 'Airbnb'
+  },
+  {
+    quote: '\u201cSch\u00f6nes, sehr gut ausgestattetes Airbnb mit freundlichem Empfang. Es gibt nichts zu bem\u00e4ngeln. Hochwertige Ausstattung. Auch f\u00fcr l\u00e4ngere Aufenthalte geeignet. Im Haus sehr ruhig. An den Ausblick aus dem Bett k\u00f6nnte man sich gew\u00f6hnen.\u201d',
+    author: '\u2014 Airbnb-Gast',
+    stars: 5,
+    platform: 'Airbnb'
   }
 ];
 
