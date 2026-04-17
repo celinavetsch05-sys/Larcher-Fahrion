@@ -66,7 +66,7 @@ module.exports = async function handler(req, res) {
     ? '<h2 style="color:#2e4a5e;font-family:sans-serif">Neue Gäste-Anfrage</h2>'
       + '<table style="border-collapse:collapse;width:100%;max-width:560px;font-family:sans-serif;font-size:14px">'
       + row('Name', name) + rowHtml('E-Mail', emailCell)
-      + row('Wohnung', wohnung) + row('Anreise', anreise) + row('Abreise', abreise)
+      + row('Telefon', telefon) + row('Wohnung', wohnung) + row('Anreise', anreise) + row('Abreise', abreise)
       + rowHtml('Nachricht', nachrichtCell)
       + '</table>'
     : '<h2 style="color:#2e4a5e;font-family:sans-serif">Neue Eigentümer-Anfrage</h2>'
