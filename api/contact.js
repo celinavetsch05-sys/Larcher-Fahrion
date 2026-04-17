@@ -122,6 +122,6 @@ module.exports = async function handler(req, res) {
 
   } catch (err) {
     console.error('Resend error:', err.message);
-    return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden.', detail: err.message });
+    return res.status(500).json({ error: 'E-Mail konnte nicht gesendet werden.' });
   }
 };

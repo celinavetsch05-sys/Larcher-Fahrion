@@ -145,6 +145,7 @@ nav.nav-top .nav-brand-text{display:flex}
   .nav-brand-name{font-size:17px}
   .nav-brand-sub{display:none}
   .mobile-menu{top:80px;left:0;right:0}
+  nav.scrolled ~ .mobile-menu{top:62px}
 }
 
 .page{display:none}
@@ -324,7 +325,7 @@ nav.nav-top .nav-brand-text{display:flex}
 .testimonial-content{
   max-width:680px;width:100%;margin:0 auto;
   display:flex;flex-direction:column;align-items:center;
-  height:280px;
+  min-height:220px;
   transition:opacity 0.35s ease,transform 0.35s ease;
 }
 .testimonial-content.fading{opacity:0;transform:translateY(8px)}
@@ -357,9 +358,9 @@ nav.nav-top .nav-brand-text{display:flex}
 .t-prev{left:1.5rem}
 .t-next{right:1.5rem}
 @media(max-width:680px){
-  .testimonial-strip{padding:3rem 1.25rem;min-height:380px}
+  .testimonial-strip{padding:3rem 1.25rem;min-height:320px}
   .t-arrow{display:none}
-  .testimonial-content{height:260px}
+  .testimonial-content{min-height:200px}
   .testimonial-strip blockquote{font-size:0.97rem}
 }
 
@@ -598,8 +599,8 @@ footer{
   .pg-show-all{font-size:10px;padding:4px 8px;bottom:5px;right:5px}
 }
 
-/* LIGHTBOX */
-.lightbox-overlay{
+/* LIGHTBOX — gallery grid */
+#gallery-lightbox{
   position:fixed;inset:0;background:white;
   z-index:900;overflow-y:auto;
 }
@@ -742,14 +743,14 @@ footer{
   .booking-grid{grid-template-columns:1fr}
 }
 
-/* LIGHTBOX */
-.lightbox-overlay{
+/* LIGHTBOX — fullscreen single image */
+#lightbox{
   display:none;position:fixed;inset:0;z-index:900;
   background:rgba(0,0,0,0.92);
   align-items:center;justify-content:center;
   animation:lb-fade 0.2s ease;
 }
-.lightbox-overlay.active{display:flex}
+#lightbox.active{display:flex}
 @keyframes lb-fade{from{opacity:0}to{opacity:1}}
 .lightbox-img{
   max-width:90vw;max-height:88vh;
@@ -929,6 +930,7 @@ footer{
   .section-title{margin-bottom:0.75rem}
 
   /* Hero */
+  .page-hero-blue{padding:3.5rem 1.25rem 3rem}
   .hero{min-height:85vh}
   .hero-content{padding:2rem 1.25rem 3.5rem}
   .hero-content h1{font-size:2.6rem;line-height:1.15}
@@ -969,6 +971,7 @@ footer{
   .owner-intro{font-size:0.9rem}
 
   /* Detail pages */
+  .detail-sidebar{order:-1}
   .detail-back{margin-bottom:1rem}
   .detail-title{font-size:1.35rem;line-height:1.3}
   .badges{gap:0.4rem}
@@ -986,5 +989,5 @@ footer{
   /* Footer */
   .footer-inner{grid-template-columns:1fr;gap:1.5rem}
   .footer-brand{grid-column:span 1;align-items:center;text-align:center}
-  .footer-logo{height:200px}
+  .footer-logo{height:120px}
 }

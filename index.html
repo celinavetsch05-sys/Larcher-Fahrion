@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2e4a5e">
+  <meta name="description" content="Ferienwohnungen in Oberammergau, Bayern. Appartement Louis und Bergliebe – persönlich betreut von Verena Larcher und Matthias Fahrion.">
   <title>Larcher &amp; Fahrion – Ferienwohnungen Oberammergau</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -117,7 +119,7 @@
                 <button class="btn-card" onclick="event.stopPropagation();showPage('detail-louis')">Details</button>
                 <div class="apt-book-pair" onclick="event.stopPropagation()">
                   <a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener">Airbnb</a>
-                  <a class="btn-card-book" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Booking</a>
+                  <a class="btn-card-book" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Booking</a>
                 </div>
               </div>
             </div>
@@ -142,7 +144,7 @@
                 <button class="btn-card" onclick="event.stopPropagation();showPage('detail-bergliebe')">Details</button>
                 <div class="apt-book-pair" onclick="event.stopPropagation()">
                   <a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener">Airbnb</a>
-                  <a class="btn-card-book" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Booking</a>
+                  <a class="btn-card-book" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Booking</a>
                 </div>
               </div>
             </div>
@@ -346,9 +348,9 @@
       <div class="footer-col">
         <h4>Unterkünfte</h4>
         <ul>
-          <li><a onclick="showPage('detail-louis')">Appartement Louis</a></li>
-          <li><a onclick="showPage('detail-bergliebe')">Bergliebe</a></li>
-          <li><a onclick="showPage('rentals')">Alle Wohnungen</a></li>
+          <li><a href="#" onclick="showPage('detail-louis');return false">Appartement Louis</a></li>
+          <li><a href="#" onclick="showPage('detail-bergliebe');return false">Bergliebe</a></li>
+          <li><a href="#" onclick="showPage('rentals');return false">Alle Wohnungen</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -368,7 +370,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
+      <span>© 2026 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
       <div class="footer-bottom-links">
         <a href="#" onclick="showPage('impressum');return false">Impressum</a>
         <a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a>
@@ -379,6 +381,16 @@
 
 <!-- ═══════════ RENTALS ═══════════ -->
 <div id="page-rentals" class="page">
+  <div class="section" style="background:var(--bg);padding-top:1.25rem;padding-bottom:0">
+    <div class="section-inner">
+      <div class="detail-back">
+        <a href="#" onclick="showPage('home');return false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="#486682"/></svg>
+          Zurück zur Startseite
+        </a>
+      </div>
+    </div>
+  </div>
   <div class="page-hero-blue">
     <div class="section-label" style="background:rgba(255,255,255,0.15);color:white">Unsere Angebote</div>
     <h1>Alle Ferienwohnungen</h1>
@@ -397,7 +409,7 @@
             <h3>Appartement Louis</h3>
             <p>Kompaktes Apartment mit Balkon und herrlichem Berg- und Gartenblick. Ideal für zwei Personen, die Ruhe und Natur suchen.</p>
             <div class="apt-specs"><span class="spec">⌂ 26 m²</span><span class="spec">★ 2 Pers.</span><span class="spec">▣ 1 Schlafzimmer</span></div>
-            <div class="apt-footer"><div class="apt-price">ab <strong>70 €</strong> / Nacht</div><div class="apt-actions"><button class="btn-card" onclick="event.stopPropagation();showPage('detail-louis')">Details</button><div class="apt-book-pair" onclick="event.stopPropagation()"><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener">Airbnb</a><a class="btn-card-book" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Booking</a></div></div></div>
+            <div class="apt-footer"><div class="apt-price">ab <strong>70 €</strong> / Nacht</div><div class="apt-actions"><button class="btn-card" onclick="event.stopPropagation();showPage('detail-louis')">Details</button><div class="apt-book-pair" onclick="event.stopPropagation()"><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener">Airbnb</a><a class="btn-card-book" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Booking</a></div></div></div>
           </div>
         </div>
         <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail-bergliebe')">
@@ -406,7 +418,7 @@
             <h3>Bergliebe</h3>
             <p>Geräumiges Apartment mit eigenem Wohnzimmer, Balkon und traumhaftem Bergblick. Fahrräder inklusive, familienfreundlich.</p>
             <div class="apt-specs"><span class="spec">⌂ 45 m²</span><span class="spec">★ 2 Pers.</span><span class="spec">▣ 1 Schlafzimmer</span></div>
-            <div class="apt-footer"><div class="apt-price">ab <strong>90 €</strong> / Nacht</div><div class="apt-actions"><button class="btn-card" onclick="event.stopPropagation();showPage('detail-bergliebe')">Details</button><div class="apt-book-pair" onclick="event.stopPropagation()"><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener">Airbnb</a><a class="btn-card-book" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Booking</a></div></div></div>
+            <div class="apt-footer"><div class="apt-price">ab <strong>90 €</strong> / Nacht</div><div class="apt-actions"><button class="btn-card" onclick="event.stopPropagation();showPage('detail-bergliebe')">Details</button><div class="apt-book-pair" onclick="event.stopPropagation()"><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener">Airbnb</a><a class="btn-card-book" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Booking</a></div></div></div>
           </div>
         </div>
       </div>
@@ -421,9 +433,9 @@
       <div class="footer-col">
         <h4>Unterkünfte</h4>
         <ul>
-          <li><a onclick="showPage('detail-louis')">Appartement Louis</a></li>
-          <li><a onclick="showPage('detail-bergliebe')">Bergliebe</a></li>
-          <li><a onclick="showPage('rentals')">Alle Wohnungen</a></li>
+          <li><a href="#" onclick="showPage('detail-louis');return false">Appartement Louis</a></li>
+          <li><a href="#" onclick="showPage('detail-bergliebe');return false">Bergliebe</a></li>
+          <li><a href="#" onclick="showPage('rentals');return false">Alle Wohnungen</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -443,7 +455,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
+      <span>© 2026 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
       <div class="footer-bottom-links">
         <a href="#" onclick="showPage('impressum');return false">Impressum</a>
         <a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a>
@@ -474,11 +486,11 @@
             <img src="images/louis-main.jpg" alt="Appartement Louis" style="cursor:pointer">
           </div>
           <div class="pg-grid">
-            <div class="pg-cell"><img src="images/louis-g2.avif" alt="Appartement Louis" style="cursor:pointer"></div>
-            <div class="pg-cell"><img src="images/louis-g3.avif" alt="Appartement Louis" style="cursor:pointer"></div>
-            <div class="pg-cell"><img src="images/louis-g4.jpg" alt="Appartement Louis" style="cursor:pointer"></div>
+            <div class="pg-cell"><img src="images/louis-g2.avif" alt="Appartement Louis" loading="lazy" style="cursor:pointer"></div>
+            <div class="pg-cell"><img src="images/louis-g3.avif" alt="Appartement Louis" loading="lazy" style="cursor:pointer"></div>
+            <div class="pg-cell"><img src="images/louis-g4.jpg" alt="Appartement Louis" loading="lazy" style="cursor:pointer"></div>
             <div class="pg-cell pg-last">
-              <img src="images/louis-g5.avif" alt="Appartement Louis" style="cursor:pointer">
+              <img src="images/louis-g5.avif" alt="Appartement Louis" loading="lazy" style="cursor:pointer">
               <button class="pg-show-all" onclick="event.stopPropagation();openLightbox('louis',0)">&#9638; Alle Fotos anzeigen</button>
             </div>
           </div>
@@ -552,10 +564,9 @@
 
           <div class="detail-sidebar">
             <div class="contact-card">
-              <div class="contact-card-price">ab <strong>70 €</strong> <span>/ Nacht</span></div>
-              <p>Für Verfügbarkeiten und Buchungsanfragen nehmen Sie gerne Kontakt auf.</p>
+              <p>Preise und Verfügbarkeiten findest du direkt auf deiner bevorzugten Buchungsplattform.</p>
               <a class="btn-primary contact-card-btn" href="#" onclick="scrollToContact();return false">Jetzt anfragen</a>
-              <a class="btn-booking" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Buchen auf Booking.com</a>
+              <a class="btn-booking" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Buchen auf Booking.com</a>
               <a class="btn-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener">Buchen auf Airbnb</a>
               <div class="contact-card-note">Persönliche Betreuung durch Verena &amp; Matthias</div>
             </div>
@@ -573,9 +584,9 @@
         <div class="footer-col">
           <h4>Unterkünfte</h4>
           <ul>
-            <li><a onclick="showPage('detail-louis')">Appartement Louis</a></li>
-            <li><a onclick="showPage('detail-bergliebe')">Bergliebe</a></li>
-            <li><a onclick="showPage('rentals')">Alle Wohnungen</a></li>
+            <li><a href="#" onclick="showPage('detail-louis');return false">Appartement Louis</a></li>
+            <li><a href="#" onclick="showPage('detail-bergliebe');return false">Bergliebe</a></li>
+            <li><a href="#" onclick="showPage('rentals');return false">Alle Wohnungen</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -595,7 +606,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-      <span>© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
+      <span>© 2026 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
       <div class="footer-bottom-links">
         <a href="#" onclick="showPage('impressum');return false">Impressum</a>
         <a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a>
@@ -627,11 +638,11 @@
             <img src="images/bergliebe-1.jpg" alt="Bergliebe" style="cursor:pointer">
           </div>
           <div class="pg-grid">
-            <div class="pg-cell"><img src="images/bergliebe-20.jpg" alt="Bergliebe" style="cursor:pointer"></div>
-            <div class="pg-cell"><img src="images/bergliebe-8.jpg" alt="Bergliebe" style="cursor:pointer"></div>
-            <div class="pg-cell"><img src="images/bergliebe-2.jpg" alt="Bergliebe" style="cursor:pointer"></div>
+            <div class="pg-cell"><img src="images/bergliebe-20.jpg" alt="Bergliebe" loading="lazy" style="cursor:pointer"></div>
+            <div class="pg-cell"><img src="images/bergliebe-8.jpg" alt="Bergliebe" loading="lazy" style="cursor:pointer"></div>
+            <div class="pg-cell"><img src="images/bergliebe-2.jpg" alt="Bergliebe" loading="lazy" style="cursor:pointer"></div>
             <div class="pg-cell pg-last">
-              <img src="images/bergliebe-18.jpg" alt="Bergliebe" style="cursor:pointer">
+              <img src="images/bergliebe-18.jpg" alt="Bergliebe" loading="lazy" style="cursor:pointer">
               <button class="pg-show-all" onclick="event.stopPropagation();openLightbox('bergliebe',0)">&#9638; Alle Fotos anzeigen</button>
             </div>
           </div>
@@ -682,15 +693,22 @@
                   <span>Sauberkeit &amp; Preis-Leistung · Booking.com</span>
                 </div>
               </div>
+              <div class="rating-breakdown">
+                <div class="rating-breakdown-title">Gesamtbewertung · Airbnb</div>
+                <div class="rating-row"><span>5</span><div class="rb-track"><div class="rb-fill" style="width:75%"></div></div></div>
+                <div class="rating-row"><span>4</span><div class="rb-track"><div class="rb-fill" style="width:25%"></div></div></div>
+                <div class="rating-row"><span>3</span><div class="rb-track"><div class="rb-fill" style="width:0%"></div></div></div>
+                <div class="rating-row"><span>2</span><div class="rb-track"><div class="rb-fill" style="width:0%"></div></div></div>
+                <div class="rating-row"><span>1</span><div class="rb-track"><div class="rb-fill" style="width:0%"></div></div></div>
+              </div>
             </div>
           </div>
 
           <div class="detail-sidebar">
             <div class="contact-card">
-              <div class="contact-card-price">ab <strong>90 €</strong> <span>/ Nacht</span></div>
-              <p>Für Verfügbarkeiten und Buchungsanfragen nehmen Sie gerne Kontakt auf.</p>
+              <p>Preise und Verfügbarkeiten findest du direkt auf deiner bevorzugten Buchungsplattform.</p>
               <a class="btn-primary contact-card-btn" href="#" onclick="scrollToContact();return false">Jetzt anfragen</a>
-              <a class="btn-booking" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Buchen auf Booking.com</a>
+              <a class="btn-booking" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Buchen auf Booking.com</a>
               <a class="btn-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener">Buchen auf Airbnb</a>
               <div class="contact-card-note">Persönliche Betreuung durch Verena &amp; Matthias</div>
             </div>
@@ -708,9 +726,9 @@
         <div class="footer-col">
           <h4>Unterkünfte</h4>
           <ul>
-            <li><a onclick="showPage('detail-louis')">Appartement Louis</a></li>
-            <li><a onclick="showPage('detail-bergliebe')">Bergliebe</a></li>
-            <li><a onclick="showPage('rentals')">Alle Wohnungen</a></li>
+            <li><a href="#" onclick="showPage('detail-louis');return false">Appartement Louis</a></li>
+            <li><a href="#" onclick="showPage('detail-bergliebe');return false">Bergliebe</a></li>
+            <li><a href="#" onclick="showPage('rentals');return false">Alle Wohnungen</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -730,7 +748,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-      <span>© 2025 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
+      <span>© 2026 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
       <div class="footer-bottom-links">
         <a href="#" onclick="showPage('impressum');return false">Impressum</a>
         <a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a>

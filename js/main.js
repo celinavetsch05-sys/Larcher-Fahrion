@@ -44,7 +44,7 @@ function scrollToContact() {
   setTimeout(function() {
     var el = document.getElementById('kontakt');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
-  }, 50);
+  }, 100);
 }
 
 // ── Apartment card filter ─────────────────────────────────────────────────────
@@ -179,7 +179,8 @@ var galleryPhotos = {
     { src: 'images/louis-x1.jpg',  alt: 'Appartement Louis — Aussicht' },
     { src: 'images/louis-x2.jpg',  alt: 'Appartement Louis' },
     { src: 'images/louis-x3.avif', alt: 'Appartement Louis' },
-    { src: 'images/louis-x4.avif', alt: 'Appartement Louis' }
+    { src: 'images/louis-x4.avif', alt: 'Appartement Louis' },
+    { src: 'images/louis-b.jpg',   alt: 'Appartement Louis' }
   ],
   bergliebe: [
     { src: 'images/bergliebe-1.jpg',  alt: 'Bergliebe' },
@@ -192,7 +193,8 @@ var galleryPhotos = {
     { src: 'images/bergliebe-10.jpg', alt: 'Bergliebe' },
     { src: 'images/bergliebe-16.jpg', alt: 'Bergliebe' },
     { src: 'images/bergliebe-19.jpg', alt: 'Bergliebe' },
-    { src: 'images/bergliebe-20.jpg', alt: 'Bergliebe' }
+    { src: 'images/bergliebe-20.jpg', alt: 'Bergliebe' },
+    { src: 'images/bergliebe-21.avif', alt: 'Bergliebe' }
   ]
 };
 
@@ -211,8 +213,7 @@ function openLightbox(apt, startIdx) {
   // clicking a grid image opens it full-screen
   grid.querySelectorAll('img').forEach(function(img, i) {
     img.addEventListener('click', function() {
-      lbImages = grid.querySelectorAll('img');
-      lbImages = Array.from(lbImages);
+      lbImages = Array.from(grid.querySelectorAll('img'));
       lbIndex = i;
       lbShow();
     });
