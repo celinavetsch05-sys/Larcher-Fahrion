@@ -28,10 +28,10 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'Ungültige E-Mail-Adresse.' });
   }
   if (type === 'guest' && !nachricht) {
-    return res.status(400).json({ error: 'Bitte geben Sie eine Nachricht ein.' });
+    return res.status(400).json({ error: 'Bitte gib eine Nachricht ein.' });
   }
   if (type === 'owner' && !standort) {
-    return res.status(400).json({ error: 'Bitte geben Sie den Standort Ihrer Wohnung an.' });
+    return res.status(400).json({ error: 'Bitte gib den Standort deiner Wohnung an.' });
   }
 
   function escHtml(str) {
@@ -106,11 +106,11 @@ module.exports = async function handler(req, res) {
       await sendEmail({
         from: 'onboarding@resend.dev',
         to: [email],
-        subject: 'Ihre Anfrage ist bei uns eingegangen',
+        subject: 'Deine Anfrage ist bei uns eingegangen',
         html: '<div style="font-family:sans-serif;font-size:15px;color:#333;max-width:560px">'
-          + '<h2 style="color:#2e4a5e">Vielen Dank für Ihre Anfrage!</h2>'
+          + '<h2 style="color:#2e4a5e">Vielen Dank für deine Anfrage!</h2>'
           + '<p>Liebe/r ' + escHtml(name) + ',</p>'
-          + '<p>wir haben Ihre Anfrage erhalten und melden uns so bald wie möglich bei Ihnen.</p>'
+          + '<p>wir haben deine Anfrage erhalten und melden uns so bald wie möglich bei dir.</p>'
           + '<p style="color:#555">Mit freundlichen Grüßen<br><strong>Verena &amp; Matthias</strong><br>Larcher &amp; Fahrion · Ferienwohnungen Oberammergau</p>'
           + '</div>'
       });
