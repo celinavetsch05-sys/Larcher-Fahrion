@@ -189,16 +189,16 @@ resetAutoPlay();
 
 var galleryPhotos = {
   louis: [
-    { src: 'images/louis-main.jpg', alt: 'Appartement Louis — Zimmer' },
-    { src: 'images/louis-g2.avif', alt: 'Appartement Louis' },
-    { src: 'images/louis-g3.avif', alt: 'Appartement Louis' },
-    { src: 'images/louis-g4.jpg',  alt: 'Appartement Louis — Bergblick' },
-    { src: 'images/louis-g5.avif', alt: 'Appartement Louis' },
-    { src: 'images/louis-x1.jpg',  alt: 'Appartement Louis — Aussicht' },
-    { src: 'images/louis-x2.jpg',  alt: 'Appartement Louis' },
-    { src: 'images/louis-x3.avif', alt: 'Appartement Louis' },
-    { src: 'images/louis-x4.avif', alt: 'Appartement Louis' },
-    { src: 'images/louis-b.jpg',   alt: 'Appartement Louis' }
+    { src: 'images/louis-main.jpg', alt: 'Apartment Louis — Zimmer' },
+    { src: 'images/louis-g2.avif', alt: 'Apartment Louis' },
+    { src: 'images/louis-g3.avif', alt: 'Apartment Louis' },
+    { src: 'images/louis-g4.jpg',  alt: 'Apartment Louis — Bergblick' },
+    { src: 'images/louis-g5.avif', alt: 'Apartment Louis' },
+    { src: 'images/louis-x1.jpg',  alt: 'Apartment Louis — Aussicht' },
+    { src: 'images/louis-x2.jpg',  alt: 'Apartment Louis' },
+    { src: 'images/louis-x3.avif', alt: 'Apartment Louis' },
+    { src: 'images/louis-x4.avif', alt: 'Apartment Louis' },
+    { src: 'images/louis-b.jpg',   alt: 'Apartment Louis' }
   ],
   bergliebe: [
     { src: 'images/bergliebe-1.jpg',  alt: 'Bergliebe' },
@@ -220,7 +220,7 @@ function openLightbox(apt, startIdx) {
   var photos = galleryPhotos[apt];
   var grid = document.getElementById('lightbox-grid');
   var title = document.getElementById('lightbox-title');
-  var aptName = apt === 'louis' ? 'Appartement Louis' : 'Bergliebe';
+  var aptName = apt === 'louis' ? 'Apartment Louis' : 'Bergliebe';
 
   if (title) title.textContent = aptName + ' \u00b7 ' + photos.length + ' Fotos';
 
