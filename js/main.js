@@ -436,8 +436,74 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Wire up gallery images to lightbox
   document.addEventListener('click', function(e) {
+    if (e.target.closest('[data-lightbox]')) return; // handled by delegation below
     if (e.target.matches('.gallery-grid img, .detail-hero-imgs img, .pg-main img, .pg-cell img')) {
       lbOpen(e.target);
     }
+  });
+
+  // ── Centralised event delegation ─────────────────────────────────────────
+  // Replaces all onclick/onsubmit attributes removed from index.html for CSP.
+  document.addEventListener('click', function(e) {
+    // Booking links / no-nav zones — let them behave normally
+    if (e.target.closest('[data-no-nav]')) return;
+
+    var el = e.target.closest(
+      '[data-page],[data-action],[data-filter],[data-tab],[data-testimonial],[data-lb-step],[data-lightbox]'
+    );
+    if (!el) return;
+
+    var page        = el.getAttribute('data-page');
+    var action      = el.getAttribute('data-action');
+    var filter      = el.getAttribute('data-filter');
+    var tab         = el.getAttribute('data-tab');
+    var testIdx     = el.getAttribute('data-testimonial');
+    var lbStepVal   = el.getAttribute('data-lb-step');
+    var lightboxApt = el.getAttribute('data-lightbox');
+
+    if (page !== null) {
+      e.preventDefault();
+      if (el.hasAttribute('data-close-menu')) closeMobileMenu();
+      showPage(page);
+      return;
+    }
+    if (action === 'scroll-contact') {
+      e.preventDefault();
+      if (el.hasAttribute('data-close-menu')) closeMobileMenu();
+      scrollToContact();
+      return;
+    }
+    if (action === 'toggle-menu')      { toggleMobileMenu(); return; }
+    if (action === 'close-lightbox')   { closeLightbox();    return; }
+    if (action === 'lb-hide')          { lbHide();           return; }
+    if (action === 'lb-close')         { if (e.target === el) lbHide(); return; }
+    if (action === 'testimonial-prev') { prevTestimonial();  return; }
+    if (action === 'testimonial-next') { nextTestimonial();  return; }
+    if (filter      !== null) { filterCards(el, filter);                                 return; }
+    if (tab         !== null) { switchFormTab(tab, el);                                  return; }
+    if (testIdx     !== null) { setTestimonial(parseInt(testIdx, 10));                   return; }
+    if (lbStepVal   !== null) { e.stopPropagation(); lbStep(parseInt(lbStepVal, 10), e); return; }
+    if (lightboxApt !== null) {
+      e.stopPropagation();
+      openLightbox(lightboxApt, parseInt(el.getAttribute('data-lightbox-start') || '0', 10));
+      return;
+    }
+  });
+
+  // Wire up contact form submissions (replaces onsubmit attributes)
+  var guestForm = document.querySelector('#panel-guest form');
+  var ownerForm = document.querySelector('#panel-owner form');
+  if (guestForm) guestForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitContactForm('guest', this);
+  });
+  if (ownerForm) ownerForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitContactForm('owner', this);
+  });
+
+  // Initialise rating bar widths from data-pct attributes (replaces style="width:X%")
+  document.querySelectorAll('.rb-fill[data-pct]').forEach(function(el) {
+    el.style.width = el.getAttribute('data-pct') + '%';
   });
 });

@@ -1,3 +1,19 @@
+/* ── Utility classes (replace inline styles removed for strict CSP) ───────────
+   These replace style="..." attributes that were previously in index.html.
+   JavaScript-set styles (el.style.x) are unaffected by CSP.               */
+.section--white     { background: white; }
+.section--pt-sm     { padding-top: 2.5rem; }
+.section--rentals-top { padding-top: 1.25rem; padding-bottom: 0; }
+.section--legal     { background: white; padding-top: 3rem; min-height: 70vh; }
+.section-inner--narrow { max-width: 720px; }
+.section-label--inverted { background: rgba(255,255,255,0.15); color: white; }
+.legal-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400; font-size: 2.2rem; color: #1a1a1a; margin: 1.5rem 0 2rem;
+}
+/* Gallery lightbox: hidden by default (was inline style="display:none") */
+#gallery-lightbox { display: none; }
+
 /* Self-hosted fonts — no Google Fonts request */
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url('../fonts/cormorant-garamond-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url('../fonts/cormorant-garamond-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}

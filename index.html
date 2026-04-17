@@ -13,7 +13,7 @@
 <div id="site">
 
 <nav id="main-nav">
-  <div class="nav-brand" onclick="showPage('home')">
+  <div class="nav-brand" data-page="home">
     <img src="images/logo.svg" alt="Larcher &amp; Fahrion" class="nav-logo">
     <div class="nav-brand-text">
       <span class="nav-brand-name">Larcher &amp; Fahrion</span>
@@ -21,18 +21,18 @@
     </div>
   </div>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#" id="nl-rentals" onclick="showPage('rentals');return false">Unterkünfte</a></li>
+    <li><a href="#" id="nl-rentals" data-page="rentals">Unterkünfte</a></li>
   </ul>
   <div class="nav-right">
-    <a class="nav-cta" href="#" onclick="scrollToContact();return false">Anfragen</a>
-    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menü">
+    <a class="nav-cta" href="#" data-action="scroll-contact">Anfragen</a>
+    <button class="nav-hamburger" id="nav-hamburger" data-action="toggle-menu" aria-label="Menü">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#" onclick="showPage('rentals');closeMobileMenu();return false">Unterkünfte</a>
-  <a href="#" onclick="scrollToContact();closeMobileMenu();return false">Anfragen</a>
+  <a href="#" data-page="rentals" data-close-menu>Unterkünfte</a>
+  <a href="#" data-action="scroll-contact" data-close-menu>Anfragen</a>
 </div>
 
 <!-- ═══════════ HOME ═══════════ -->
@@ -46,8 +46,8 @@
       <h1>Dein Zuhause<br>in den <em>Bergen</em></h1>
       <p>Ruhig. Echt. Zum Wohlfühlen. Verena und Matthias freuen sich, dich willkommen zu heißen.</p>
       <div class="hero-btns">
-        <a class="btn-hero" href="#" onclick="scrollToContact();return false">Verfügbarkeit anfragen</a>
-        <button class="btn-hero-ghost" onclick="showPage('rentals')">Alle Wohnungen ansehen</button>
+        <a class="btn-hero" href="#" data-action="scroll-contact">Verfügbarkeit anfragen</a>
+        <button class="btn-hero-ghost" data-page="rentals">Alle Wohnungen ansehen</button>
       </div>
     </div>
     <div class="scroll-hint"><div class="scroll-arrow"></div>Entdecken</div>
@@ -72,7 +72,7 @@
     </div>
   </div>
 
-  <div class="section" style="background:white">
+  <div class="section section--white">
     <div class="section-inner">
       <div class="intro-split">
         <div class="intro-img fade-up">
@@ -90,17 +90,17 @@
     </div>
   </div>
 
-  <div class="section" style="background:var(--bg)">
+  <div class="section">
     <div class="section-inner">
       <div class="section-label">Unsere Wohnungen</div>
       <div class="section-title">Unsere Ferienwohnungen</div>
       <p class="section-sub">Gemütlich eingerichtet, ruhig gelegen — ideal für einen Aufenthalt in den Bergen.</p>
       <div class="filter-bar">
-        <button class="filter-btn on" onclick="filterCards(this,'all')">Alle</button>
-        <button class="filter-btn" onclick="filterCards(this,'2')">2 Personen</button>
+        <button class="filter-btn on" data-filter="all">Alle</button>
+        <button class="filter-btn" data-filter="2">2 Personen</button>
       </div>
       <div class="apt-grid" id="apt-grid">
-        <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail-louis')">
+        <div class="apt-card fade-up" data-cap="2" data-page="detail-louis">
           <div class="apt-card-img">
             <img id="card1-img" src="images/louis-card.jpg" alt="Apartment Louis">
             <div class="apt-tag">Louis</div>
@@ -115,8 +115,8 @@
             </div>
             <div class="apt-footer">
                             <div class="apt-actions">
-                <button class="btn-card" onclick="event.stopPropagation();showPage('detail-louis')">Details</button>
-                <div class="apt-book-pair" onclick="event.stopPropagation()">
+                <button class="btn-card" data-page="detail-louis">Details</button>
+                <div class="apt-book-pair" data-no-nav>
                   <a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener">Airbnb</a>
                   <a class="btn-card-book" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Booking</a>
                 </div>
@@ -124,7 +124,7 @@
             </div>
           </div>
         </div>
-        <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail-bergliebe')">
+        <div class="apt-card fade-up" data-cap="2" data-page="detail-bergliebe">
           <div class="apt-card-img">
             <img id="card2-img" src="images/bergliebe-1.jpg" alt="Bergliebe">
             <div class="apt-tag">Bergliebe</div>
@@ -139,8 +139,8 @@
             </div>
             <div class="apt-footer">
                             <div class="apt-actions">
-                <button class="btn-card" onclick="event.stopPropagation();showPage('detail-bergliebe')">Details</button>
-                <div class="apt-book-pair" onclick="event.stopPropagation()">
+                <button class="btn-card" data-page="detail-bergliebe">Details</button>
+                <div class="apt-book-pair" data-no-nav>
                   <a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener">Airbnb</a>
                   <a class="btn-card-book" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Booking</a>
                 </div>
@@ -153,20 +153,20 @@
   </div>
 
   <!-- ═══════════ KONTAKT ═══════════ -->
-  <div id="kontakt" class="section contact-section" style="background:var(--bg)">
+  <div id="kontakt" class="section contact-section">
     <div class="section-inner">
       <div class="section-label">Kontakt</div>
       <div class="section-title">Jetzt anfragen</div>
       <p class="section-sub">Ob als Urlaubsgast oder als Wohnungseigentümer — wir freuen uns, von dir zu hören.</p>
 
       <div class="form-tabs">
-        <button type="button" class="form-tab active" onclick="switchFormTab('guest', this)">Als Gast</button>
-        <button type="button" class="form-tab" onclick="switchFormTab('owner', this)">Als Eigentümer</button>
+        <button type="button" class="form-tab active" data-tab="guest">Als Gast</button>
+        <button type="button" class="form-tab" data-tab="owner">Als Eigentümer</button>
       </div>
 
       <!-- Gast-Formular -->
       <div class="form-panel active" id="panel-guest">
-        <form onsubmit="submitContactForm('guest', this); return false;">
+        <form>
           <div class="form-cols">
             <div class="form-group">
               <label for="g-name">Name *</label>
@@ -206,7 +206,7 @@
           <div class="form-submit-row">
             <button type="submit" class="btn-primary">Anfrage senden</button>
           </div>
-          <p class="form-privacy">Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer <a href="#" onclick="showPage('datenschutz');return false">Datenschutzerklärung</a> zu.</p>
+          <p class="form-privacy">Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer <a href="#" data-page="datenschutz">Datenschutzerklärung</a> zu.</p>
           <div class="form-feedback" id="feedback-guest" aria-live="polite"></div>
         </form>
       </div>
@@ -236,7 +236,7 @@
           </div>
         </div>
         <p class="owner-intro">Du besitzt eine Ferienwohnung in der Alpenregion und möchtest sie professionell vermieten, ohne den Aufwand selbst zu tragen? Larcher &amp; Fahrion übernimmt die vollständige Betreuung — von der Vermarktung bis zur Reinigung. Kontaktiere uns für ein unverbindliches Gespräch.</p>
-        <form onsubmit="submitContactForm('owner', this); return false;">
+        <form>
           <div class="form-cols">
             <div class="form-group">
               <label for="o-name">Name *</label>
@@ -264,7 +264,7 @@
           <div class="form-submit-row">
             <button type="submit" class="btn-primary">Unverbindlich anfragen</button>
           </div>
-          <p class="form-privacy">Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer <a href="#" onclick="showPage('datenschutz');return false">Datenschutzerklärung</a> zu.</p>
+          <p class="form-privacy">Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer <a href="#" data-page="datenschutz">Datenschutzerklärung</a> zu.</p>
           <div class="form-feedback" id="feedback-owner" aria-live="polite"></div>
         </form>
       </div>
@@ -272,7 +272,7 @@
     </div>
   </div>
 
-  <div class="section" style="background:white">
+  <div class="section section--white">
     <div class="section-inner">
       <div class="section-label">Atmosphäre</div>
       <div class="section-title">So fühlt es sich an</div>
@@ -287,7 +287,7 @@
     </div>
   </div>
 
-  <div class="section" style="background:var(--bg)">
+  <div class="section">
     <div class="section-inner">
       <div class="section-label">Warum hierher</div>
       <div class="section-title">Das macht den Unterschied</div>
@@ -317,18 +317,18 @@
   </div>
 
   <div class="testimonial-strip" id="testimonial-strip">
-    <button class="t-arrow t-prev" onclick="prevTestimonial()" aria-label="Vorheriges">&#8249;</button>
+    <button class="t-arrow t-prev" data-action="testimonial-prev" aria-label="Vorheriges">&#8249;</button>
     <div class="testimonial-content" id="testimonial-content">
       <div class="t-stars" id="t-stars">★★★★★</div>
       <blockquote id="t-quote">"Wir kommen jedes Jahr wieder. Es fühlt sich wirklich wie ein zweites Zuhause an — danke Verena und Matthias!"</blockquote>
       <cite id="t-author">— Familie Müller, München</cite>
       <span class="t-platform" id="t-platform">Booking.com</span>
     </div>
-    <button class="t-arrow t-next" onclick="nextTestimonial()" aria-label="Nächstes">&#8250;</button>
+    <button class="t-arrow t-next" data-action="testimonial-next" aria-label="Nächstes">&#8250;</button>
     <div class="testimonial-dots">
-      <div class="t-dot on" onclick="setTestimonial(0)"></div>
-      <div class="t-dot" onclick="setTestimonial(1)"></div>
-      <div class="t-dot" onclick="setTestimonial(2)"></div>
+      <div class="t-dot on" data-testimonial="0"></div>
+      <div class="t-dot" data-testimonial="1"></div>
+      <div class="t-dot" data-testimonial="2"></div>
     </div>
   </div>
 
@@ -336,8 +336,8 @@
     <div class="section-inner">
       <h2>Bereit für dein Bergabenteuer?</h2>
       <p>Frag jetzt an — wir melden uns schnell und unkompliziert.</p>
-      <a class="btn-primary" href="#" onclick="scrollToContact();return false">Jetzt Verfügbarkeit anfragen</a>
-      <button class="btn-outline-blue" onclick="showPage('rentals')">Alle Wohnungen</button>
+      <a class="btn-primary" href="#" data-action="scroll-contact">Jetzt Verfügbarkeit anfragen</a>
+      <button class="btn-outline-blue" data-page="rentals">Alle Wohnungen</button>
     </div>
   </div>
 
@@ -350,9 +350,9 @@
       <div class="footer-col">
         <h4>Unterkünfte</h4>
         <ul>
-          <li><a href="#" onclick="showPage('detail-louis');return false">Apartment Louis</a></li>
-          <li><a href="#" onclick="showPage('detail-bergliebe');return false">Bergliebe</a></li>
-          <li><a href="#" onclick="showPage('rentals');return false">Alle Wohnungen</a></li>
+          <li><a href="#" data-page="detail-louis">Apartment Louis</a></li>
+          <li><a href="#" data-page="detail-bergliebe">Bergliebe</a></li>
+          <li><a href="#" data-page="rentals">Alle Wohnungen</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -366,16 +366,16 @@
       <div class="footer-col">
         <h4>Rechtliches</h4>
         <ul>
-          <li><a href="#" onclick="showPage('impressum');return false">Impressum</a></li>
-          <li><a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a></li>
+          <li><a href="#" data-page="impressum">Impressum</a></li>
+          <li><a href="#" data-page="datenschutz">Datenschutz</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
       <div class="footer-bottom-links">
-        <a href="#" onclick="showPage('impressum');return false">Impressum</a>
-        <a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a>
+        <a href="#" data-page="impressum">Impressum</a>
+        <a href="#" data-page="datenschutz">Datenschutz</a>
       </div>
     </div>
     <div class="footer-credit">
@@ -386,10 +386,10 @@
 
 <!-- ═══════════ RENTALS ═══════════ -->
 <div id="page-rentals" class="page">
-  <div class="section" style="background:var(--bg);padding-top:1.25rem;padding-bottom:0">
+  <div class="section section--rentals-top">
     <div class="section-inner">
       <div class="detail-back">
-        <a href="#" onclick="showPage('home');return false">
+        <a href="#" data-page="home">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="#486682"/></svg>
           Zurück zur Startseite
         </a>
@@ -397,33 +397,33 @@
     </div>
   </div>
   <div class="page-hero-blue">
-    <div class="section-label" style="background:rgba(255,255,255,0.15);color:white">Unsere Angebote</div>
+    <div class="section-label section-label--inverted">Unsere Angebote</div>
     <h1>Alle Ferienwohnungen</h1>
     <p>Schau dich in Ruhe um und finde die Wohnung, die zu dir passt.</p>
   </div>
-  <div class="section" style="background:var(--bg)">
+  <div class="section">
     <div class="section-inner">
       <div class="filter-bar">
-        <button class="filter-btn on" onclick="filterCards(this,'all')">Alle</button>
-        <button class="filter-btn" onclick="filterCards(this,'2')">2 Personen</button>
+        <button class="filter-btn on" data-filter="all">Alle</button>
+        <button class="filter-btn" data-filter="2">2 Personen</button>
       </div>
       <div class="apt-grid">
-        <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail-louis')">
+        <div class="apt-card fade-up" data-cap="2" data-page="detail-louis">
           <div class="apt-card-img"><img id="r-card1" src="images/louis-card.jpg" alt="Apartment Louis"><div class="apt-tag">Louis</div></div>
           <div class="apt-body">
             <h3>Apartment Louis</h3>
             <p>Kompaktes Apartment mit Balkon und herrlichem Berg- und Gartenblick. Ideal für zwei Personen, die Ruhe und Natur suchen.</p>
             <div class="apt-specs"><span class="spec">⌂ 26 m²</span><span class="spec">★ 2 Pers.</span><span class="spec">▣ 1 Schlafzimmer</span></div>
-            <div class="apt-footer"><div class="apt-actions"><button class="btn-card" onclick="event.stopPropagation();showPage('detail-louis')">Details</button><div class="apt-book-pair" onclick="event.stopPropagation()"><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener">Airbnb</a><a class="btn-card-book" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Booking</a></div></div></div>
+            <div class="apt-footer"><div class="apt-actions"><button class="btn-card" data-page="detail-louis">Details</button><div class="apt-book-pair" data-no-nav><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener">Airbnb</a><a class="btn-card-book" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Booking</a></div></div></div>
           </div>
         </div>
-        <div class="apt-card fade-up" data-cap="2" onclick="showPage('detail-bergliebe')">
+        <div class="apt-card fade-up" data-cap="2" data-page="detail-bergliebe">
           <div class="apt-card-img"><img id="r-card2" src="images/bergliebe-1.jpg" alt="Bergliebe"><div class="apt-tag">Bergliebe</div></div>
           <div class="apt-body">
             <h3>Bergliebe</h3>
             <p>Geräumiges Apartment mit eigenem Wohnzimmer, Balkon und traumhaftem Bergblick. Fahrräder inklusive, familienfreundlich.</p>
             <div class="apt-specs"><span class="spec">⌂ 45 m²</span><span class="spec">★ 2 Pers.</span><span class="spec">▣ 1 Schlafzimmer</span></div>
-            <div class="apt-footer"><div class="apt-actions"><button class="btn-card" onclick="event.stopPropagation();showPage('detail-bergliebe')">Details</button><div class="apt-book-pair" onclick="event.stopPropagation()"><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener">Airbnb</a><a class="btn-card-book" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Booking</a></div></div></div>
+            <div class="apt-footer"><div class="apt-actions"><button class="btn-card" data-page="detail-bergliebe">Details</button><div class="apt-book-pair" data-no-nav><a class="btn-card-book-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener">Airbnb</a><a class="btn-card-book" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Booking</a></div></div></div>
           </div>
         </div>
       </div>
@@ -438,9 +438,9 @@
       <div class="footer-col">
         <h4>Unterkünfte</h4>
         <ul>
-          <li><a href="#" onclick="showPage('detail-louis');return false">Apartment Louis</a></li>
-          <li><a href="#" onclick="showPage('detail-bergliebe');return false">Bergliebe</a></li>
-          <li><a href="#" onclick="showPage('rentals');return false">Alle Wohnungen</a></li>
+          <li><a href="#" data-page="detail-louis">Apartment Louis</a></li>
+          <li><a href="#" data-page="detail-bergliebe">Bergliebe</a></li>
+          <li><a href="#" data-page="rentals">Alle Wohnungen</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -454,16 +454,16 @@
       <div class="footer-col">
         <h4>Rechtliches</h4>
         <ul>
-          <li><a href="#" onclick="showPage('impressum');return false">Impressum</a></li>
-          <li><a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a></li>
+          <li><a href="#" data-page="impressum">Impressum</a></li>
+          <li><a href="#" data-page="datenschutz">Datenschutz</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
       <div class="footer-bottom-links">
-        <a href="#" onclick="showPage('impressum');return false">Impressum</a>
-        <a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a>
+        <a href="#" data-page="impressum">Impressum</a>
+        <a href="#" data-page="datenschutz">Datenschutz</a>
       </div>
     </div>
     <div class="footer-credit">
@@ -475,10 +475,10 @@
 <!-- ═══════════ DETAIL: LOUIS ═══════════ -->
 <div id="page-detail-louis" class="page">
   <div class="detail-page-wrap">
-    <div class="section" style="background:white;padding-top:2.5rem">
+    <div class="section section--white section--pt-sm">
       <div class="section-inner">
         <div class="detail-back">
-          <a href="#" onclick="showPage('rentals');return false">
+          <a href="#" data-page="rentals">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="#486682"/></svg>
             Zurück zu allen Wohnungen
           </a>
@@ -491,15 +491,15 @@
 
         <div class="photo-gallery">
           <div class="pg-main">
-            <img src="images/louis-main.jpg" alt="Apartment Louis" style="cursor:pointer">
+            <img src="images/louis-main.jpg" alt="Apartment Louis">
           </div>
           <div class="pg-grid">
-            <div class="pg-cell"><img src="images/louis-g2.avif" alt="Apartment Louis" loading="lazy" style="cursor:pointer"></div>
-            <div class="pg-cell"><img src="images/louis-g3.avif" alt="Apartment Louis" loading="lazy" style="cursor:pointer"></div>
-            <div class="pg-cell"><img src="images/louis-g4.jpg" alt="Apartment Louis" loading="lazy" style="cursor:pointer"></div>
+            <div class="pg-cell"><img src="images/louis-g2.avif" alt="Apartment Louis" loading="lazy"></div>
+            <div class="pg-cell"><img src="images/louis-g3.avif" alt="Apartment Louis" loading="lazy"></div>
+            <div class="pg-cell"><img src="images/louis-g4.jpg" alt="Apartment Louis" loading="lazy"></div>
             <div class="pg-cell pg-last">
-              <img src="images/louis-g5.avif" alt="Apartment Louis" loading="lazy" style="cursor:pointer">
-              <button class="pg-show-all" onclick="event.stopPropagation();openLightbox('louis',0)">&#9638; Alle Fotos anzeigen</button>
+              <img src="images/louis-g5.avif" alt="Apartment Louis" loading="lazy">
+              <button class="pg-show-all" data-lightbox="louis" data-lightbox-start="0">&#9638; Alle Fotos anzeigen</button>
             </div>
           </div>
         </div>
@@ -551,11 +551,11 @@
               </div>
               <div class="rating-breakdown">
                 <div class="rating-breakdown-title">Gesamtbewertung · Airbnb</div>
-                <div class="rating-row"><span>5</span><div class="rb-track"><div class="rb-fill" style="width:50%"></div></div></div>
-                <div class="rating-row"><span>4</span><div class="rb-track"><div class="rb-fill" style="width:50%"></div></div></div>
-                <div class="rating-row"><span>3</span><div class="rb-track"><div class="rb-fill" style="width:0%"></div></div></div>
-                <div class="rating-row"><span>2</span><div class="rb-track"><div class="rb-fill" style="width:0%"></div></div></div>
-                <div class="rating-row"><span>1</span><div class="rb-track"><div class="rb-fill" style="width:0%"></div></div></div>
+                <div class="rating-row"><span>5</span><div class="rb-track"><div class="rb-fill" data-pct="50"></div></div></div>
+                <div class="rating-row"><span>4</span><div class="rb-track"><div class="rb-fill" data-pct="50"></div></div></div>
+                <div class="rating-row"><span>3</span><div class="rb-track"><div class="rb-fill" data-pct="0"></div></div></div>
+                <div class="rating-row"><span>2</span><div class="rb-track"><div class="rb-fill" data-pct="0"></div></div></div>
+                <div class="rating-row"><span>1</span><div class="rb-track"><div class="rb-fill" data-pct="0"></div></div></div>
               </div>
             </div>
 
@@ -564,7 +564,7 @@
           <div class="detail-sidebar">
             <div class="contact-card">
               <p>Preise und Verfügbarkeiten findest du direkt auf deiner bevorzugten Buchungsplattform.</p>
-              <a class="btn-primary contact-card-btn" href="#" onclick="scrollToContact();return false">Jetzt anfragen</a>
+              <a class="btn-primary contact-card-btn" href="#" data-action="scroll-contact">Jetzt anfragen</a>
               <a class="btn-booking" href="https://www.booking.com/Share-Bgzg6sZ" target="_blank" rel="noopener">Buchen auf Booking.com</a>
               <a class="btn-airbnb" href="https://www.airbnb.de/rooms/689606050667986904" target="_blank" rel="noopener">Buchen auf Airbnb</a>
               <div class="contact-card-note">Persönliche Betreuung durch Verena &amp; Matthias</div>
@@ -583,9 +583,9 @@
         <div class="footer-col">
           <h4>Unterkünfte</h4>
           <ul>
-            <li><a href="#" onclick="showPage('detail-louis');return false">Apartment Louis</a></li>
-            <li><a href="#" onclick="showPage('detail-bergliebe');return false">Bergliebe</a></li>
-            <li><a href="#" onclick="showPage('rentals');return false">Alle Wohnungen</a></li>
+            <li><a href="#" data-page="detail-louis">Apartment Louis</a></li>
+            <li><a href="#" data-page="detail-bergliebe">Bergliebe</a></li>
+            <li><a href="#" data-page="rentals">Alle Wohnungen</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -599,16 +599,16 @@
         <div class="footer-col">
           <h4>Rechtliches</h4>
           <ul>
-            <li><a href="#" onclick="showPage('impressum');return false">Impressum</a></li>
-            <li><a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a></li>
+            <li><a href="#" data-page="impressum">Impressum</a></li>
+            <li><a href="#" data-page="datenschutz">Datenschutz</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
       <span>© 2026 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
       <div class="footer-bottom-links">
-        <a href="#" onclick="showPage('impressum');return false">Impressum</a>
-        <a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a>
+        <a href="#" data-page="impressum">Impressum</a>
+        <a href="#" data-page="datenschutz">Datenschutz</a>
       </div>
     </div>
     <div class="footer-credit">
@@ -621,10 +621,10 @@
 <!-- ═══════════ DETAIL: BERGLIEBE ═══════════ -->
 <div id="page-detail-bergliebe" class="page">
   <div class="detail-page-wrap">
-    <div class="section" style="background:white;padding-top:2.5rem">
+    <div class="section section--white section--pt-sm">
       <div class="section-inner">
         <div class="detail-back">
-          <a href="#" onclick="showPage('rentals');return false">
+          <a href="#" data-page="rentals">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="#486682"/></svg>
             Zurück zu allen Wohnungen
           </a>
@@ -637,15 +637,15 @@
 
         <div class="photo-gallery">
           <div class="pg-main">
-            <img src="images/bergliebe-1.jpg" alt="Bergliebe" style="cursor:pointer">
+            <img src="images/bergliebe-1.jpg" alt="Bergliebe">
           </div>
           <div class="pg-grid">
-            <div class="pg-cell"><img src="images/bergliebe-20.jpg" alt="Bergliebe" loading="lazy" style="cursor:pointer"></div>
-            <div class="pg-cell"><img src="images/bergliebe-8.jpg" alt="Bergliebe" loading="lazy" style="cursor:pointer"></div>
-            <div class="pg-cell"><img src="images/bergliebe-2.jpg" alt="Bergliebe" loading="lazy" style="cursor:pointer"></div>
+            <div class="pg-cell"><img src="images/bergliebe-20.jpg" alt="Bergliebe" loading="lazy"></div>
+            <div class="pg-cell"><img src="images/bergliebe-8.jpg" alt="Bergliebe" loading="lazy"></div>
+            <div class="pg-cell"><img src="images/bergliebe-2.jpg" alt="Bergliebe" loading="lazy"></div>
             <div class="pg-cell pg-last">
-              <img src="images/bergliebe-18.jpg" alt="Bergliebe" loading="lazy" style="cursor:pointer">
-              <button class="pg-show-all" onclick="event.stopPropagation();openLightbox('bergliebe',0)">&#9638; Alle Fotos anzeigen</button>
+              <img src="images/bergliebe-18.jpg" alt="Bergliebe" loading="lazy">
+              <button class="pg-show-all" data-lightbox="bergliebe" data-lightbox-start="0">&#9638; Alle Fotos anzeigen</button>
             </div>
           </div>
         </div>
@@ -697,11 +697,11 @@
               </div>
               <div class="rating-breakdown">
                 <div class="rating-breakdown-title">Gesamtbewertung · Airbnb</div>
-                <div class="rating-row"><span>5</span><div class="rb-track"><div class="rb-fill" style="width:75%"></div></div></div>
-                <div class="rating-row"><span>4</span><div class="rb-track"><div class="rb-fill" style="width:25%"></div></div></div>
-                <div class="rating-row"><span>3</span><div class="rb-track"><div class="rb-fill" style="width:0%"></div></div></div>
-                <div class="rating-row"><span>2</span><div class="rb-track"><div class="rb-fill" style="width:0%"></div></div></div>
-                <div class="rating-row"><span>1</span><div class="rb-track"><div class="rb-fill" style="width:0%"></div></div></div>
+                <div class="rating-row"><span>5</span><div class="rb-track"><div class="rb-fill" data-pct="75"></div></div></div>
+                <div class="rating-row"><span>4</span><div class="rb-track"><div class="rb-fill" data-pct="25"></div></div></div>
+                <div class="rating-row"><span>3</span><div class="rb-track"><div class="rb-fill" data-pct="0"></div></div></div>
+                <div class="rating-row"><span>2</span><div class="rb-track"><div class="rb-fill" data-pct="0"></div></div></div>
+                <div class="rating-row"><span>1</span><div class="rb-track"><div class="rb-fill" data-pct="0"></div></div></div>
               </div>
             </div>
           </div>
@@ -709,7 +709,7 @@
           <div class="detail-sidebar">
             <div class="contact-card">
               <p>Preise und Verfügbarkeiten findest du direkt auf deiner bevorzugten Buchungsplattform.</p>
-              <a class="btn-primary contact-card-btn" href="#" onclick="scrollToContact();return false">Jetzt anfragen</a>
+              <a class="btn-primary contact-card-btn" href="#" data-action="scroll-contact">Jetzt anfragen</a>
               <a class="btn-booking" href="https://www.booking.com/Share-z9bjit" target="_blank" rel="noopener">Buchen auf Booking.com</a>
               <a class="btn-airbnb" href="https://www.airbnb.de/rooms/1132389542652290306" target="_blank" rel="noopener">Buchen auf Airbnb</a>
               <div class="contact-card-note">Persönliche Betreuung durch Verena &amp; Matthias</div>
@@ -728,9 +728,9 @@
         <div class="footer-col">
           <h4>Unterkünfte</h4>
           <ul>
-            <li><a href="#" onclick="showPage('detail-louis');return false">Apartment Louis</a></li>
-            <li><a href="#" onclick="showPage('detail-bergliebe');return false">Bergliebe</a></li>
-            <li><a href="#" onclick="showPage('rentals');return false">Alle Wohnungen</a></li>
+            <li><a href="#" data-page="detail-louis">Apartment Louis</a></li>
+            <li><a href="#" data-page="detail-bergliebe">Bergliebe</a></li>
+            <li><a href="#" data-page="rentals">Alle Wohnungen</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -744,16 +744,16 @@
         <div class="footer-col">
           <h4>Rechtliches</h4>
           <ul>
-            <li><a href="#" onclick="showPage('impressum');return false">Impressum</a></li>
-            <li><a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a></li>
+            <li><a href="#" data-page="impressum">Impressum</a></li>
+            <li><a href="#" data-page="datenschutz">Datenschutz</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
       <span>© 2026 Larcher &amp; Fahrion · Oberammergau, Bayern</span>
       <div class="footer-bottom-links">
-        <a href="#" onclick="showPage('impressum');return false">Impressum</a>
-        <a href="#" onclick="showPage('datenschutz');return false">Datenschutz</a>
+        <a href="#" data-page="impressum">Impressum</a>
+        <a href="#" data-page="datenschutz">Datenschutz</a>
       </div>
     </div>
     <div class="footer-credit">
@@ -768,15 +768,15 @@
 
 <!-- ═══════════ IMPRESSUM ═══════════ -->
 <div id="page-impressum" class="page">
-  <div class="section" style="background:white;padding-top:3rem;min-height:70vh">
-    <div class="section-inner" style="max-width:720px">
+  <div class="section section--legal">
+    <div class="section-inner section-inner--narrow">
       <div class="detail-back">
-        <a href="#" onclick="showPage('home');return false">
+        <a href="#" data-page="home">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="#486682"/></svg>
           Zurück zur Startseite
         </a>
       </div>
-      <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:2.2rem;color:#1a1a1a;margin:1.5rem 0 2rem">Impressum</h1>
+      <h1 class="legal-heading">Impressum</h1>
 
       <div class="legal-body">
         <h2>Angaben gemäß § 5 TMG</h2>
@@ -810,15 +810,15 @@
 
 <!-- ═══════════ DATENSCHUTZ ═══════════ -->
 <div id="page-datenschutz" class="page">
-  <div class="section" style="background:white;padding-top:3rem;min-height:70vh">
-    <div class="section-inner" style="max-width:720px">
+  <div class="section section--legal">
+    <div class="section-inner section-inner--narrow">
       <div class="detail-back">
-        <a href="#" onclick="showPage('home');return false">
+        <a href="#" data-page="home">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="#486682"/></svg>
           Zurück zur Startseite
         </a>
       </div>
-      <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:2.2rem;color:#1a1a1a;margin:1.5rem 0 2rem">Datenschutzerklärung</h1>
+      <h1 class="legal-heading">Datenschutzerklärung</h1>
 
       <div class="legal-body">
         <h2>1. Verantwortlicher</h2>
@@ -860,9 +860,9 @@
 </div>
 
 <!-- GALLERY LIGHTBOX -->
-<div id="gallery-lightbox" class="lightbox-overlay" style="display:none" role="dialog" aria-modal="true" aria-label="Fotogalerie">
+<div id="gallery-lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Fotogalerie">
   <div class="lightbox-header">
-    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Schließen">
+    <button class="lightbox-close" data-action="close-lightbox" aria-label="Schließen">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="currentColor"/></svg>
       Zurück
     </button>
@@ -880,11 +880,11 @@
 </a>
 
 <!-- LIGHTBOX -->
-<div class="lightbox-overlay" id="lightbox" onclick="lbClose(event)">
-  <button class="lightbox-close" onclick="lbHide()">&times;</button>
-  <button class="lightbox-prev" onclick="lbStep(-1,event)">&#8249;</button>
+<div class="lightbox-overlay" id="lightbox" data-action="lb-close">
+  <button class="lightbox-close" data-action="lb-hide">&times;</button>
+  <button class="lightbox-prev" data-lb-step="-1">&#8249;</button>
   <img class="lightbox-img" id="lightbox-img" src="" alt="">
-  <button class="lightbox-next" onclick="lbStep(1,event)">&#8250;</button>
+  <button class="lightbox-next" data-lb-step="1">&#8250;</button>
   <div class="lightbox-counter" id="lightbox-counter"></div>
 </div>
 
