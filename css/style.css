@@ -595,7 +595,7 @@ footer{
 @media(max-width:680px){
   .photo-gallery{grid-template-columns:1fr;grid-template-rows:auto;height:auto}
   .pg-main{height:230px}
-  .pg-grid{grid-template-columns:repeat(4,1fr);grid-template-rows:1fr;height:100px;gap:3px}
+  .pg-grid{grid-template-columns:repeat(4,1fr);grid-template-rows:1fr;height:90px;gap:3px}
   .pg-show-all{font-size:10px;padding:4px 8px;bottom:5px;right:5px}
 }
 
@@ -948,8 +948,6 @@ footer{
   /* Why grid → 1 column on small screens */
   .why-grid{grid-template-columns:1fr}
 
-  /* Gallery mobile: 2x2 thumbnail grid instead of 4-in-a-row */
-  .pg-grid{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:160px}
 
   /* CTA section */
   .cta-banner{padding:3rem 1.25rem}
