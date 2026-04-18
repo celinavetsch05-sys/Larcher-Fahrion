@@ -426,7 +426,6 @@ nav.nav-top .nav-brand-text{display:flex}
 .lage-card--winter{background:var(--brand-xlight);border-color:#c5d8ea}
 .lage-card--winter h4{color:var(--brand-dark)}
 .lage-card--winter h4::before{content:"❄ "}
-.lage-card--winter ul li::before{color:var(--brand)}
 
 /* TESTIMONIAL STRIP */
 .testimonial-strip{
