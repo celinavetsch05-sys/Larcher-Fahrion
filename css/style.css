@@ -412,6 +412,14 @@ nav.nav-top .nav-brand-text{display:flex}
 .why-card h4{font-size:1rem;font-weight:500;margin-bottom:0.6rem;color:white}
 .why-card p{font-size:0.88rem;line-height:1.65;color:rgba(255,255,255,0.65)}
 
+/* ── Lage section ── */
+.lage-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem}
+.lage-card{border:1px solid var(--brand-light);border-radius:var(--r);padding:2rem;background:var(--brand-xlight)}
+.lage-card h4{font-size:1.1rem;font-weight:600;color:var(--brand-dark);margin-bottom:1rem}
+.lage-card ul{list-style:none;padding:0;margin:0}
+.lage-card ul li{padding:0.35rem 0 0.35rem 1.4rem;position:relative;color:var(--text-muted);font-size:0.95rem;line-height:1.5}
+.lage-card ul li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-size:0.85rem}
+
 /* TESTIMONIAL STRIP */
 .testimonial-strip{
   background:var(--brand);
@@ -870,6 +878,7 @@ footer{
   .intro-split,.about-split,.contact-wrap,.loc-split,.detail-layout{grid-template-columns:1fr;gap:2rem}
   .apt-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr 1fr}
+  .lage-grid{grid-template-columns:1fr;gap:1.25rem}
   .mosaic{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px 160px}
   .section{padding:4rem 1.75rem}
 .footer-inner{grid-template-columns:1fr 1fr;gap:2rem}
