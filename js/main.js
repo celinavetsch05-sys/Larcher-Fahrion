@@ -132,9 +132,8 @@ function setTestimonial(idx) {
     if (starsEl) starsEl.textContent = '★'.repeat(t.stars) + '☆'.repeat(5 - t.stars);
     if (platformEl) platformEl.textContent = t.platform;
 
-    document.querySelectorAll('.t-dot').forEach(function(dot, i) {
-      dot.classList.toggle('on', i === idx);
-    });
+    var counterEl = document.getElementById('t-counter');
+    if (counterEl) counterEl.textContent = (idx + 1) + ' von ' + testimonials.length;
 
     content.classList.remove('fading');
   }, 200);
@@ -162,12 +161,16 @@ function resetAutoPlay() {
   var strip = document.getElementById('testimonial-strip');
   if (!strip) return;
   var startX = 0;
+  var startY = 0;
   strip.addEventListener('touchstart', function(e) {
     startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
   }, { passive: true });
   strip.addEventListener('touchend', function(e) {
     var dx = e.changedTouches[0].clientX - startX;
-    if (Math.abs(dx) > 40) {
+    var dy = e.changedTouches[0].clientY - startY;
+    // Only count as a swipe if horizontal movement dominates
+    if (Math.abs(dx) > 35 && Math.abs(dx) > Math.abs(dy)) {
       dx < 0 ? nextTestimonial() : prevTestimonial();
     }
   }, { passive: true });
@@ -212,7 +215,8 @@ var galleryPhotos = {
     { src: 'images/bergliebe-16.jpg', alt: 'Bergliebe' },
     { src: 'images/bergliebe-19.jpg', alt: 'Bergliebe' },
     { src: 'images/bergliebe-20.jpg', alt: 'Bergliebe' },
-    { src: 'images/bergliebe-21.avif', alt: 'Bergliebe' }
+    { src: 'images/bergliebe-21.avif', alt: 'Bergliebe' },
+    { src: 'images/bergliebe-koenigscard.jpg', alt: 'Bergliebe – Königscard' }
   ]
 };
 

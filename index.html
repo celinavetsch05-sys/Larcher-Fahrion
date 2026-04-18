@@ -21,7 +21,14 @@
     </div>
   </div>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#" id="nl-rentals" data-page="rentals">Unterkünfte</a></li>
+    <li class="nav-has-dropdown">
+      <a href="#" id="nl-rentals" data-page="rentals" class="nav-dropdown-trigger">Unterkünfte <svg class="nav-dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown">
+        <a href="#" data-page="detail-louis">Apartment Louis</a>
+        <a href="#" data-page="detail-bergliebe">Bergliebe</a>
+        <a href="#" data-page="rentals" class="nav-dropdown-all">Alle anzeigen</a>
+      </div>
+    </li>
   </ul>
   <div class="nav-right">
     <a class="nav-cta" href="#" data-action="scroll-contact">Anfragen</a>
@@ -32,6 +39,8 @@
 </nav>
 <div class="mobile-menu" id="mobile-menu">
   <a href="#" data-page="rentals" data-close-menu>Unterkünfte</a>
+  <a href="#" data-page="detail-louis" data-close-menu class="mobile-menu-sub">Apartment Louis</a>
+  <a href="#" data-page="detail-bergliebe" data-close-menu class="mobile-menu-sub">Bergliebe</a>
   <a href="#" data-action="scroll-contact" data-close-menu>Anfragen</a>
 </div>
 
@@ -325,10 +334,10 @@
       <span class="t-platform" id="t-platform">Booking.com</span>
     </div>
     <button class="t-arrow t-next" data-action="testimonial-next" aria-label="Nächstes">&#8250;</button>
-    <div class="testimonial-dots">
-      <div class="t-dot on" data-testimonial="0"></div>
-      <div class="t-dot" data-testimonial="1"></div>
-      <div class="t-dot" data-testimonial="2"></div>
+    <div class="t-mobile-nav">
+      <button class="t-mob-btn" data-action="testimonial-prev" aria-label="Vorheriges">&#8249;</button>
+      <div class="t-counter" id="t-counter">1 von 6</div>
+      <button class="t-mob-btn" data-action="testimonial-next" aria-label="Nächstes">&#8250;</button>
     </div>
   </div>
 
@@ -551,11 +560,11 @@
               </div>
               <div class="rating-breakdown">
                 <div class="rating-breakdown-title">Gesamtbewertung · Airbnb</div>
-                <div class="rating-row"><span>5</span><div class="rb-track"><div class="rb-fill" data-pct="50"></div></div></div>
-                <div class="rating-row"><span>4</span><div class="rb-track"><div class="rb-fill" data-pct="50"></div></div></div>
+                <div class="rating-row"><span>5</span><div class="rb-track"><div class="rb-fill" data-pct="90"></div></div></div>
+                <div class="rating-row"><span>4</span><div class="rb-track"><div class="rb-fill" data-pct="8"></div></div></div>
                 <div class="rating-row"><span>3</span><div class="rb-track"><div class="rb-fill" data-pct="0"></div></div></div>
                 <div class="rating-row"><span>2</span><div class="rb-track"><div class="rb-fill" data-pct="0"></div></div></div>
-                <div class="rating-row"><span>1</span><div class="rb-track"><div class="rb-fill" data-pct="0"></div></div></div>
+                <div class="rating-row"><span>1</span><div class="rb-track"><div class="rb-fill" data-pct="2"></div></div></div>
               </div>
             </div>
 
@@ -681,6 +690,7 @@
               </div>
               <div class="amenity-feature-box">
                 <div class="amenity-feature-title">Königscard inklusive</div>
+                <img src="images/bergliebe-koenigscard.jpg" alt="Königscard – über 200 kostenlose Erlebnisse in der Region" class="amenity-feature-img" loading="lazy">
                 <p class="amenity-feature-desc">Die Königscard ist in vielen Unterkünften in Oberammergau inklusive und bietet dir kostenlosen Zugang zu über 200 Erlebnissen in der Region – von Bergbahnen und Bädern bis zu Museen und geführten Touren. Damit kannst du die Umgebung aktiv und vielseitig nutzen, ohne ständig extra zahlen zu müssen.</p>
               </div>
             </div>
