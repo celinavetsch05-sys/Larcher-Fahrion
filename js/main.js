@@ -410,6 +410,26 @@ function lbStep(dir, e) {
   lbShow();
 }
 
+// ── Touch swipe for fullscreen lightbox ──────────────────────────────────────
+
+(function() {
+  var lb = document.getElementById('lightbox');
+  if (!lb) return;
+  var startX = 0;
+  var startY = 0;
+  lb.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  lb.addEventListener('touchend', function(e) {
+    var dx = e.changedTouches[0].clientX - startX;
+    var dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+      dx < 0 ? lbStep(1, null) : lbStep(-1, null);
+    }
+  }, { passive: true });
+})();
+
 // ── Initialise on DOM ready ───────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', function() {
