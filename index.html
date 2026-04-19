@@ -4,8 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#2e4a5e">
-  <meta name="description" content="Ferienwohnungen in Oberammergau, Bayern. Apartment Louis und Bergliebe – persönlich betreut von Verena Larcher und Matthias Fahrion.">
+  <meta name="description" content="Ferienwohnungen in Oberammergau, Bayern – Apartment Louis (26 m²) und Bergliebe (45 m²) mit Bergblick. Persönliche Betreuung, ideale Lage in der Zugspitzregion.">
   <title>Larcher &amp; Fahrion – Ferienwohnungen Oberammergau</title>
+
+  <link rel="canonical" href="https://www.larcherfahrion-ferienwohnungen.com/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/logo.png">
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn previews) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Larcher &amp; Fahrion">
+  <meta property="og:title" content="Larcher &amp; Fahrion – Ferienwohnungen Oberammergau">
+  <meta property="og:description" content="Ferienwohnungen in Oberammergau, Bayern – Apartment Louis und Bergliebe mit Bergblick. Persönliche Betreuung, Nähe zur Zugspitze.">
+  <meta property="og:url" content="https://www.larcherfahrion-ferienwohnungen.com/">
+  <meta property="og:image" content="https://www.larcherfahrion-ferienwohnungen.com/images/hero.jpg">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Larcher &amp; Fahrion – Ferienwohnungen Oberammergau">
+  <meta name="twitter:description" content="Ferienwohnungen in Oberammergau, Bayern – Apartment Louis und Bergliebe mit Bergblick. Persönliche Betreuung, Nähe zur Zugspitze.">
+  <meta name="twitter:image" content="https://www.larcherfahrion-ferienwohnungen.com/images/hero.jpg">
+
+  <!-- Preload the hero image so it loads faster (improves Core Web Vitals) -->
+  <link rel="preload" as="image" href="images/hero.png" fetchpriority="high">
+
+  <!-- Structured data: tells Google exactly what this business is -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LodgingBusiness",
+        "name": "Larcher & Fahrion – Ferienwohnungen Oberammergau",
+        "url": "https://www.larcherfahrion-ferienwohnungen.com/",
+        "telephone": "+4917664867860",
+        "email": "verena.larcher@gmail.com",
+        "image": "https://www.larcherfahrion-ferienwohnungen.com/images/hero.jpg",
+        "description": "Ferienwohnungen in Oberammergau, Bayern – Apartment Louis und Bergliebe mit Bergblick, persönlicher Betreuung und idealer Lage in der Zugspitzregion.",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Ettaler Str. 50B",
+          "addressLocality": "Oberammergau",
+          "postalCode": "82487",
+          "addressCountry": "DE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "47.5994",
+          "longitude": "11.0664"
+        },
+        "containsPlace": [
+          {
+            "@type": "Accommodation",
+            "name": "Apartment Louis",
+            "description": "Kompaktes 1-Zimmer-Apartment mit ca. 26 m², Balkon und herrlichem Berg- und Gartenblick. Ideal für zwei Personen.",
+            "floorSize": { "@type": "QuantitativeValue", "value": 26, "unitCode": "MTK" },
+            "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 },
+            "amenityFeature": [
+              { "@type": "LocationFeatureSpecification", "name": "Balkon", "value": true },
+              { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+              { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
+              { "@type": "LocationFeatureSpecification", "name": "Haustiere erlaubt", "value": true }
+            ],
+            "image": "https://www.larcherfahrion-ferienwohnungen.com/images/louis-main.jpg"
+          },
+          {
+            "@type": "Accommodation",
+            "name": "Bergliebe",
+            "description": "Geräumiges Apartment mit ca. 45 m², separatem Wohnbereich, Balkon und Bergblick. Familienfreundlich, Königscard inklusive.",
+            "floorSize": { "@type": "QuantitativeValue", "value": 45, "unitCode": "MTK" },
+            "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 },
+            "amenityFeature": [
+              { "@type": "LocationFeatureSpecification", "name": "Balkon", "value": true },
+              { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+              { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
+              { "@type": "LocationFeatureSpecification", "name": "Königscard inklusive", "value": true },
+              { "@type": "LocationFeatureSpecification", "name": "Familienfreundlich", "value": true }
+            ],
+            "image": "https://www.larcherfahrion-ferienwohnungen.com/images/bergliebe-1.jpg"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="css/style.css">
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -61,7 +148,7 @@
 <div id="page-home" class="page active">
 
   <div class="hero">
-    <div class="hero-bg"><img id="hero-bg-img" src="images/hero.png" alt="Alpine view"></div>
+    <div class="hero-bg"><img id="hero-bg-img" src="images/hero.png" alt="Bergpanorama über Oberammergau in den Bayerischen Alpen" fetchpriority="high" loading="eager"></div>
     <div class="hero-gradient"></div>
     <div class="hero-content">
       <div class="hero-label"><div class="hero-dot"></div>Oberammergau · Bayerische Alpen</div>
@@ -98,12 +185,12 @@
     <div class="section-inner">
       <div class="intro-split">
         <div class="intro-img fade-up">
-          <img id="intro-img" src="images/intro.jpg" alt="Cozy alpine interior">
+          <img id="intro-img" src="images/intro.jpg" alt="Gemütliche Ferienwohnung in Oberammergau – einladendes Wohnzimmer mit alpinem Charakter">
           <div class="intro-img-badge"><strong>Alpenregion</strong>Bayern</div>
         </div>
         <div class="intro-text fade-up">
           <div class="section-label">Herzlich willkommen</div>
-          <h3>Ein Ort zum Ankommen</h3>
+          <h2>Ein Ort zum Ankommen</h2>
           <p>Genieße erholsame Urlaubstage in unseren liebevoll eingerichteten Ferienwohnungen in ruhiger, naturnaher Lage.</p>
           <p>Ein Ort zum Ankommen, Abschalten und Durchatmen – umgeben von Bergen, Wäldern und klarer Alpenluft.</p>
           <p>Unsere Unterkünfte sind der ideale Ausgangspunkt, um die Vielfalt der bayerischen Alpen zu entdecken und gleichzeitig Ruhe und Erholung zu finden.</p>
@@ -116,7 +203,7 @@
   <div class="section">
     <div class="section-inner">
       <div class="section-label">Unsere Wohnungen</div>
-      <div class="section-title">Unsere Ferienwohnungen</div>
+      <h2 class="section-title">Unsere Ferienwohnungen</h2>
       <p class="section-sub">Gemütlich eingerichtet, ruhig gelegen — ideal für einen Aufenthalt in den Bergen.</p>
       <div class="filter-bar">
         <button class="filter-btn on" data-filter="all">Alle</button>
@@ -179,7 +266,7 @@
   <div id="kontakt" class="section contact-section">
     <div class="section-inner">
       <div class="section-label">Kontakt</div>
-      <div class="section-title">Jetzt anfragen</div>
+      <h2 class="section-title">Jetzt anfragen</h2>
       <p class="section-sub">Ob als Urlaubsgast oder als Wohnungseigentümer — wir freuen uns, von dir zu hören.</p>
 
       <div class="form-tabs">
@@ -298,7 +385,7 @@
   <div class="section section--white">
     <div class="section-inner">
       <div class="section-label">Zugspitzregion</div>
-      <div class="section-title">Die Lage</div>
+      <h2 class="section-title">Die Lage</h2>
       <p class="section-sub">Die Region rund um die Zugspitze zählt zu den schönsten Urlaubsgebieten Deutschlands. Hier erwarten dich beeindruckende Berglandschaften, kristallklare Seen und unzählige Möglichkeiten, die Natur aktiv zu erleben.</p>
       <div class="lage-grid">
         <div class="lage-card lage-card--sommer">
@@ -326,14 +413,14 @@
   <div class="section section--white">
     <div class="section-inner">
       <div class="section-label">Atmosphäre</div>
-      <div class="section-title">So fühlt es sich an</div>
+      <h2 class="section-title">So fühlt es sich an</h2>
       <div class="mosaic">
-        <div class="mosaic-img"><img id="atm1" src="images/bergliebe-1.jpg" alt="Bergliebe"></div>
-        <div class="mosaic-img"><img id="atm2" src="images/louis-b.jpg" alt="Apartment Louis"></div>
-        <div class="mosaic-img"><img id="atm3" src="images/louis-card.jpg" alt="Apartment Louis"></div>
-        <div class="mosaic-img"><img id="atm4" src="images/louis-x3.avif" alt="Apartment Louis"></div>
-        <div class="mosaic-img"><img id="atm5" src="images/bergliebe-3.jpg" alt="Bergliebe"></div>
-        <div class="mosaic-img"><img id="atm6" src="images/louis-g5.avif" alt="Apartment Louis"></div>
+        <div class="mosaic-img"><img id="atm1" src="images/bergliebe-1.jpg" alt="Wohnbereich Bergliebe – Ferienwohnung mit Bergblick in Oberammergau"></div>
+        <div class="mosaic-img"><img id="atm2" src="images/louis-b.jpg" alt="Balkon mit Garten- und Bergblick – Apartment Louis Oberammergau"></div>
+        <div class="mosaic-img"><img id="atm3" src="images/louis-card.jpg" alt="Schlafbereich Apartment Louis – gemütlich eingerichtete Ferienwohnung"></div>
+        <div class="mosaic-img"><img id="atm4" src="images/louis-x3.avif" alt="Einrichtungsdetail Apartment Louis – natürliche Materialien"></div>
+        <div class="mosaic-img"><img id="atm5" src="images/bergliebe-3.jpg" alt="Schlafzimmer Bergliebe – ruhige Ferienwohnung in den Alpen"></div>
+        <div class="mosaic-img"><img id="atm6" src="images/louis-g5.avif" alt="Küche Apartment Louis – vollständig ausgestattet für Selbstversorger"></div>
       </div>
     </div>
   </div>
@@ -341,7 +428,7 @@
   <div class="section">
     <div class="section-inner">
       <div class="section-label">Warum hierher</div>
-      <div class="section-title">Das macht den Unterschied</div>
+      <h2 class="section-title">Das macht den Unterschied</h2>
       <div class="why-grid">
         <div class="why-card fade-up">
           <div class="why-num">01</div>
@@ -542,14 +629,14 @@
 
         <div class="photo-gallery">
           <div class="pg-main">
-            <img src="images/louis-main.jpg" alt="Apartment Louis">
+            <img src="images/louis-main.jpg" alt="Apartment Louis Oberammergau – 26 m² mit Balkon und Bergblick">
           </div>
           <div class="pg-grid">
-            <div class="pg-cell"><img src="images/louis-g2.avif" alt="Apartment Louis" loading="lazy"></div>
-            <div class="pg-cell"><img src="images/louis-g3.avif" alt="Apartment Louis" loading="lazy"></div>
-            <div class="pg-cell"><img src="images/louis-g4.jpg" alt="Apartment Louis" loading="lazy"></div>
+            <div class="pg-cell"><img src="images/louis-g2.avif" alt="Wohnzimmer Apartment Louis – hell und gemütlich eingerichtet" loading="lazy"></div>
+            <div class="pg-cell"><img src="images/louis-g3.avif" alt="Küche Apartment Louis – Herd, Backofen und Geschirrspüler" loading="lazy"></div>
+            <div class="pg-cell"><img src="images/louis-g4.jpg" alt="Bad Apartment Louis – sauber und modern" loading="lazy"></div>
             <div class="pg-cell pg-last">
-              <img src="images/louis-g5.avif" alt="Apartment Louis" loading="lazy">
+              <img src="images/louis-g5.avif" alt="Balkon Apartment Louis – Blick auf Garten und Berge" loading="lazy">
               <button class="pg-show-all" data-lightbox="louis" data-lightbox-start="0">&#9638; Alle Fotos anzeigen</button>
             </div>
           </div>
@@ -573,7 +660,7 @@
             </div>
 
             <div class="detail-section">
-              <h3 class="detail-section-title">Ausstattung</h3>
+              <h2 class="detail-section-title">Ausstattung</h2>
               <div class="amenities-grid">
                 <div class="amenity"><span class="amenity-check">✓</span>Balkon mit Blick auf Garten und Berge</div>
                 <div class="amenity"><span class="amenity-check">✓</span>Kostenloses WLAN</div>
@@ -587,12 +674,12 @@
             </div>
 
             <div class="detail-section">
-              <h3 class="detail-section-title">Lage</h3>
+              <h2 class="detail-section-title">Lage</h2>
               <p>Die Unterkunft befindet sich in ruhiger Umgebung in Oberammergau. Das Ortszentrum erreichst du in ca. 15 Minuten zu Fuß oder in 3 Minuten mit dem Auto. Einkaufsmöglichkeiten sind ebenfalls nur wenige Minuten entfernt. Die Lage ist ideal für Naturfreunde, Ruhesuchende sowie für Aktivitäten wie Wandern oder Skifahren. Das bekannte Schloss Neuschwanstein ist in etwa 45 Minuten mit dem Auto erreichbar.</p>
             </div>
 
             <div class="detail-section">
-              <h3 class="detail-section-title">Bewertungen</h3>
+              <h2 class="detail-section-title">Bewertungen</h2>
               <div class="detail-rating">
                 <span class="rating-score">9,6</span>
                 <div class="rating-text">
@@ -688,14 +775,14 @@
 
         <div class="photo-gallery">
           <div class="pg-main">
-            <img src="images/bergliebe-1.jpg" alt="Bergliebe">
+            <img src="images/bergliebe-1.jpg" alt="Bergliebe Oberammergau – 45 m² mit separatem Wohnbereich und Bergblick">
           </div>
           <div class="pg-grid">
-            <div class="pg-cell"><img src="images/bergliebe-20.jpg" alt="Bergliebe" loading="lazy"></div>
-            <div class="pg-cell"><img src="images/bergliebe-8.jpg" alt="Bergliebe" loading="lazy"></div>
-            <div class="pg-cell"><img src="images/bergliebe-2.jpg" alt="Bergliebe" loading="lazy"></div>
+            <div class="pg-cell"><img src="images/bergliebe-20.jpg" alt="Wohnzimmer Bergliebe – geräumig mit gemütlicher Sitzecke" loading="lazy"></div>
+            <div class="pg-cell"><img src="images/bergliebe-8.jpg" alt="Schlafzimmer Bergliebe – ruhige Atmosphäre und natürliche Materialien" loading="lazy"></div>
+            <div class="pg-cell"><img src="images/bergliebe-2.jpg" alt="Küche Bergliebe – vollständig ausgestattet für erholsame Urlaubstage" loading="lazy"></div>
             <div class="pg-cell pg-last">
-              <img src="images/bergliebe-18.jpg" alt="Bergliebe" loading="lazy">
+              <img src="images/bergliebe-18.jpg" alt="Balkon Bergliebe – Ausblick auf die Berglandschaft Oberammergaus" loading="lazy">
               <button class="pg-show-all" data-lightbox="bergliebe" data-lightbox-start="0">&#9638; Alle Fotos anzeigen</button>
             </div>
           </div>
@@ -719,7 +806,7 @@
             </div>
 
             <div class="detail-section">
-              <h3 class="detail-section-title">Ausstattung</h3>
+              <h2 class="detail-section-title">Ausstattung</h2>
               <div class="amenities-grid">
                 <div class="amenity"><span class="amenity-check">✓</span>Balkon mit Blick auf Berge und Garten</div>
                 <div class="amenity"><span class="amenity-check">✓</span>Kostenloses WLAN</div>
@@ -738,12 +825,12 @@
             </div>
 
             <div class="detail-section">
-              <h3 class="detail-section-title">Lage</h3>
+              <h2 class="detail-section-title">Lage</h2>
               <p>Das Apartment befindet sich in einer ruhigen Wohngegend in Oberammergau. Das Zentrum ist in etwa 10 Minuten zu Fuß erreichbar, Einkaufsmöglichkeiten liegen nur wenige Minuten entfernt. Die Umgebung bietet ideale Bedingungen für Wanderungen, Wintersport und erholsame Aufenthalte in der Natur.</p>
             </div>
 
             <div class="detail-section">
-              <h3 class="detail-section-title">Bewertungen</h3>
+              <h2 class="detail-section-title">Bewertungen</h2>
               <div class="detail-rating">
                 <span class="rating-score">9,8</span>
                 <div class="rating-text">

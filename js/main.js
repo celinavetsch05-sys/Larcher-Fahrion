@@ -35,6 +35,19 @@ function showPage(name) {
 
   // Update nav transparency (transparent only on home at top)
   updateNavStyle();
+
+  // Update the browser tab title for each page (helps Google index them)
+  var pageTitles = {
+    'home':             'Larcher & Fahrion – Ferienwohnungen Oberammergau',
+    'rentals':          'Alle Ferienwohnungen – Larcher & Fahrion Oberammergau',
+    'detail-louis':     'Apartment Louis – Ferienwohnung in Oberammergau',
+    'detail-bergliebe': 'Bergliebe – Ferienwohnung mit Königscard in Oberammergau',
+    'impressum':        'Impressum – Larcher & Fahrion',
+    'datenschutz':      'Datenschutzerklärung – Larcher & Fahrion'
+  };
+  if (pageTitles[name]) {
+    document.title = pageTitles[name];
+  }
 }
 
 // ── Scroll to contact section ─────────────────────────────────────────────────
