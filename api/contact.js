@@ -8,6 +8,12 @@ module.exports = async function handler(req, res) {
   }
 
   var body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {});
+
+  // Honeypot: real users never fill this field; bots do
+  if (body.website) {
+    return res.status(200).json({ ok: true });
+  }
+
   var type = body.type;
   var name = (body.name || '').trim();
   var email = (body.email || '').trim();

@@ -29,7 +29,7 @@
   <meta name="twitter:image" content="https://www.larcherfahrion-ferienwohnungen.com/images/hero.jpg">
 
   <!-- Preload the hero image so it loads faster (improves Core Web Vitals) -->
-  <link rel="preload" as="image" href="images/hero.png" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 
   <!-- Structured data: tells Google exactly what this business is -->
   <script type="application/ld+json">
@@ -148,7 +148,7 @@
 <div id="page-home" class="page active">
 
   <div class="hero">
-    <div class="hero-bg"><img id="hero-bg-img" src="images/hero.png" alt="Bergpanorama über Oberammergau in den Bayerischen Alpen" fetchpriority="high" loading="eager"></div>
+    <div class="hero-bg"><img id="hero-bg-img" src="images/hero.jpg" alt="Bergpanorama über Oberammergau in den Bayerischen Alpen" fetchpriority="high" loading="eager"></div>
     <div class="hero-gradient"></div>
     <div class="hero-content">
       <div class="hero-label"><div class="hero-dot"></div>Oberammergau · Bayerische Alpen</div>
@@ -277,6 +277,8 @@
       <!-- Gast-Formular -->
       <div class="form-panel active" id="panel-guest">
         <form>
+          <!-- Honeypot: hidden from real users, bots fill it in → request rejected -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
           <div class="form-cols">
             <div class="form-group">
               <label for="g-name">Name *</label>
@@ -347,6 +349,8 @@
         </div>
         <p class="owner-intro">Du besitzt eine Ferienwohnung in der Alpenregion und möchtest sie professionell vermieten, ohne den Aufwand selbst zu tragen? Larcher &amp; Fahrion übernimmt die vollständige Betreuung — von der Vermarktung bis zur Reinigung. Kontaktiere uns für ein unverbindliches Gespräch.</p>
         <form>
+          <!-- Honeypot: hidden from real users, bots fill it in → request rejected -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
           <div class="form-cols">
             <div class="form-group">
               <label for="o-name">Name *</label>
