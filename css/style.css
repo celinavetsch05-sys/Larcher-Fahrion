@@ -606,8 +606,8 @@ nav.nav-top .nav-brand-text{display:flex}
 }
 .amenity-feature-desc{font-size:0.85rem;color:var(--text-muted);line-height:1.65}
 .amenity-feature-img{
-  width:100%;border-radius:var(--r-sm);object-fit:cover;
-  max-height:200px;margin:0.65rem 0 0.75rem;display:block;
+  width:100%;border-radius:var(--r-sm);
+  margin:0.65rem 0 0.75rem;display:block;
 }
 .booking-card{
   background:white;border-radius:var(--r);
